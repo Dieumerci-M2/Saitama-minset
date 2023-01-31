@@ -6,8 +6,8 @@ function Login() {
       <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-md space-y-8">
           <div>
-            <h2 className="mt-6 text-center text-1xl font-normal tracking-tight text-gray-900">
-              VOUS AVEZ DÉJÀ UN COMPTE ? <span className='ml-2 text-[red] cursor-pointer text:hover-indigo-600'> S'inscrire</span>
+            <h2 className="mt-6 text-center text-1xl font-normal tracking-tight text-[gray]">
+              VOUS AVEZ DÉJÀ UN COMPTE ? <span className='ml-2 text-[red] cursor-pointer hover:text-indigo-500'> S'inscrire</span>
             </h2>
           </div>
           <form className="mt-8 space-y-6" action="#" method="POST">
@@ -17,6 +17,7 @@ function Login() {
                 <label htmlFor="email-address" className="sr-only">
                   Votre adresse mail
                 </label>
+               <span className='flex flex-start'>Email</span> 
                 <input
                   id="email-address"
                   name="email"
@@ -27,10 +28,12 @@ function Login() {
                   placeholder="Email"
                 />
               </div>
+              <br />
               <div>
                 <label htmlFor="password" className="sr-only">
-                  Mot de passe
+                <span>Mot de passe</span>
                 </label>
+                <span className='flex flex-start'>Mot de passe</span>
                 <input
                   id="password"
                   name="password"
@@ -57,9 +60,9 @@ function Login() {
               </div>
 
               <div className="text-sm">
-                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                <span className="font-medium text-[red] cursor-pointer hover:text-indigo-500">
                 Mot de passe oublié ?
-                </a>
+                </span>
               </div>
             </div>
 
