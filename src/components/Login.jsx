@@ -1,10 +1,12 @@
 import React from 'react'
+import './Auth.css';
 
 function Login() {
   return (
-    <>
-      <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <div className="w-full max-w-md space-y-8">
+  <body>
+    <div className='flex'>
+      <div className="flex min-h-full justify-end px-4 sm:px-6 lg:px-8">
+        <div className="max-w-md space-y-8">
           <div>
             <h2 className="mt-6 text-center text-1xl font-normal tracking-tight text-[gray]">
               VOUS AVEZ DÉJÀ UN COMPTE ? <span className='ml-2 text-[red] cursor-pointer hover:text-indigo-500'> S'inscrire</span>
@@ -79,7 +81,9 @@ function Login() {
           </form>
         </div>
       </div>
-    </>
+    </div>
+    </body>
+
   )
 }
 
