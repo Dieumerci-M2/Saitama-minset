@@ -1,7 +1,15 @@
-.formController
+
+
+.Forms-Login
 {
     display: flex;
-    margin: auto;
-    justify-content: end;
-  
+    justify-content: start;
+  padding: 20px;
 }
+
+.Form-div
+{
+    display: flex;
+    justify-content: center;
+}
+    

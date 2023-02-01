@@ -4,7 +4,7 @@ import './components/Auth.css'
 function App() {
 
   return (
-    <div className='formController'>
+    <div>
       <Auth />
     </div>
   )
