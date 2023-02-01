@@ -3,11 +3,18 @@ import './Auth.css';
 
 function Login() {
   return (
-  <body>
-    <div className='flex'>
-      <div className="flex min-h-full justify-end px-4 sm:px-6 lg:px-8">
+  
+    <div className='flex justify-between m-auto'>
+      <div className='flex p-20 m-2 flex-column flex-wrap bg-white'>
+        <div className='flex mb-40 '>
+        <p><h1>Se connecter</h1> 
+        <h3>Connectez-vous maintenant ! Et débuter avec nous...</h3></p>
+      </div>
+      </div>
+    <div className='Forms-Login'>
+      <div className="flex min-h-full px-4 sm:px-6 lg:px-8">
         <div className="max-w-md space-y-8">
-          <div>
+          <div className='flex flex-center'>
             <h2 className="mt-6 text-center text-1xl font-normal tracking-tight text-[gray]">
               VOUS AVEZ DÉJÀ UN COMPTE ? <span className='ml-2 text-[red] cursor-pointer hover:text-indigo-500'> S'inscrire</span>
             </h2>
@@ -19,7 +26,7 @@ function Login() {
                 <label htmlFor="email-address" className="sr-only">
                   Votre adresse mail
                 </label>
-               <span className='flex flex-start'>Email</span> 
+               <span className='flex flex-start'> Email </span> 
                 <input
                   id="email-address"
                   name="email"
@@ -33,7 +40,7 @@ function Login() {
               <br />
               <div>
                 <label htmlFor="password" className="sr-only">
-                <span> Votre Mot de passe</span>
+                <span> Votre Mot de passe </span>
                 </label>
                 <span className='flex flex-start'>Mot de passe</span>
                 <input
@@ -81,8 +88,8 @@ function Login() {
           </form>
         </div>
       </div>
+      </div>
     </div>
-    </body>
 
   )
 }
