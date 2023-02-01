@@ -33,7 +33,7 @@ function Login() {
               <br />
               <div>
                 <label htmlFor="password" className="sr-only">
-                <span> Votre Mot de passe</span>
+                <span> Votre Mot de passe </span>
                 </label>
                 <span className='flex flex-start'>Mot de passe</span>
                 <input
