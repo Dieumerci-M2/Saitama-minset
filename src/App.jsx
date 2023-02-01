@@ -1,11 +1,14 @@
-import Auth from './pages/Auth'
+import { BrowserRouter as Router } from 'react-router-dom'
+import Road from './Routes/Routes'
 import './components/Auth.css'
 
 function App() {
 
   return (
     <div>
-      <Auth />
+      <Router>
+        <Road />
+      </Router>
     </div>
   )
 }
