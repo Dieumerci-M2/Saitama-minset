@@ -15,7 +15,8 @@ import Navbar from "./Navbar";
         <body>
         <div className="flex flex-row flex-wrap items-center mt-14 ">     
         <div className="imgBackLogin">
-        <p className="flex text-4xl font-bold p-10 text-white"> Se connecter </p>
+        <p className="flex text-5xl font-bold p-10 text-white"> Se connecter </p>
+        <p className="p-10 text-white">Connectez-vous et joignez notre team ! C'est gratuit et sans frais...</p>
         </div>
         <div className="flex ml-10 h-[350px] w-[350px]">
      

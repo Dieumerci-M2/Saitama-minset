@@ -10,8 +10,8 @@ function Navbar() {
               <div className='flex gap-10
                m-3 cursor-pointer mr-10 font-medium text-lg'
               >
-                  <span id='inscription'>Inscription</span>
-                  <span id='connexion'>Connexion</span>
+                  <span className='text-[red] text-1xl ' id='inscription'>Inscription</span>
+                  <span className='text-[red] text-1xl' id='connexion'>Connexion</span>
               </div>
           </header>
 
