@@ -5,7 +5,9 @@ import Register from '../components/Register'
 function Auth() {
   return (
     <div>
+      <div className='flex justify-around m-20'>
         <Login />
+        </div>
         <Register />
 
     </div>
