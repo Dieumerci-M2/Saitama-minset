@@ -9,11 +9,13 @@ import Contactpage from '../pages/Contactpage'
 import Bookspage from '../pages/Bookspage'
 import Formationpage from '../pages/Formationpage'
 import Homepage from '../pages/Homepage'
+import Presentation from '../pages/Presentation'
 
 const Road = () => {
   return (
     <Routes>
-        <Route path ='/' element = {<Auth/>}/>
+      <Route path='/' element={ <Presentation /> } />
+      <Route path ='/auth' element = {<Auth/>}/>
         <Route path='/home' element={ <Homepage /> } />
         <Route path='/blogs' element={ <Blogpage /> } />
         <Route path='/contact' element={ <Contactpage /> } />
