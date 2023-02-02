@@ -5,7 +5,7 @@ import Register from '../components/Register'
 function Auth() {
   return (
     <div>
-        <Login />
+        {/* <Login /> */}
         <Register />
 
     </div>
