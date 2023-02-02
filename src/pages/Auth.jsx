@@ -1,11 +1,17 @@
 import React from 'react'
 import Login from '../components/Login'
 import Register from '../components/Register'
+import Navbar from '../components/Navbar'
 
 function Auth() {
   return (
     <div>
-      <div className='flex justify-around m-20'>
+      
+      <div className='fixed w-full'>
+        <Navbar />
+        </div>
+    
+      <div className='flex justify-around '>
         <Login />
         </div>
         <Register />
