@@ -6,16 +6,10 @@ import Navbar from '../components/Navbar'
 function Auth() {
   return (
     <div>
-      
-      <div className='fixed w-full'>
-        <Navbar />
-        </div>
-    
       <div className='flex justify-around '>
         <Login />
         </div>
         <Register />
-
     </div>
   )
 }
