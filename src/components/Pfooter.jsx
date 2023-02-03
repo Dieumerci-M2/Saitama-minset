@@ -21,7 +21,7 @@ const Pfooter = () => {
                  <img className='w-[30px] h-[30px] cursor-pointer' src={ linkedin } alt="Logo"/> 
               </div>
               <span
-                  className='mt-10'
+                  className='mt-10 text-xs'
               >
                   All rights reserved . © 2023 SAITAMA-MINDSET. Powored by Colab-Group
               </span>
