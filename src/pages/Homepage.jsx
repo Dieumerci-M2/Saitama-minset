@@ -4,7 +4,7 @@ import Footer from "../components/Footer"
 
 const Homepage = () => {
   return (
-    <article className="bg-gray-800">
+    <article className="">
       <header className="flex justify-center flex-col items-center">
         <div className="w-[1309px] h-[30px] bg-gray-300">
           <div>
