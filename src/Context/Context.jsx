@@ -4,8 +4,7 @@ const BookContext = createContext();
 
 const BookProvider = ( { children } ) => {
     
-  // All use State can be define here
-  const [user, setUser] = useState()
+    const [ user, setUser ] = useState();
     
   useEffect(() => {
     const userInfo = JSON.parse(localStorage.getItem('InfoUser'));
@@ -15,7 +14,7 @@ const BookProvider = ( { children } ) => {
   return (
     <BookContext.Provider
       value={{
-        // All state can be exported here
+        setUser,
       }}>
       {children}
     </BookContext.Provider>
