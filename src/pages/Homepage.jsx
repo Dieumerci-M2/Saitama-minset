@@ -6,7 +6,7 @@ const Homepage = () => {
   return (
     <article className="">
       <header className="flex justify-center flex-col items-center">
-        <div className="w-[1309px] h-[30px] bg-gray-300">
+        <div className="w-[1200px] h-[30px] bg-gray-300">
           <div>
             <span></span>
             <span></span>

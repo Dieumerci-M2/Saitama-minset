@@ -14,7 +14,7 @@ const BookProvider = ( { children } ) => {
   return (
     <BookContext.Provider
       value={{
-        // All state can be exported here
+        setUser,
       }}>
       {children}
     </BookContext.Provider>
