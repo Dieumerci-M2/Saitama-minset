@@ -1,8 +1,15 @@
 import React from 'react'
+import Rechercher from '../components/Rechercher'
+
 
 const Contactpage = () => {
   return (
-    <div>Contactpage</div>
+    <div>
+      <div>
+       <Rechercher />
+      </div>
+
+    </div>
   )
 }
 
