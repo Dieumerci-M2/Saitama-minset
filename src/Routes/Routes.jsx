@@ -14,7 +14,6 @@ import Presentation from '../pages/Presentation'
 const Road = () => {
   return (
     <Routes>
-        <Route path ='/' element = {<Auth/>}/>
       <Route path='/' element={ <Presentation /> } />
       <Route path ='/auth' element = {<Auth/>}/>
         <Route path='/home' element={ <Homepage /> } />
