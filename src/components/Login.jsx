@@ -7,9 +7,9 @@ import {
     Checkbox,
     Button,
   } from "@material-tailwind/react";
-  import imgLog from "../components/img/imgLog.png"
-import Auth from "../components/Auth.css"
-import Navbar from "./Navbar";
+import imgLog from "../components/img/imgLog.png"
+import "./Auth.css"
+
   export default function Example() {
     return (
         <body>
