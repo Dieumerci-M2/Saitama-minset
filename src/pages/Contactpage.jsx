@@ -1,4 +1,5 @@
 import React from 'react'
+import CategoriesSearch from '../components/CategoriesSearch'
 import Rechercher from '../components/Rechercher'
 
 
@@ -7,6 +8,9 @@ const Contactpage = () => {
     <div>
       <div>
        <Rechercher />
+      </div>
+      <div>
+        <CategoriesSearch />
       </div>
 
     </div>
