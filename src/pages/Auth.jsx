@@ -2,14 +2,21 @@ import React from 'react'
 import Login from '../components/Login'
 import Register from '../components/Register'
 import Navbar from '../components/Navbar'
+import Pfooter from '../components/Pfooter'
+
 
 function Auth() {
   return (
     <div>
+      <Navbar />
       <div className='flex justify-around '>
         <Login />
         </div>
-        <Register />
+       
+        
+        <div className='mt-20'>
+          <Pfooter />
+        </div>
     </div>
   )
 }
