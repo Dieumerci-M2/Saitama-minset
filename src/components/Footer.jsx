@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
         </div>
       </section>
-      <section className="flex flex-row justify-between mx-16">
+      <section className="flex flex-row justify-between mx-16 mb-5">
         <div className="flex flex-col gap-4 w-[400px] h-[155px] py-5">
           <span className="text-lg font-semibold">SAITAMA COMPANY</span>
           <span>
@@ -43,15 +43,15 @@ const Footer = () => {
           <span className="text-lg font-semibold">Nos Bureaux sonts ouverts</span>
           <div className="mt-2">
             <span>Lundi-Vendredi </span>
-            <span className="ml"> 8h30-16h00</span>
+            <span className="ml-5"> 8h30-16h00</span>
           </div>
           <div>
             <span>Samedi </span>
-            <span>10h00-13h00</span>
+            <span className='ml-20'>10h00-13h00</span>
           </div>
           <div>
             <span>Dimanche</span>
-            <span>Fermez...</span>
+            <span className='ml-[94px]'>Fermez...</span>
           </div>
           <div className="flex flex-col my-4">
             <span className="text-lg font-semibold">Appeler nous aux</span>
