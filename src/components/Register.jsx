@@ -10,6 +10,7 @@ import {
 import imgLog from "../components/img/imgLog.png"
 import Auth from "../components/Auth.css"
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 export default function Register() {
   return (
       <body>
@@ -36,6 +37,7 @@ export default function Register() {
    
     </div>
     </div>
+    <Footer />
     </body>
   );
 }
