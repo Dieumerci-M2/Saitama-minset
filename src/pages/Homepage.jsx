@@ -34,7 +34,7 @@ const Homepage = () => {
         <Menus />
       </header>
       <main className="mx-16 my-[30px]">
-        <article>
+        <article className='flex flex-row'>
           <section className="ml-2">
             <Categories />
           </section>
@@ -84,7 +84,7 @@ const Homepage = () => {
         </article>
         <article>
           <div>
-            
+
           </div>
           <div>
 
