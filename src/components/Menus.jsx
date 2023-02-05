@@ -6,7 +6,7 @@ import Youtube from "../assets/Vector(2).svg"
 const Menus = () => {
   return (
     <section className="flex justify-around">
-      <div className="w-[150px]  h-[50px] m-3 mr-4">
+      <div className="w-[150px]  h-[50px] my-3 mr-4">
         <img src={Saitama} alt="logo" className="mr-4 cursor-pointer" />
       </div>
       <div className="flex flex-row my-auto mx-4 rounded-l-xl h-10">
@@ -25,7 +25,7 @@ const Menus = () => {
           <option>Selon le prix des livres</option>
         </select>
         <span className="w-20 h-10 bg-red-700 cursor-pointer">
-          <img src={Search} alt="Search" className="m-auto my-2" />
+          <img src={Search} alt="Search" className="m-auto my-2 text-[#FFFFFF]" />
         </span>
       </div>
       <div className="flex flex-row h-12 w-[170px] bg-gray-100 my-auto mt-3 mx-4">

@@ -34,29 +34,37 @@ const Homepage = () => {
         <Menus />
       </header>
       <main className="mx-16 my-[30px]">
-        <article className='flex flex-row'>
+        <article className="flex flex-row gap-4">
           <section className="ml-2">
             <Categories />
           </section>
-          <section>
-            <div>
-              <span>J.K ROWLING</span>
-              <span>HARRY POTTER AND THE CURSED CHILD</span>
-              <span>$13.22</span>
-              <button className="py-1 px-4 text-white bg-[#1E7DBD]">Lire plus</button>
+          <section className="flex flex-row">
+            <div className="flex flex-col p-8 pt-8 gap-6 text-lg bg-gray-300 w-[50%]">
+              <span className="text-red-900 mt-3">J.K ROWLING</span>
+              <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
+              <span className="text-red-900">$13.22</span>
+              <button className="py-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
             </div>
-            <div>
-              <img src={Affiche} alt="affiche" />
+            <div className="w-[50%] bg-cover ">
+              <img src={Affiche} alt="affiche" className="bg-cover h-[100%]" />
             </div>
           </section>
           <section>
             <SousMenus />
-            <div>
-
-            </div>
-            <div>
-
-            </div>
+            <section className='flex flex-row mr-4 gap-4 mt-4'>
+              <div className="flex flex-col p-8 pt-2 justify-center items-center gap-4 text-lg bg-gray-300 w-[50%]">
+                <span className="text-red-900 mt-3">J.K ROWLING</span>
+                <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
+                <span className="text-red-900">$13.22</span>
+                <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
+              </div>
+              <div className="flex flex-col justify-center items-center p-8 pt-2 gap-4 text-lg bg-gray-300 w-[50%]">
+                <span className="text-red-900 mt-3">J.K ROWLING</span>
+                <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
+                <span className="text-red-900">$13.22</span>
+                <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
+              </div>
+            </section>
           </section>
         </article>
         <Livraison />
@@ -67,28 +75,18 @@ const Homepage = () => {
             </div>
           </section>
           <section>
-            <InfoLivre/>
+            <InfoLivre />
           </section>
           <section>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
+            <div></div>
+            <div></div>
           </section>
         </article>
-        <ButtonsRouge/>
+        <ButtonsRouge />
+        <article></article>
         <article>
-
-        </article>
-        <article>
-          <div>
-
-          </div>
-          <div>
-
-          </div>
+          <div></div>
+          <div></div>
         </article>
       </main>
       <footer>
