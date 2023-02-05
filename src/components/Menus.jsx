@@ -6,8 +6,8 @@ import Youtube from "../assets/Vector(2).svg"
 const Menus = () => {
   return (
     <section className="flex justify-around">
-      <div className="w-[150px]  h-[50px] m-2 mr-4">
-        <img src={Saitama} alt="logo" className="mr-4" />
+      <div className="w-[150px]  h-[50px] m-3 mr-4">
+        <img src={Saitama} alt="logo" className="mr-4 cursor-pointer" />
       </div>
       <div className="flex flex-row my-auto mx-4 rounded-l-xl h-10">
         <input
@@ -24,7 +24,7 @@ const Menus = () => {
           <option>Selon le prix des livres</option>
           <option>Selon le prix des livres</option>
         </select>
-        <span className="w-20 h-10 bg-red-700">
+        <span className="w-20 h-10 bg-red-700 cursor-pointer">
           <img src={Search} alt="Search" className="m-auto my-2" />
         </span>
       </div>
@@ -35,20 +35,20 @@ const Menus = () => {
           alt=""
         />
         <div>
-          <span className="mr-2">Connexion</span>
+          <span className="mr-2 cursor-pointer">Connexion</span>
           <br />
-          <span className="mr-2">Compte</span>
+          <span className="mr-2 cursor-pointer">Compte</span>
         </div>
       </div>
       <div className="flex flex-row gap-4 mt-3">
         <div className="flex flex-row gap-2 mt-1">
           <span>
-            <img src={Not} alt="not" />
+            <img src={Not} alt="not" className="cursor-pointer" />
           </span>
           <span>Notifications</span>
         </div>
         <div className="mt-1">
-          <img src={Youtube} alt="youtube" />
+          <img src={Youtube} alt="youtube" className='cursor-pointer'/>
         </div>
       </div>
     </section>
