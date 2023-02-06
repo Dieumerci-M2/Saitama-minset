@@ -1,8 +1,8 @@
-import React from 'react'
-import Saitama from "../assets/saitama.png"
-import Search from "../assets/Vector.svg"
-import Not from "../assets/Vector(1).svg"
-import Youtube from "../assets/Vector(2).svg"
+import React from 'react';
+import Saitama from '../assets/saitama.png';
+import Search from '../assets/Vector.svg';
+import Not from '../assets/Vector(1).svg';
+import Youtube from '../assets/Vector(2).svg';
 const Menus = () => {
   return (
     <section className="flex justify-between">
@@ -48,11 +48,11 @@ const Menus = () => {
           <span>Notifications</span>
         </div>
         <div className="mt-1">
-          <img src={Youtube} alt="youtube" className='cursor-pointer'/>
+          <img src={Youtube} alt="youtube" className="cursor-pointer" />
         </div>
       </div>
     </section>
   );
-}
+};
 
-export default Menus
+export default Menus;

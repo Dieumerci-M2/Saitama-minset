@@ -24,7 +24,7 @@ const Homepage = () => {
         <div className="flex justify-between w-[1200px] h-[30px] bg-gray-300">
           <div className="flex flex-row ml-2 gap-4">
             <span>
-              <img src={Reduction} alt="reduction" />
+              <img src={Reduction} alt="reduction cursor-pointer" />
             </span>
             <span className="text-white">Nos réductions vont jusqu’à 70%</span>
           </div>
@@ -56,7 +56,7 @@ const Homepage = () => {
               <button className="py-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
             </div>
             <div className="w-[50%] bg-cover ">
-              <img src={Affiche} alt="affiche" className="bg-cover h-[100%]" />
+              <img src={Affiche} alt="affiche" className="bg-cover h-[100%] cursor-pointer" />
             </div>
           </section>
           <section>
@@ -85,7 +85,7 @@ const Homepage = () => {
         <article className="flex flex-row">
           <section className="w-[33%] h-[500px]">
             <div className="ml-1">
-              <img src={Harry2} alt="book" className="bg-cover h-[578px] w-[100%]" />
+              <img src={Harry2} alt="book" className="bg-cover h-[578px] w-[100%] cursor-pointer" />
             </div>
           </section>
           <section className="w-[33%]">
@@ -100,7 +100,11 @@ const Homepage = () => {
                 <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
               </div>
               <div className="w-[50%]">
-                <img src={Harry1} alt="harry" className="bg-cover h-[280px] w-[100%]" />
+                <img
+                  src={Harry1}
+                  alt="harry"
+                  className="bg-cover h-[280px] w-[100%] cursor-pointer"
+                />
               </div>
             </div>
             <div className="flex flex-row">
@@ -111,7 +115,11 @@ const Homepage = () => {
                 <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
               </div>
               <div className="w-[50%]">
-                <img src={Harry3} alt="harry" className="bg-cover h-[280px] w-[100%]" />
+                <img
+                  src={Harry3}
+                  alt="harry"
+                  className="bg-cover h-[280px] w-[100%] cursor-pointer"
+                />
               </div>
             </div>
           </section>
@@ -120,7 +128,11 @@ const Homepage = () => {
         <article className="flex flex-row">
           <section className="w-[33%] h-[500px]">
             <div className="ml-1 bg-black">
-              <img src={Formation} alt="book" className="bg-cover h-[578px] w-[100%]" />
+              <img
+                src={Formation}
+                alt="book"
+                className="bg-cover h-[578px] w-[100%] cursor-pointer"
+              />
             </div>
           </section>
           <section className="w-[33%]">
@@ -129,12 +141,20 @@ const Homepage = () => {
           <section className="w-[34%] flex flex-col gap-4">
             <div className="flex flex-row">
               <div className="w-[100%]">
-                <img src={Formation1} alt="harry" className="bg-cover h-[280px] w-[100%]" />
+                <img
+                  src={Formation1}
+                  alt="harry"
+                  className="bg-cover h-[280px] w-[100%] cursor-pointer"
+                />
               </div>
             </div>
             <div className="flex flex-row">
               <div className="w-[100%]">
-                <img src={Formation2} alt="harry" className="bg-cover h-[280px] w-[100%]" />
+                <img
+                  src={Formation2}
+                  alt="harry"
+                  className="bg-cover h-[280px] w-[100%] cursor-pointer"
+                />
               </div>
             </div>
           </section>
@@ -143,7 +163,11 @@ const Homepage = () => {
           <section className="flex flex-col gap-14">
             <div className="flex flex-row w-[700px] h-[300px] rounded-2xl shadow-xl">
               <div className="w-[300px] h-[300px]">
-                <img src={Bed} alt="bed" className="bg-cover w-[300px] h-[100%] rounded-l-2xl" />
+                <img
+                  src={Bed}
+                  alt="bed"
+                  className="bg-cover w-[300px] h-[100%] rounded-l-2xl cursor-pointer"
+                />
               </div>
               <div className="flex flex-col gap-4 w-[400px] h-[300px] px-8 py-4 ">
                 <span className="font-bold">
@@ -155,7 +179,7 @@ const Homepage = () => {
                 </span>
                 <div className="flex flex-row h-12 w-[250px] bg-gray-100 my-auto mt-3">
                   <img
-                    className="inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4"
+                    className="cursor-pointer inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4"
                     src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                     alt=""
                   />
@@ -170,7 +194,11 @@ const Homepage = () => {
             <div>
               <div className="flex flex-row w-[700px] h-[300px] rounded-2xl shadow-xl">
                 <div className="w-[300px] h-[300px]">
-                  <img src={Bed} alt="bed" className="bg-cover w-[300px] h-[100%] rounded-l-2xl" />
+                  <img
+                    src={Bed}
+                    alt="bed"
+                    className="bg-cover w-[300px] h-[100%] rounded-l-2xl cursor-pointer"
+                  />
                 </div>
                 <div className="flex flex-col gap-4 w-[400px] h-[300px] px-8 py-4 ">
                   <span className="font-bold">
@@ -182,7 +210,7 @@ const Homepage = () => {
                   </span>
                   <div className="flex flex-row h-12 w-[250px] bg-gray-100 my-auto mt-3">
                     <img
-                      className="inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4"
+                      className="cursor-pointer inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4"
                       src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       alt=""
                     />
@@ -199,7 +227,11 @@ const Homepage = () => {
           <section>
             <div className="flex flex-col justify-center items-center h-[650px] w-[350px] rounded-2xl shadow-xl">
               <div className="h-[300px] w-[350px]">
-                <img src={Bed} alt="bed" className="bg-cover h-[300px] w-[100%] rounded-t-2xl" />
+                <img
+                  src={Bed}
+                  alt="bed"
+                  className="bg-cover h-[300px] w-[100%] rounded-t-2xl cursor-pointer"
+                />
               </div>
               <div className="flex flex-col justify-center items-center text-center gap-4 h-[350px] w-[350px] px-8 py-4 ">
                 <span className="font-bold">
@@ -211,7 +243,7 @@ const Homepage = () => {
                 </span>
                 <div className="flex flex-row text-center h-12 w-[250px] bg-gray-100 my-auto mt-3">
                   <img
-                    className="inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4"
+                    className="cursor-pointer inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4"
                     src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                     alt=""
                   />
