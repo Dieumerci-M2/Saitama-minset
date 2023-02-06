@@ -12,10 +12,7 @@ import imgLog from "../components/img/imgLog.png"
 import "./Auth.css"
 
   export default function Example() {
-    const navigate = useNavigate() 
-    const handlerNavigate = () => {
-      navigate("/register")
-    }
+    
     return (
         <body>
         <div className="flex flex-row flex-wrap items-center mt-14 ">     
@@ -33,9 +30,7 @@ import "./Auth.css"
             <Checkbox className="bg-red" label="se souvenir de moi" />
           </div>
         
-          <Button onClick={()=> {
-            handlerNavigate()
-          }} className="bg-[red]" fullWidth>
+          <Button className="bg-[red]" fullWidth>
             Se connecter
           </Button>
         

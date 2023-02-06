@@ -48,11 +48,11 @@ const Homepage = () => {
              bg-slate-200 w-[50%]">
               <span className="text-red-900 mt-3">J.K ROWLING</span>
               <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
-              <span className="text-red-900">$13.22</span>
+              <span className="text-red-900"> $13.22 </span>
               <button className="py-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
             </div>
             <div className="w-[50%] bg-cover ">
-              <img src={Affiche} alt="affiche" className="bg-cover h-[100%]" />
+              <img src={Affiche} alt="affiche" className="bg-cover h-[50%]" />
             </div>
           </section>
           <section>
