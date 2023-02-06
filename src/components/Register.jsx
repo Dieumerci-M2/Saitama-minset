@@ -8,7 +8,7 @@ import {
   Button,
 } from "@material-tailwind/react";
 import imgLog from "../components/img/imgLog.png"
-import Auth from "../components/Auth.css"
+import "./Auth.css"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 export default function Register() {
