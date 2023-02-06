@@ -11,6 +11,9 @@ import InfoLivre from '../components/InfoLivre'
 import Harry1 from "../assets/BooksReal.jpg"
 import Harry2 from "../assets/Harry-Potter-de-J.K.-Rowling.jpg"
 import Harry3 from "../assets/HenryPorter1.jpg"
+import Formation from "../assets/Formation 1.svg"
+import Formation1 from "../assets/Formation-relatif-1.svg"
+import Formation2 from "../assets/Formation-relatif-2.svg"
 
 
 const Homepage = () => {
@@ -89,31 +92,52 @@ const Homepage = () => {
           </section>
           <section className="w-[34%] flex flex-col gap-4">
             <div className="flex flex-row">
-              <div className="flex flex-col gap-4 bg-slate-200 p-6 w-[50%]">
+              <div className="flex flex-col justify-start items-center text-center gap-4 bg-slate-200 p-6 w-[50%]">
                 <span className="text-red-900 mt-3">J.K ROWLING</span>
                 <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
                 <span className="text-red-900">$13.22</span>
                 <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
               </div>
-              <div className='w-[50%]'>
-                <img src={Harry1} alt="harry" className="bg-cover h-[274px] w-[100%]" />
+              <div className="w-[50%]">
+                <img src={Harry1} alt="harry" className="bg-cover h-[280px] w-[100%]" />
               </div>
             </div>
             <div className="flex flex-row">
-              <div className="flex flex-col gap-4 bg-slate-200 p-6 w-[50%]">
+              <div className="flex flex-col justify-start items-center text-center gap-4 bg-slate-200 p-6 w-[50%]">
                 <span className="text-red-900 mt-3">J.K ROWLING</span>
                 <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
                 <span className="text-red-900">$13.22</span>
                 <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
               </div>
-              <div className='w-[50%]'>
-                <img src={Harry3} alt="harry" className="bg-cover h-[274px] w-[100%]" />
+              <div className="w-[50%]">
+                <img src={Harry3} alt="harry" className="bg-cover h-[280px] w-[100%]" />
               </div>
             </div>
           </section>
         </article>
         <ButtonsRouge />
-        <article></article>
+        <article className="flex flex-row">
+          <section className="w-[33%] h-[500px]">
+            <div className="ml-1 bg-black">
+              <img src={Formation} alt="book" className="bg-cover h-[578px] w-[100%]" />
+            </div>
+          </section>
+          <section className="w-[33%]">
+            <InfoLivre />
+          </section>
+          <section className="w-[34%] flex flex-col gap-4">
+            <div className="flex flex-row">
+              <div className="w-[100%]">
+                <img src={Formation1} alt="harry" className="bg-cover h-[280px] w-[100%]" />
+              </div>
+            </div>
+            <div className="flex flex-row">
+              <div className="w-[100%]">
+                <img src={Formation2} alt="harry" className="bg-cover h-[280px] w-[100%]" />
+              </div>
+            </div>
+          </section>
+        </article>
         <article>
           <div></div>
           <div></div>
