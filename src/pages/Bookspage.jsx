@@ -2,6 +2,11 @@ import React from 'react'
 import Saitama from '../assets/saitama.png';
 import Search from '../assets/Vector.svg';
 import SousMenus from '../components/SousMenus';
+import Harry1 from '../assets/BooksReal.jpg';
+import Harry2 from '../assets/Harry-Potter-de-J.K.-Rowling.jpg';
+import Harry3 from '../assets/HenryPorter1.jpg';
+import ButtonsRouge from '../components/ButtonsRouges';
+import InfoLivre from '../components/InfoLivre';
 
 const Bookspage = () => {
   return (
@@ -41,7 +46,26 @@ const Bookspage = () => {
           </div>
         </section>
       </header>
-      <main></main>
+      <main className='my-10'>
+        <article className="flex flex-row">
+          <section className="w-[33%] h-[500px]">
+            <div className="ml-1">
+              <img src={Harry2} alt="book" className="bg-cover h-[578px] w-[100%]" />
+            </div>
+          </section>
+          <section className="w-[33%]">
+            <InfoLivre />
+          </section>
+          <section className="w-[34%] flex flex-col gap-4">
+              <div className="w-[100%]">
+                <img src={Harry1} alt="harry" className="bg-cover h-[280px] w-[100%]" />
+              </div>
+              <div className="w-[100%]">
+                <img src={Harry3} alt="harry" className="bg-cover h-[280px] w-[100%]" />
+              </div>
+          </section>
+        </article>
+      </main>
       <footer></footer>
     </article>
   );
