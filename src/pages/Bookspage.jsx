@@ -1,12 +1,12 @@
 import React from 'react'
 import Saitama from '../assets/saitama.png';
 import Search from '../assets/Vector.svg';
-import SousMenus from '../components/SousMenus';
 import Harry1 from '../assets/BooksReal.jpg';
 import Harry2 from '../assets/Harry-Potter-de-J.K.-Rowling.jpg';
 import Harry3 from '../assets/HenryPorter1.jpg';
 import ButtonsRouge from '../components/ButtonsRouges';
 import InfoLivre from '../components/InfoLivre';
+import Footer from '../components/Footer';
 
 const Bookspage = () => {
   return (
@@ -46,27 +46,61 @@ const Bookspage = () => {
           </div>
         </section>
       </header>
-      <main className='my-10'>
+      <main className="my-10">
         <article className="flex flex-row">
           <section className="w-[33%] h-[500px]">
             <div className="ml-1">
-              <img src={Harry2} alt="book" className="bg-cover h-[578px] w-[100%]" />
+              <img src={Harry2} alt="book" className="bg-cover h-[578px] w-[100%] cursor-pointer" />
             </div>
           </section>
           <section className="w-[33%]">
             <InfoLivre />
           </section>
           <section className="w-[34%] flex flex-col gap-4">
-              <div className="w-[100%]">
-                <img src={Harry1} alt="harry" className="bg-cover h-[280px] w-[100%]" />
-              </div>
-              <div className="w-[100%]">
-                <img src={Harry3} alt="harry" className="bg-cover h-[280px] w-[100%]" />
-              </div>
+            <div className="w-[100%]">
+              <img
+                src={Harry1}
+                alt="harry"
+                className="bg-cover h-[280px] w-[100%] cursor-pointer"
+              />
+            </div>
+            <div className="w-[100%]">
+              <img
+                src={Harry3}
+                alt="harry"
+                className="bg-cover h-[280px] w-[100%] cursor-pointer"
+              />
+            </div>
           </section>
         </article>
+        <div className="my-10">
+          <ButtonsRouge />
+        </div>
+        <article>
+          <section className="grid grid-cols-2 gap-10 w-[70%] text-center">
+            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
+              <img src={Harry2} alt="harry" className=" bg-cover h-[100%] cursor-pointer" />
+              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+            </div>
+            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
+              <img src={Harry3} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
+              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+            </div>
+            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
+              <img src={Harry3} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
+              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+            </div>
+            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
+              <img src={Harry2} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
+              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+            </div>
+          </section>
+          <section></section>
+        </article>
       </main>
-      <footer></footer>
+      <footer className='mt-10'>
+        <Footer />
+      </footer>
     </article>
   );
 }
