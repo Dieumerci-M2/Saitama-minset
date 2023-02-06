@@ -11,7 +11,7 @@ const Presentation = () => {
     <article className="box-border overflow-hidden">
       <header className="fixed  w-full">
         <section className="flex  bg-white flex-row justify-between">
-          <div className="border w-16  h-[50px] m-2 ">
+          <div className="border w-[150px]  h-[50px] m-2 ">
             <img src={saitama} alt="Logo" />
           </div>
           <div
