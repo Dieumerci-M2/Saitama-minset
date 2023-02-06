@@ -6,7 +6,7 @@ import Reduction from "../assets/Reduction.svg"
 
 const Livraison = () => {
   return (
-    <section className="flex flex-row justify-center gap-20 py-2 my-10 ">
+    <section className="flex flex-row justify-center gap-28 py-2 my-10 ">
       <div className="flex flex-row gap-3">
         <img src={Voiture} alt="voiture" className="w-[30px] h-[30px] mt-3" />
         <div className="flex flex-col justify-center items-center gap-2">

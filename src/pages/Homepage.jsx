@@ -8,6 +8,10 @@ import Affiche from '../assets/Affiche.jpg'
 import SousMenus from '../components/SousMenus'
 import ButtonsRouge from '../components/ButtonsRouges'
 import InfoLivre from '../components/InfoLivre'
+import Harry1 from "../assets/BooksReal.jpg"
+import Harry2 from "../assets/Harry-Potter-de-J.K.-Rowling.jpg"
+import Harry3 from "../assets/HenryPorter1.jpg"
+
 
 const Homepage = () => {
   return (
@@ -33,13 +37,15 @@ const Homepage = () => {
         </div>
         <Menus />
       </header>
-      <main className="mx-16 my-[30px]">
+      <main className="my-[30px]">
         <article className="flex flex-row gap-4">
           <section className="ml-2">
             <Categories />
           </section>
           <section className="flex flex-row">
-            <div className="flex flex-col p-8 pt-8 gap-6 text-lg bg-gray-300 w-[50%]">
+            <div
+              className="flex flex-col justify-center items-center text-center p-8 pt-8 gap-6 text-lg
+             bg-slate-200 w-[50%]">
               <span className="text-red-900 mt-3">J.K ROWLING</span>
               <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
               <span className="text-red-900">$13.22</span>
@@ -51,14 +57,18 @@ const Homepage = () => {
           </section>
           <section>
             <SousMenus />
-            <section className='flex flex-row mr-4 gap-4 mt-4'>
-              <div className="flex flex-col p-8 pt-2 justify-center items-center gap-4 text-lg bg-gray-300 w-[50%]">
+            <section className="flex flex-row mr-1 gap-4 mt-4">
+              <div
+                className="flex flex-col text-center p-8 pt-2 justify-center
+               items-center gap-4 text-lg bg-slate-200 w-[50%]">
                 <span className="text-red-900 mt-3">J.K ROWLING</span>
                 <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
                 <span className="text-red-900">$13.22</span>
                 <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
               </div>
-              <div className="flex flex-col justify-center items-center p-8 pt-2 gap-4 text-lg bg-gray-300 w-[50%]">
+              <div
+                className="flex flex-col text-center justify-center items-center
+               p-8 pt-2 gap-4 text-lg bg-slate-200 w-[50%]">
                 <span className="text-red-900 mt-3">J.K ROWLING</span>
                 <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
                 <span className="text-red-900">$13.22</span>
@@ -68,18 +78,38 @@ const Homepage = () => {
           </section>
         </article>
         <Livraison />
-        <article>
-          <section>
-            <div>
-              <img src="" alt="book" />
+        <article className="flex flex-row">
+          <section className="w-[33%] h-[500px]">
+            <div className="ml-1">
+              <img src={Harry2} alt="book" className="bg-cover h-[578px] w-[100%]" />
             </div>
           </section>
-          <section>
+          <section className="w-[33%]">
             <InfoLivre />
           </section>
-          <section>
-            <div></div>
-            <div></div>
+          <section className="w-[34%] flex flex-col gap-4">
+            <div className="flex flex-row">
+              <div className="flex flex-col gap-4 bg-slate-200 p-6 w-[50%]">
+                <span className="text-red-900 mt-3">J.K ROWLING</span>
+                <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
+                <span className="text-red-900">$13.22</span>
+                <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
+              </div>
+              <div className='w-[50%]'>
+                <img src={Harry1} alt="harry" className="bg-cover h-[274px] w-[100%]" />
+              </div>
+            </div>
+            <div className="flex flex-row">
+              <div className="flex flex-col gap-4 bg-slate-200 p-6 w-[50%]">
+                <span className="text-red-900 mt-3">J.K ROWLING</span>
+                <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
+                <span className="text-red-900">$13.22</span>
+                <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
+              </div>
+              <div className='w-[50%]'>
+                <img src={Harry3} alt="harry" className="bg-cover h-[274px] w-[100%]" />
+              </div>
+            </div>
           </section>
         </article>
         <ButtonsRouge />

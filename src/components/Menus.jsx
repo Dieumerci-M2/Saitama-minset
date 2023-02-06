@@ -5,11 +5,11 @@ import Not from "../assets/Vector(1).svg"
 import Youtube from "../assets/Vector(2).svg"
 const Menus = () => {
   return (
-    <section className="flex justify-around">
-      <div className="w-[150px]  h-[50px] my-3 mr-4">
-        <img src={Saitama} alt="logo" className="mr-4 cursor-pointer" />
+    <section className="flex justify-between">
+      <div className="w-[150px]  h-[50px] my-3 mr-8">
+        <img src={Saitama} alt="logo" className="mr-8 cursor-pointer" />
       </div>
-      <div className="flex flex-row my-auto mx-4 rounded-l-xl h-10">
+      <div className="flex flex-row my-auto mx-8 rounded-l-xl h-10">
         <input
           className="placeholder:italic placeholder:text-slate-400 block
              bg-gray-100 w-full border border-slate-300 py-2 pl-9 pr-3 shadow-sm 
@@ -28,9 +28,9 @@ const Menus = () => {
           <img src={Search} alt="Search" className="m-auto my-2 text-[#FFFFFF]" />
         </span>
       </div>
-      <div className="flex flex-row h-12 w-[170px] bg-gray-100 my-auto mt-3 mx-4">
+      <div className="flex flex-row h-12 w-[170px] bg-gray-100 my-auto mt-3 mx-8">
         <img
-          className="inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-3"
+          className="inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4"
           src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
           alt=""
         />
@@ -40,7 +40,7 @@ const Menus = () => {
           <span className="mr-2 cursor-pointer">Compte</span>
         </div>
       </div>
-      <div className="flex flex-row gap-4 mt-3">
+      <div className="flex flex-row gap-8 mt-3 ml-6">
         <div className="flex flex-row gap-2 mt-1">
           <span>
             <img src={Not} alt="not" className="cursor-pointer" />
