@@ -3,7 +3,7 @@ import Facebook from "../assets/Facebook.png"
 import Twitter from "../assets/Twitter.png"
 import Linkedin from "../assets/linkedin.png"
 import Telegram from "../assets/logos_telegram.png"
-import Toppost from "../assets/TopPost.svg" 
+import Toppost from "../assets/Topblog.png" 
 
 const NewsLetter = () => {
   return (
