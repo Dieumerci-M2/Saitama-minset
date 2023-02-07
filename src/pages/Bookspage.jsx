@@ -37,7 +37,7 @@ const Bookspage = () => {
             </span>
           </div>
           <div
-            className="flex gap-6 font-semibold mr-1 mt-2
+            className="flex gap-6 font-semibold mr-2 mt-2
             text-lg bg-gray-300 text-white border-gray-900 border-2 px-4 py-4 ">
             <span className="cursor-pointer ml-3">Home</span>
             <span className="cursor-pointer ">Formations</span>
