@@ -12,8 +12,7 @@ const Contactpage = () => {
        <Menus />
       </div>
       <div>
-        <CategoriesSearch />
-       
+        <CategoriesSearch /> 
       </div>
       <div className='flex justify-center'>
         <ContactForm />
