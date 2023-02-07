@@ -1,6 +1,18 @@
 import React from 'react'
 import Saitama from '../assets/saitama.png';
 import Search from '../assets/Vector.svg';
+import Footer from '../components/Footer';
+import Formation from '../assets/Formation 1.svg';
+import Formation1 from '../assets/Formation-relatif-1.svg';
+import Formation2 from '../assets/Formation-relatif-2.svg';
+import InfoLivre from '../components/InfoLivre';
+import BoutonsRouge from "../components/ButtonsRouges"
+import NewsLetter from '../components/NewsLetter';
+import FormReact1 from "../assets/Formation-dispo-1.png"
+import FormReact2 from "../assets/Formation-dispo-2.png"
+import FormReact3 from '../assets/Formation-dispo-3.png';
+import FormReact4 from '../assets/Formation-dispo-4.png';
+import Harry3 from '../assets/HenryPorter1.jpg';
 
 const Formationpage = () => {
   return (
@@ -40,6 +52,69 @@ const Formationpage = () => {
           </div>
         </section>
       </header>
+      <main className="my-10">
+        <article className="flex flex-row">
+          <section className="w-[33%] h-[500px]">
+            <div className="ml-1 bg-black">
+              <img
+                src={Formation}
+                alt="book"
+                className="bg-cover h-[578px] w-[100%] cursor-pointer"
+              />
+            </div>
+          </section>
+          <section className="w-[33%]">
+            <InfoLivre />
+          </section>
+          <section className="w-[34%] flex flex-col gap-4">
+            <div className="flex flex-row">
+              <div className="w-[100%]">
+                <img
+                  src={Formation1}
+                  alt="harry"
+                  className="bg-cover h-[280px] w-[100%] cursor-pointer"
+                />
+              </div>
+            </div>
+            <div className="flex flex-row">
+              <div className="w-[100%]">
+                <img
+                  src={Formation2}
+                  alt="harry"
+                  className="bg-cover h-[280px] w-[100%] cursor-pointer"
+                />
+              </div>
+            </div>
+          </section>
+        </article>
+        <BoutonsRouge />
+        <article className="flex flex-row justify-between ">
+          <section className="grid grid-cols-2 gap-10 w-[68%] text-center ml-10">
+            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
+              <img src={FormReact1} alt="harry" className=" bg-cover h-[100%] cursor-pointer" />
+              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+            </div>
+            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
+              <img src={FormReact2} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
+              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+            </div>
+            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
+              <img src={FormReact3} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
+              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+            </div>
+            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
+              <img src={FormReact4} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
+              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+            </div>
+          </section>
+          <section className="mr-10">
+            <NewsLetter />
+          </section>
+        </article>
+      </main>
+      <footer className="">
+        <Footer />
+      </footer>
     </article>
   );
 }
