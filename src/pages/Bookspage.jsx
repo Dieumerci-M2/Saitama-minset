@@ -7,6 +7,7 @@ import Harry3 from '../assets/HenryPorter1.jpg';
 import ButtonsRouge from '../components/ButtonsRouges';
 import InfoLivre from '../components/InfoLivre';
 import Footer from '../components/Footer';
+import NewsLetter from '../components/NewsLetter';
 
 const Bookspage = () => {
   return (
@@ -76,8 +77,8 @@ const Bookspage = () => {
         <div className="my-10">
           <ButtonsRouge />
         </div>
-        <article>
-          <section className="grid grid-cols-2 gap-10 w-[70%] text-center">
+        <article className='flex flex-row justify-between '>
+          <section className="grid grid-cols-2 gap-10 w-[68%] text-center ml-10">
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
               <img src={Harry2} alt="harry" className=" bg-cover h-[100%] cursor-pointer" />
               <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
@@ -95,7 +96,9 @@ const Bookspage = () => {
               <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
             </div>
           </section>
-          <section></section>
+          <section className='mr-10'>
+            <NewsLetter />
+          </section>
         </article>
       </main>
       <footer className='mt-10'>
