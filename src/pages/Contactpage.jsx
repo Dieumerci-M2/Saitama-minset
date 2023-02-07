@@ -1,14 +1,13 @@
 import React from 'react'
 import CategoriesSearch from '../components/CategoriesSearch'
 import ContactForm from '../components/ContactForm'
-import Rechercher from '../components/Rechercher'
-
+import Menus from '../components/Menus'
 
 const Contactpage = () => {
   return (
-    <div className='m-20'>
+    <div className='m-10'>
       <div className='mb-10'>
-       <Rechercher />
+       <Menus />
       </div>
       <div>
         <CategoriesSearch />

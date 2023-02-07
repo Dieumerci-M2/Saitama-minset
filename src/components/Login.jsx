@@ -7,10 +7,12 @@ import {
     Checkbox,
     Button,
   } from "@material-tailwind/react";
+import { useNavigate } from "react-router-dom";
 import imgLog from "../components/img/imgLog.png"
 import "./Auth.css"
 
   export default function Example() {
+    
     return (
         <body>
         <div className="flex flex-row flex-wrap items-center mt-14 ">     

@@ -1,7 +1,8 @@
 import React from 'react'
 import Login from '../components/Login'
 import Register from '../components/Register'
-import Pfooter from '../components/Pfooter'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
 function Auth() {
   return (
@@ -10,10 +11,8 @@ function Auth() {
       <div className='flex justify-around '>
         <Login />
         </div>
-       
-        
         <div className='mt-20'>
-          <Pfooter />
+          <Footer />
         </div>
     </div>
   )

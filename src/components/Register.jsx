@@ -10,10 +10,14 @@ import {
 import imgLog from "../components/img/imgLog.png"
 import "./Auth.css"
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 export default function Register() {
   return (
       <body>
-      <div className="flex flex-row flex-wrap items-center mt-14 ">     
+        <div>
+          <Navbar />
+        </div>
+      <div className="flex flex-row justify-center flex-wrap mt-14 ">     
       <div className="imgBackLogin">
       <p className="flex text-5xl font-bold p-10 text-white"> S'Inscrire </p>
       <p className="p-10 text-white">Inscrivez-vous maintenant et joignez le grand Team Saitama !</p>
@@ -35,6 +39,9 @@ export default function Register() {
       </CardBody>
    
     </div>
+    </div>
+    <div className="mt-14">
+    <Footer />
     </div>
     </body>
   );
