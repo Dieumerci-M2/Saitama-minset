@@ -2,7 +2,7 @@ import React from 'react'
 
 const InfoLivre = () => {
   return (
-    <section className="flex flex-col text-center p-12 justify-center items-center gap-6">
+    <section className="flex flex-col text-center p-12 justify-center items-center gap-6 shadow-xl">
       <span className="text-red-900 text-lg">J.K ROWLING</span>
       <span className="font-semibold text-2xl">HARRY POTTER AND THE CURSED CHILD</span>
       <div>
