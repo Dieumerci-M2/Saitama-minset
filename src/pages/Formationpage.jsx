@@ -12,7 +12,6 @@ import FormReact1 from "../assets/Formation-dispo-1.png"
 import FormReact2 from "../assets/Formation-dispo-2.png"
 import FormReact3 from '../assets/Formation-dispo-3.png';
 import FormReact4 from '../assets/Formation-dispo-4.png';
-import Harry3 from '../assets/HenryPorter1.jpg';
 
 const Formationpage = () => {
   return (
@@ -92,19 +91,21 @@ const Formationpage = () => {
           <section className="grid grid-cols-2 gap-10 w-[68%] text-center ml-10">
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
               <img src={FormReact1} alt="harry" className=" bg-cover h-[100%] cursor-pointer" />
-              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+              <span className="text-lg font-semibold">React js et native pour debutants</span>
             </div>
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
               <img src={FormReact2} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
-              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+              <span className="text-lg font-semibold">PHP et Laravel pour debutants</span>
             </div>
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
               <img src={FormReact3} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
-              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+              <span className="text-lg font-semibold">Créer un seveur avec node</span>
             </div>
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
               <img src={FormReact4} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
-              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+              <span className="text-lg font-semibold">
+                Decouvrer python avec son framework Flask
+              </span>
             </div>
           </section>
           <section className="mr-10">
