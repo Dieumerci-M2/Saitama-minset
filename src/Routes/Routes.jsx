@@ -4,7 +4,6 @@ import {
     Route,
 } from 'react-router-dom'
 import Auth from '../pages/Auth'
-import Blogpage from '../pages/Blogpage'
 import Contactpage from '../pages/Contactpage'
 import Bookspage from '../pages/Bookspage'
 import Formationpage from '../pages/Formationpage'
@@ -22,7 +21,6 @@ const Road = () => {
       <Route path="/auth" element={<Auth />} />
       <Route path="/register" element={<Register />} />
       <Route path="/home" element={<Homepage />} />
-      <Route path="/blogs" element={<Blogpage />} />
       <Route path="/contact" element={<Contactpage />} />
       <Route path="/books" element={<Bookspage />} />
       <Route path="/formation" element={<Formationpage />} />

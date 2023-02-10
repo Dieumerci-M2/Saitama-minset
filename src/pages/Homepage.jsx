@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Menus from "../components/Menus"
 import Footer from "../components/Footer"
 import Reduction from '../assets/reduction.svg'
@@ -15,9 +15,11 @@ import Formation from "../assets/Formation 1.svg"
 import Formation1 from "../assets/Formation-relatif-1.svg"
 import Formation2 from "../assets/Formation-relatif-2.svg"
 import Bed from "../assets/Bed.jpg"
-
+import Payement from "../components/PaiyementModal"
 
 const Homepage = () => {
+  const [ showpayment, setShowpayement ] = useState( false )
+  const HandlerOnclose = ()=> setShowpayement(false)
   return (
     <article className="">
       <header className="flex justify-center flex-col items-center">
@@ -42,6 +44,7 @@ const Homepage = () => {
         <Menus />
       </header>
       <main className="my-[30px]">
+        <Payement onClose={HandlerOnclose} Visible={showpayment} />
         <article className="flex flex-row gap-4">
           <section className="ml-2">
             <Categories />
@@ -84,7 +87,7 @@ const Homepage = () => {
         <Livraison />
         <article className="flex flex-row">
           <section className="w-[33%] h-[500px]">
-            <div className="ml-1">
+            <div className="ml-1" onClick={() => setShowpayement(true)}>
               <img src={Harry2} alt="book" className="bg-cover h-[578px] w-[100%] cursor-pointer" />
             </div>
           </section>
@@ -99,7 +102,7 @@ const Homepage = () => {
                 <span className="text-red-900">$13.22</span>
                 <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
               </div>
-              <div className="w-[50%]">
+              <div className="w-[50%]" onClick={() => setShowpayement(true)}>
                 <img
                   src={Harry1}
                   alt="harry"
@@ -114,7 +117,7 @@ const Homepage = () => {
                 <span className="text-red-900">$13.22</span>
                 <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
               </div>
-              <div className="w-[50%]">
+              <div className="w-[50%]" onClick={() => setShowpayement(true)}>
                 <img
                   src={Harry3}
                   alt="harry"
@@ -140,7 +143,7 @@ const Homepage = () => {
           </section>
           <section className="w-[34%] flex flex-col gap-4">
             <div className="flex flex-row">
-              <div className="w-[100%]">
+              <div className="w-[100%]" onClick={() => setShowpayement(true)}>
                 <img
                   src={Formation1}
                   alt="harry"
@@ -149,7 +152,7 @@ const Homepage = () => {
               </div>
             </div>
             <div className="flex flex-row">
-              <div className="w-[100%]">
+              <div className="w-[100%]" onClick={() => setShowpayement(true)}>
                 <img
                   src={Formation2}
                   alt="harry"
