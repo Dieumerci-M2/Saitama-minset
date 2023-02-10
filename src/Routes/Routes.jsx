@@ -13,6 +13,7 @@ import Presentation from '../pages/Presentation'
 import Register from '../components/Register'
 import AdminPage from '../pages/AdminPage'
 import ContactUsPage from '../pages/ContactUsPage'
+import CheckPaiement from '../pages/checkpaiment'
 
 const Road = () => {
   return (
@@ -26,6 +27,7 @@ const Road = () => {
       <Route path="/books" element={<Bookspage />} />
       <Route path="/formation" element={<Formationpage />} />
       <Route path="/admin" element={<AdminPage />} />
+      <Route path="/paiement" element={<CheckPaiement />} />
     </Routes>
   );
 }

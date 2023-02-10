@@ -11,7 +11,20 @@ import imgLog from "../components/img/imgLog.png"
 import "./Auth.css"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import {useDispatch,useSelector} from 'react-redux'
+
 export default function Register() {
+  const Dispatch = useDispatch()
+  const state = useSelector(state => {
+    return state
+  })
+  const handleChange = () => {
+    
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    
+  }
   return (
       <body>
         <div>
@@ -26,13 +39,15 @@ export default function Register() {
    
       <CardBody className="flex flex-col flex-wrap gap-4 w-96 p-10">
       <p className="flex flex-row justify-center text-[gray]">AVEZ-VOUS DÉJÀ UN COMPTE ?</p> 
-        <Input label="Email" size="lg" />
-        <Input label="Password" size="lg" />
+            <Input label="text" size="lg" name="username" onChange={handleChange} />
+              <Input label="Email" size="lg"  name="email" onChange={handleChange}/>
+            <Input label="Password" size="lg"  name="password" onChange={handleChange}/>
+            <Input label="Password" size="lg" />
         <div className="-ml-2.5">
           <Checkbox className="bg-red" label="se souvenir de moi" />
         </div>
       
-        <Button className="bg-[red]" fullWidth>
+        <Button className="bg-[red]" fullWidth onClick={handleSubmit}>
           S'inscrire
         </Button>
       
