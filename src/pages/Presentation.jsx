@@ -5,8 +5,10 @@ import saitama from "../assets/saitama.png";
 import Accueil from "../assets/Image-accueil.svg";
 import ReadBook1 from "../assets/Ellipse3.svg";
 import ReadBook2 from "../assets/Ellipse2.svg";
+import { useNavigate } from 'react-router-dom';
 
 const Presentation = () => {
+  const router = useNavigate()
   return (
     <article className="box-border overflow-hidden">
       <header className="fixed  w-full">
@@ -17,7 +19,9 @@ const Presentation = () => {
           <div
             className="flex gap-10
                 m-3 mr-10 font-medium text-lg">
-            <span className="cursor-pointer" id="inscription">
+            <span className="cursor-pointer" id="inscription" onClick={() => {
+             router('/register')
+            }}>
               Inscription
             </span>
             <span className="cursor-pointer" id="connexion">

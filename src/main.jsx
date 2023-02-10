@@ -2,10 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
-import BookProvider from './Context/Context'
-
+// import BookProvider from './Context/Context'
+import store from '../src/app/store'
+import { Provider } from "react-redux";
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BookProvider>
-    <App />
-  </BookProvider>
+<Provider store={store}>
+     <App />
+</Provider>
+   
+ 
 );
