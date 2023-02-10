@@ -6,7 +6,10 @@ export const createUsers = createAsyncThunk(
   async (data, thunkAPI) => {
     try {
       const res = await axios.post("http://localhost:8080/api/v1/register", data);
-      return res;
+      console.log(res)
+      localStorage.setItem('users',JSON.stringify(res))
+      return res.toString();
+      
     } catch (error) {
       const message =
         (error && error.data && error.data.message) ||
@@ -20,7 +23,7 @@ export const createUsers = createAsyncThunk(
 
 
 export const userSlice = createSlice({
-  name: "projects",
+  name: "users",
   initialState: {
   users: null,
     isLoading: false,
@@ -36,7 +39,7 @@ export const userSlice = createSlice({
       .addCase(createUsers.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.projets = [...state.projects,action.payload];
+        state.users = [state.users,action.payload];
         state.isError = false;
         state.errorMessage = "";
       })
