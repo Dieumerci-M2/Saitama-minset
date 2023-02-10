@@ -16,8 +16,10 @@ import {useDispatch,useSelector} from 'react-redux'
 import { createUsers } from "../feature/usersSlice";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const navigate = useNavigate()
  
   const showToastErrorMessage = (message) => {
     toast.error(message, {
@@ -79,6 +81,8 @@ export default function Register() {
     const auth = localStorage.getItem('users')
     if (auth !== "") {
       showToastSuccessMessage()
+      
+      navigate('/home')
     } else {
       showToastErrorMessage("veuilles vous authentifiez ")
       
