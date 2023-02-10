@@ -1,12 +1,13 @@
 import React from 'react'
 import Logo from '../assets/saitama.png'
 import Facebook from '../assets/Facebook.png'
-import Twitter from '../assets/Twitter.png'
-import Linkedin from '../assets/linkedin.png'
 import Telegram from '../assets/logos_telegram.png'
-import Phone from '../assets/phone.svg'
+
 
 const Footer = () => {
+  const GotoTelegram = () => {
+    
+  }
   return (
     <footer className="bg-[#010626] text-[#FFFFFF] text-center">
       <section className="flex flex-col justify-center items-center text-center">
@@ -20,7 +21,7 @@ const Footer = () => {
               <img src={Facebook} alt="facebook" className="text-white bg-[#FFFFFF] rounded " />
             </span>
             <span className="w-8 h-8 cursor-pointer text-white">
-              <img src={Telegram} alt="telegram" className="text-white bg-[#FFFFFF] rounded" />
+              <img src={Telegram} alt="telegram" className="text-white bg-[#FFFFFF] rounded" onClick={()=>GotoTelegram} />
             </span>
           </div>
         </div>
