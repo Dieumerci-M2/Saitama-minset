@@ -1,16 +1,11 @@
 import {
-  Card,
   CardBody,
-  CardFooter,
-  Typography,
   Input,
   Checkbox,
   Button,
 } from "@material-tailwind/react";
-import imgLog from "../components/img/imgLog.png"
 import "./Auth.css"
 import Navbar from "./Navbar";
-import Footer from "./Footer";
 import {useDispatch,useSelector} from 'react-redux'
 
 export default function Register() {
@@ -26,38 +21,37 @@ export default function Register() {
     
   }
   return (
-      <body>
-        <div>
-          <Navbar />
+    <body>
+      <section>
+        <Navbar />
+      </section>
+      <section className="flex flex-row justify-center items-center text-center mx-auto flex-wrap">
+        <div className="imgBackLogin bg-blue-400">
+          <p
+            className="text-5xl font-bold px-10 pt-20 text-white
+           text-center">
+            S'Inscrire
+          </p>
+          <p className="px-10 pt-20  text-white text-center">
+            Inscrivez-vous maintenant et joignez le grand Team Saitama !
+          </p>
         </div>
-      <div className="flex flex-row justify-center flex-wrap mt-14 ">     
-      <div className="imgBackLogin">
-      <p className="flex text-5xl font-bold p-10 text-white"> S'Inscrire </p>
-      <p className="p-10 text-white">Inscrivez-vous maintenant et joignez le grand Team Saitama !</p>
-      </div>
-      <div className="flex ml-10 h-[350px] w-[350px]">
-   
-      <CardBody className="flex flex-col flex-wrap gap-4 w-96 p-10">
-      <p className="flex flex-row justify-center text-[gray]">AVEZ-VOUS DÉJÀ UN COMPTE ?</p> 
+        <div className="h-[350px] w-[350px] mb-14">
+          <CardBody className="flex flex-col flex-wrap gap-4 w-96 p-10 shadow-xl">
             <Input label="text" size="lg" name="username" onChange={handleChange} />
-              <Input label="Email" size="lg"  name="email" onChange={handleChange}/>
-            <Input label="Password" size="lg"  name="password" onChange={handleChange}/>
-            <Input label="Password" size="lg" />
-        <div className="-ml-2.5">
-          <Checkbox className="bg-red" label="se souvenir de moi" />
+            <Input label="Email" size="lg" name="email" onChange={handleChange} />
+            <Input label="Password" size="lg" name="password" onChange={handleChange} />
+            <Input label="Confirm Password" size="lg" />
+            <div className="-ml-2.5">
+              <Checkbox className="bg-red" label="se souvenir de moi" />
+            </div>
+            <p className="flex flex-row justify-start text-[gray]">Avez-vous déjà un compte?</p>
+            <Button className="bg-red-500" fullWidth onClick={handleSubmit}>
+              S'inscrire
+            </Button>
+          </CardBody>
         </div>
-      
-        <Button className="bg-[red]" fullWidth onClick={handleSubmit}>
-          S'inscrire
-        </Button>
-      
-      </CardBody>
-   
-    </div>
-    </div>
-    <div className="mt-14">
-    <Footer />
-    </div>
+      </section>
     </body>
   );
 }
