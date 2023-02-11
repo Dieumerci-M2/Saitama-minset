@@ -1,8 +1,10 @@
 import React from 'react'
 import { Button } from '@material-tailwind/react';
 
-const PaiyementModal = ({ Visible, Desciption, Prix, onClose }) => {
-  if (!Visible) return null;
+const PaiyementModal = ( { Visible, Desciption, Prix, Onclose } ) => {
+    
+    if ( !Visible ) return null;
+    
   return (
     <article
       className="fixed inset-0 bg-black
@@ -11,7 +13,7 @@ const PaiyementModal = ({ Visible, Desciption, Prix, onClose }) => {
         <div>Description : {Desciption}</div>
         <div className="my-5">Prix : {Prix}</div>
         <div className="text-center relative top-4 ">
-          <Button onClick={onClose} variant="filled">
+          <Button onClick={Onclose} variant="filled">
             Buy Now
           </Button>
         </div>

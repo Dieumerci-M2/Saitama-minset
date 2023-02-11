@@ -19,7 +19,7 @@ import Payement from "../components/PaiyementModal"
 
 const Homepage = () => {
   const [ showpayment, setShowpayement ] = useState( false )
-  const HandlerOnclose = ()=> setShowpayement(false)
+ const HandlerOnclose = ()=>setShowpayement(false)
   return (
     <article className="">
       <header className="flex justify-center flex-col items-center">
@@ -44,7 +44,7 @@ const Homepage = () => {
         <Menus />
       </header>
       <main className="my-[30px]">
-        <Payement onClose={HandlerOnclose} Visible={showpayment} />
+        <Payement Onclose={ HandlerOnclose } Visible={showpayment} />
         <article className="flex flex-row gap-4">
           <section className="ml-2">
             <Categories />
