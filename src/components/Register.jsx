@@ -4,12 +4,6 @@ import {
   Checkbox,
   Button,
 } from "@material-tailwind/react";
-<<<<<<< HEAD
-
-import React, { useEffect } from "react";
-import imgLog from "../components/img/imgLog.png"
-=======
->>>>>>> ef0383e (feat : finish with modal)
 import "./Auth.css"
 import Navbar from "./Navbar";
 import {useDispatch,useSelector} from 'react-redux'
