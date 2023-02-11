@@ -16,6 +16,21 @@ export const createPaiment = createAsyncThunk(
     }
   }
 );
+export const createPaimentbackend = createAsyncThunk(
+  "paiement/createtronpaiment",
+  async (data, thunkAPI) => {
+    try {
+      const res = await axios.post("https://api.trongrid.io/wallet/createtransaction", data);
+      return res;
+    } catch (error) {
+      const message =
+        (error && error.data && error.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
 
 
 
