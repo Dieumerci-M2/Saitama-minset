@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const getOnePost = createAsyncThunk(
-  "blogs/getOne",
-  async (titleName, thunkAPI) => {
+export const createPaiment = createAsyncThunk(
+  "paiement/create",
+  async (data, thunkAPI) => {
     try {
-      const res = await axios.get(`http://localhost:8080/api/v1/title?titre=${titleName}`);
-      return res.data;
+      const res = await axios.post("https://api.blockcypher.com/{{API_VERSION}}/{{COIN}}/{{CHAIN}}/txs/send?token={{TOKEN}}", data);
+      return res;
     } catch (error) {
       const message =
         (error && error.data && error.data.message) ||
@@ -18,10 +18,13 @@ export const getOnePost = createAsyncThunk(
 );
 
 
-export const PostSlice = createSlice({
-  name: "post",
+
+
+
+export const PaiementSlice  = createSlice({
+  name: "paiement",
   initialState: {
-    post: null,
+    paiement: null,
     isLoading: false,
     isSuccess: false,
     isError: false,
@@ -29,24 +32,24 @@ export const PostSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-     .addCase(getOnePost.pending, (state, action) => {
+     
+      .addCase(createPaiment.pending, (state, action) => {
         state.isLoading = true;
       })
-      .addCase(getOnePost.fulfilled, (state, action) => {
+      .addCase(createPaiment.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.post = action.payload;
+        state.projets = [...state.projects,action.payload];
         state.isError = false;
         state.errorMessage = "";
       })
-      .addCase(getOnePost.rejected, (state, action) => {
+      .addCase(createPaiment.rejected, (state, action) => {
         state.isLoading = false;
         state.isSuccess = false;
         state.isError = true;
         state.errorMessage = action.payload;
-      })
-
+      });
   },
 });
 
-export default PostSlice.reducer;
+export default PaiementSlice.reducer;

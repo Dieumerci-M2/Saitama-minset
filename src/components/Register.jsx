@@ -48,14 +48,15 @@ export default function Register() {
    
     setUserStates(e.target.value)
     setUserState({
-      username: e.target.value,
-      email: e.target.value,
-      password: e.target.value,
-      confirmPass : e.target.value
+      username: userstate.username,
+      email: userstate.email,
+      password: userstate.password,
+      confirmPass : userstate.confirmPass
       
     })
   }
   const handleSubmit = (e) => {
+    console.log("jfdncjns")
     e.preventDefault()
     
     if (userstate.username === "" || userstate.email === "" || userstate.password === "" || userstate.confirmPass === "") {
@@ -104,15 +105,17 @@ export default function Register() {
         </div>
         <div className="h-[350px] w-[350px] mb-14">
           <CardBody className="flex flex-col flex-wrap gap-4 w-96 p-10 shadow-xl">
-            <Input label="text" size="lg" name="username" onChange={handleChange} />
-            <Input label="Email" size="lg" name="email" onChange={handleChange} />
-            <Input label="Password" size="lg" name="password" onChange={handleChange} />
-            <Input label="Confirm Password" size="lg" />
+            <Input label="Nom" type="text" l="Name"  size="lg" name="username" required onChange={handleChange} />
+            <Input label="Email" type="text" size="lg" name="email" required onChange={handleChange} />
+            <Input label="Password" type="password" size="lg" name="password" required onChange={handleChange} />
+            <Input label="Confirmez votre Password" type="password"  required name="confirmPassword" size="lg" />
             <div className="-ml-2.5">
               <Checkbox className="bg-red" label="se souvenir de moi" />
             </div>
             <p className="flex flex-row justify-start text-[gray]">Avez-vous déjà un compte?</p>
-            <Button className="bg-red-500" fullWidth onClick={handleSubmit}>
+            <Button className="bg-red-500" fullWidth type="submit" onClick={(e) => {
+              handleSubmit(e)
+            }}>
               S'inscrire
             </Button>
           </CardBody>
