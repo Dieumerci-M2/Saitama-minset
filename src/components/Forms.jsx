@@ -6,7 +6,7 @@ function Forms() {
   return (
 
 
-    <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class=" px-10 py-6 shadow-lg bg-white">
       <form>
         <div class="grid grid-cols-2 gap-4">
           <div class="form-group mb-6">
@@ -127,22 +127,22 @@ function Forms() {
         </div>
 
 
-        <div className='flex justify-end'>
+        <div className='flex justify-start'>
           <button type="submit" class="
-      w-48
+      w-56
       px-6
       py-2.5
       bg-red-600
       text-white
       font-medium
-      text-xs
+      text-md
       leading-tight
       uppercase
       rounded
       shadow-md
-      hover:bg-blue-700 hover:shadow-lg
-      focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-      active:bg-blue-800 active:shadow-lg
+      hover:bg-red-300 hover:shadow-lg
+      focus:bg-red-400 focus:shadow-lg focus:outline-none focus:ring-0
+      active:bg-red-500 active:shadow-lg
       transition
       duration-150
       ease-in-out">Envoyer le message</button>

@@ -17,7 +17,9 @@ const Bookspage = () => {
       <header>
         <section className="flex justify-between">
           <div className="w-[150px]  h-[50px] my-3 mr-2 mt-4 ml-2">
-            <img src={Saitama} alt="logo" className="cursor-pointer" />
+            <a href="https://t.me/Moneygrr" target="_blank">
+              <img src={Saitama} alt="logo" className="cursor-pointer" />
+            </a>
           </div>
           <div className="flex flex-row mt-6 mx-4 rounded-l-xl h-10">
             <input
@@ -41,7 +43,7 @@ const Bookspage = () => {
           <div
             className="flex gap-10 font-semibold mr-1
         text-lg bg-gray-300 text-white border-gray-900 border-2 px-4 py-4 ">
-            <span onClick={() => router('/home')} className="cursor-pointer ml-8">
+            <span onClick={() => router('/home')} className="cursor-pointer">
               Home
             </span>
             <span onClick={() => router('/formation')} className="cursor-pointer ">

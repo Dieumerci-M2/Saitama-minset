@@ -27,8 +27,11 @@ const Presentation = () => {
               }}>
               Inscription
             </span>
-            <span className="cursor-pointer hover:text-blue-400" id="connexion">
-              Connexion
+            <span
+              onClick={() => {
+                router('/auth');
+              }}
+              className="cursor-pointer hover:text-blue-400" id="connexion"> Connexion
             </span>
           </div>
         </section>
