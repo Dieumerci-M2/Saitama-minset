@@ -4,12 +4,7 @@ import {
   Checkbox,
   Button,
 } from "@material-tailwind/react";
-<<<<<<< HEAD
-
-import React, { useEffect } from "react";
-import imgLog from "../components/img/imgLog.png"
-=======
->>>>>>> ef0383e (feat : finish with modal)
+import { useState } from "react";
 import "./Auth.css"
 import Navbar from "./Navbar";
 import {useDispatch,useSelector} from 'react-redux'
@@ -39,13 +34,13 @@ export default function Register() {
           theme: "light",
 });
     };
-  const [userstate,setUserState] = React.useState({
+  const [userstate,setUserState] = useState({
     username: "",
     email: "",
     password: "",
     confirmPass : ""
   })
-   const [userstates,setUserStates] = React.useState("")
+   const [userstates,setUserStates] = useState("")
   const Dispatch = useDispatch()
   const handleChange = (e) => {
    
@@ -95,7 +90,7 @@ export default function Register() {
       <section>
         <Navbar />
       </section>
-      <section className="flex flex-row justify-center items-center text-center mx-auto flex-wrap">
+      <section className="flex flex-row justify-center items-center text-center mx-auto">
         <div className="imgBackLogin bg-blue-400">
           <p
             className="text-5xl font-bold px-10 pt-20 text-white
@@ -112,11 +107,11 @@ export default function Register() {
             <Input label="Email" size="lg" name="email" onChange={handleChange} />
             <Input label="Password" size="lg" name="password" onChange={handleChange} />
             <Input label="Confirm Password" size="lg" />
-            <div className="-ml-2.5">
+            <div className="text-start -ml-2.5">
               <Checkbox className="bg-red" label="se souvenir de moi" />
             </div>
-            <p className="flex flex-row justify-start text-[gray]">Avez-vous déjà un compte?</p>
-            <Button className="bg-red-500" fullWidth onClick={handleSubmit}>
+            <p className="text-center text-blue-400 cursor-pointer">Avez-vous déjà un compte?</p>
+            <Button className="bg-red-500 text-center" fullWidth onClick={handleSubmit}>
               S'inscrire
             </Button>
           </CardBody>

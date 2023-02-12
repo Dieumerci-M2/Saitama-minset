@@ -3,7 +3,9 @@ import Saitama from '../assets/saitama.png';
 import Search from '../assets/Vector.svg';
 import Not from '../assets/Vector(1).svg';
 import Youtube from '../assets/Vector(2).svg';
+import { useNavigate } from 'react-router-dom';
 const Menus = () => {
+  const router = useNavigate();
   return (
     <section className="flex justify-between">
       <div className="w-[150px]  h-[50px] my-3 mr-8">
@@ -35,7 +37,12 @@ const Menus = () => {
           alt=""
         />
         <div>
-          <span className="mr-2 cursor-pointer">Connexion</span>
+          <span
+            onClick={() => {
+              router('/register');
+            }}
+            className="mr-2 cursor-pointer">Connexion
+          </span>
           <br />
           <span className="mr-2 cursor-pointer">Compte</span>
         </div>

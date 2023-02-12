@@ -26,17 +26,17 @@ const InfoLivre = () => {
       <span>L'offre se termine dans:</span>
       <div className="flex flex-row gap-4 ">
         <div className="flex flex-col gap-2 justify-center items-center">
-          <span className="p-4 bg-gray-400 rounded-md text-2xl font-semibold">12</span>
+          <span className="p-4 bg-gray-400 rounded-md text-2xl font-semibold">00</span>
           <span className="text-[8px]">Hours</span>
         </div>
         <span className="mt-2 rounded-md text-4xl font-semibold">:</span>
         <div className="flex flex-col gap-2 justify-center items-center">
-          <span className="p-4 bg-gray-400 rounded-md text-2xl font-semibold">30</span>
+          <span className="p-4 bg-gray-400 rounded-md text-2xl font-semibold">00</span>
           <span className="text-[8px]">Minutes</span>
         </div>
         <span className="mt-2 rounded-md text-4xl font-semibold">:</span>
         <div className="flex flex-col gap-2 justify-center items-center">
-          <span className="p-4 bg-gray-400 rounded-md text-2xl font-semibold">13</span>
+          <span className="p-4 bg-gray-400 rounded-md text-2xl font-semibold">00</span>
           <span className="text-[8px]">Secondes</span>
         </div>
       </div>

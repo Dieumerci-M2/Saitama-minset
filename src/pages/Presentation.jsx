@@ -19,12 +19,15 @@ const Presentation = () => {
           <div
             className="flex gap-10
                 m-3 mr-10 font-medium text-lg">
-            <span className="cursor-pointer" id="inscription" onClick={() => {
-             router('/register')
-            }}>
+            <span
+              className="cursor-pointer hover:text-blue-400"
+              id="inscription"
+              onClick={() => {
+                router('/register');
+              }}>
               Inscription
             </span>
-            <span className="cursor-pointer" id="connexion">
+            <span className="cursor-pointer hover:text-blue-400" id="connexion">
               Connexion
             </span>
           </div>
@@ -40,7 +43,13 @@ const Presentation = () => {
               Le meilleur investissement que tu puisse faire c'est d'investir pour toi même
             </p>
             <div className="mt-2 text-left text-lg">
-              <Button className="text-lg" color="red" w-3>
+              <Button
+                onClick={() => {
+                  router('/home');
+                }}
+                className="text-lg"
+                color="red"
+                w-3>
                 Continuer
               </Button>
             </div>
@@ -60,7 +69,12 @@ const Presentation = () => {
                align-center text-center gap-8">
             <span className="font-bold text-2xl">Plus tu apprends, Plus t gagnes</span>
             <span className="">
-              <Button className="text-lg" color="red">
+              <Button
+                onClick={() => {
+                  router('/home');
+                }}
+                className="text-lg"
+                color="red">
                 Découvrez nos programmes
               </Button>
             </span>
