@@ -16,8 +16,10 @@ import Formation1 from "../assets/Formation-relatif-1.svg"
 import Formation2 from "../assets/Formation-relatif-2.svg"
 import Bed from "../assets/Bed.jpg"
 import Payement from "../components/PaiyementModal"
+import { useNavigate } from 'react-router-dom'
 
 const Homepage = () => {
+   const router = useNavigate();
   const [ showpayment, setShowpayement ] = useState( false )
  const HandlerOnclose = ()=>setShowpayement(false)
   return (
@@ -31,11 +33,17 @@ const Homepage = () => {
             <span className="text-white">Nos réductions vont jusqu’à 70%</span>
           </div>
           <div className="flex flex-row gap-2">
-            <select name="devise" id="devise" className="bg-gray-300 text-white">
+            <select
+              name="devise"
+              id="devise"
+              className="bg-gray-300 text-white outline-none cursor-pointer">
               <option value="1">USD</option>
               <option value="2">Fc</option>
             </select>
-            <select name="language" id="language" className="bg-gray-300 text-white">
+            <select
+              name="language"
+              id="language"
+              className="bg-gray-300 text-white outline-none cursor-pointer">
               <option value="1">French</option>
               <option value="2">English</option>
             </select>
@@ -43,8 +51,8 @@ const Homepage = () => {
         </div>
         <Menus />
       </header>
-      <main className="my-[30px]">
-        <Payement Onclose={ HandlerOnclose } Visible={showpayment} />
+      <main className="my-[30px] mx-10">
+        <Payement Onclose={HandlerOnclose} Visible={showpayment} />
         <article className="flex flex-row gap-4">
           <section className="ml-2">
             <Categories />
@@ -56,10 +64,19 @@ const Homepage = () => {
               <span className="text-red-900 mt-3">J.K ROWLING</span>
               <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
               <span className="text-red-900"> $13.22 </span>
-              <button className="py-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
+              <button
+                onClick={() => setShowpayement(true)}
+                className="py-1 px-4 text-white bg-[#1E7DBD] w-28">
+                Lire plus
+              </button>
             </div>
             <div className="w-[50%] bg-cover ">
-              <img src={Affiche} alt="affiche" className="bg-cover h-[100%] cursor-pointer" />
+              <img
+                onClick={() => setShowpayement(true)}
+                src={Affiche}
+                alt="affiche"
+                className="bg-cover h-[100%] cursor-pointer"
+              />
             </div>
           </section>
           <section>
@@ -71,7 +88,11 @@ const Homepage = () => {
                 <span className="text-red-900 mt-3">J.K ROWLING</span>
                 <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
                 <span className="text-red-900">$13.22</span>
-                <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
+                <button
+                  onClick={() => setShowpayement(true)}
+                  className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">
+                  Lire plus
+                </button>
               </div>
               <div
                 className="flex flex-col text-center justify-center items-center
@@ -79,7 +100,11 @@ const Homepage = () => {
                 <span className="text-red-900 mt-3">J.K ROWLING</span>
                 <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
                 <span className="text-red-900">$13.22</span>
-                <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
+                <button
+                  onClick={() => setShowpayement(true)}
+                  className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">
+                  Lire plus
+                </button>
               </div>
             </section>
           </section>

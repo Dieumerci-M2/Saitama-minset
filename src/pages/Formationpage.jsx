@@ -12,8 +12,10 @@ import FormReact1 from "../assets/Formation-dispo-1.png"
 import FormReact2 from "../assets/Formation-dispo-2.png"
 import FormReact3 from '../assets/Formation-dispo-3.png';
 import FormReact4 from '../assets/Formation-dispo-4.png';
+import { useNavigate } from 'react-router-dom';
 
 const Formationpage = () => {
+  const route = useNavigate();
   return (
     <article>
       <header>
@@ -41,13 +43,20 @@ const Formationpage = () => {
             </span>
           </div>
           <div
-            className="flex gap-6 font-semibold mr-2 mt-2
-            text-lg bg-gray-300 text-white border-gray-900 border-2 px-4 py-4 ">
-            <span className="cursor-pointer ml-3">Home</span>
-            <span className="cursor-pointer ">Formations</span>
-            <span className="cursor-pointer ">Nos livres</span>
-            <span className="cursor-pointer ">Blogs</span>
-            <span className="cursor-pointer ">Contact</span>
+            className="flex gap-10 font-semibold mr-1
+        text-lg bg-gray-300 text-white border-gray-900 border-2 px-4 py-4 ">
+            <span onClick={() => router('/home')} className="cursor-pointer ml-8">
+              Home
+            </span>
+            <span onClick={() => router('/formation')} className="cursor-pointer ">
+              Formations
+            </span>
+            <span onClick={() => router('/books')} className="cursor-pointer ">
+              Nos livres
+            </span>
+            <span onClick={() => router('/contact')} className="cursor-pointer ">
+              Contact
+            </span>
           </div>
         </section>
       </header>

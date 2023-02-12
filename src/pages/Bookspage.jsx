@@ -8,8 +8,10 @@ import ButtonsRouge from '../components/ButtonsRouges';
 import InfoLivre from '../components/InfoLivre';
 import Footer from '../components/Footer';
 import NewsLetter from '../components/NewsLetter';
+import { useNavigate} from 'react-router-dom';
 
 const Bookspage = () => {
+  const router = useNavigate();
   return (
     <article>
       <header>
@@ -37,13 +39,20 @@ const Bookspage = () => {
             </span>
           </div>
           <div
-            className="flex gap-6 font-semibold mr-2 mt-2
-            text-lg bg-gray-300 text-white border-gray-900 border-2 px-4 py-4 ">
-            <span className="cursor-pointer ml-3">Home</span>
-            <span className="cursor-pointer ">Formations</span>
-            <span className="cursor-pointer ">Nos livres</span>
-            <span className="cursor-pointer ">Blogs</span>
-            <span className="cursor-pointer ">Contact</span>
+            className="flex gap-10 font-semibold mr-1
+        text-lg bg-gray-300 text-white border-gray-900 border-2 px-4 py-4 ">
+            <span onClick={() => router('/home')} className="cursor-pointer ml-8">
+              Home
+            </span>
+            <span onClick={() => router('/formation')} className="cursor-pointer ">
+              Formations
+            </span>
+            <span onClick={() => router('/books')} className="cursor-pointer ">
+              Nos livres
+            </span>
+            <span onClick={() => router('/contact')} className="cursor-pointer ">
+              Contact
+            </span>
           </div>
         </section>
       </header>
@@ -77,7 +86,7 @@ const Bookspage = () => {
         <div className="my-10">
           <ButtonsRouge />
         </div>
-        <article className='flex flex-row justify-between '>
+        <article className="flex flex-row justify-between ">
           <section className="grid grid-cols-2 gap-10 w-[68%] text-center ml-10">
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
               <img src={Harry2} alt="harry" className=" bg-cover h-[100%] cursor-pointer" />
@@ -96,12 +105,12 @@ const Bookspage = () => {
               <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
             </div>
           </section>
-          <section className='mr-10'>
+          <section className="mr-10">
             <NewsLetter />
           </section>
         </article>
       </main>
-      <footer className='mt-10'>
+      <footer className="mt-10">
         <Footer />
       </footer>
     </article>
