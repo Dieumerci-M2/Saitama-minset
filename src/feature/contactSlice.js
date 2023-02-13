@@ -8,7 +8,6 @@ export const createUsers = createAsyncThunk(
     try {
       const res = await axios.post("http://localhost:8080/api/v1/create/message", data);
       console.log(res)
-      localStorage.setItem('users',JSON.stringify(res))
       return res.toString();
       
     } catch (error) {

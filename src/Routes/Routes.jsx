@@ -11,7 +11,6 @@ import Homepage from '../pages/Homepage'
 import Presentation from '../pages/Presentation'
 import Register from '../components/Register'
 import AdminPage from '../pages/AdminPage'
-import ContactUsPage from '../pages/ContactUsPage'
 import CheckPaiement from '../pages/checkpaiment'
 
 const Road = () => {

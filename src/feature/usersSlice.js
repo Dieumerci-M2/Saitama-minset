@@ -6,7 +6,6 @@ import axios from "axios";
   async (data, thunkAPI) => {
     try {
       const res = await axios.post("http://localhost:8080/api/v1/register", data);
-      console.log(res)
       localStorage.setItem('users',JSON.stringify(res))
       return res.toString();
       
@@ -20,24 +19,24 @@ import axios from "axios";
   }
 );
 
-//  const createUserLogin = createAsyncThunk(
-//   "users/createLogin",
-//   async (data, thunkAPI) => {
-//     try {
-//       const res = await axios.post("http://localhost:8080/api/v1/login", data);
-//       console.log(res)
-//       localStorage.setItem('users',JSON.stringify(res))
-//       return res.toString();
+ export const createUserLogin = createAsyncThunk(
+  "users/createLogin",
+  async (data, thunkAPI) => {
+    try {
+      const res = await axios.post("http://localhost:8080/api/v1/login", data);
+      console.log(res)
+      localStorage.setItem('login',JSON.stringify(res))
+      return res.toString();
       
-//     } catch (error) {
-//       const message =
-//         (error && error.data && error.data.message) ||
-//         error.message ||
-//         error.toString();
-//       return thunkAPI.rejectWithValue(message);
-//     }
-//   }
-// );
+    } catch (error) {
+      const message =
+        (error && error.data && error.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
 
 
 
