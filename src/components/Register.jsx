@@ -114,7 +114,7 @@ export default function Register() {
               className="text-center text-blue-400 cursor-pointer">
               Avez-vous déjà un compte?
             </p>
-            <Button className="bg-red-500 text-center" fullWidth onClick={handleSubmit}>
+            <Button className="bg-red-700 text-center" fullWidth onClick={handleSubmit}>
               S'inscrire
             </Button>
           </CardBody>
