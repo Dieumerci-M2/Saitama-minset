@@ -6,7 +6,6 @@ import Livraison from '../components/Livraison'
 import Categories from '../components/CategoriesSearch'
 import Affiche from '../assets/Affiche.jpg'
 import SousMenus from '../components/SousMenus'
-import ButtonsRouge from '../components/ButtonsRouges'
 import InfoLivre from '../components/InfoLivre'
 import Harry1 from "../assets/BooksReal.jpg"
 import Harry2 from "../assets/Harry-Potter-de-J.K.-Rowling.jpg"
@@ -16,10 +15,9 @@ import Formation1 from "../assets/Formation-relatif-1.svg"
 import Formation2 from "../assets/Formation-relatif-2.svg"
 import Bed from "../assets/Bed.jpg"
 import Payement from "../components/PaiyementModal"
-import { useNavigate } from 'react-router-dom'
+
 
 const Homepage = () => {
-   const router = useNavigate();
   const [ showpayment, setShowpayement ] = useState( false )
  const HandlerOnclose = ()=>setShowpayement(false)
   return (
@@ -52,7 +50,7 @@ const Homepage = () => {
         <Menus />
       </header>
       <main className="my-[30px] mx-10">
-        <Payement Onclose={HandlerOnclose} Visible={showpayment} />
+        <Payement onClose={HandlerOnclose} Visible={showpayment} />
         <article className="flex flex-row gap-4">
           <section className="ml-2">
             <Categories />
@@ -110,7 +108,7 @@ const Homepage = () => {
           </section>
         </article>
         <Livraison />
-        <h1 className='text-5xl -mt-10 pb-10'>Nos Livres</h1>
+        <h1 className="text-5xl -mt-10 pb-10">Nos Livres</h1>
         <article className="flex flex-row">
           <section className="w-[33%] h-[500px]">
             <div className="ml-1" onClick={() => setShowpayement(true)}>
@@ -153,7 +151,7 @@ const Homepage = () => {
             </div>
           </section>
         </article>
-        <h1 className='text-5xl my-10'>Nos Formations</h1>
+        <h1 className="text-5xl my-10">Nos Formations</h1>
         <article className="flex flex-row">
           <section className="w-[33%] h-[500px]">
             <div className="ml-1 bg-black">

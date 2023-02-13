@@ -2,9 +2,9 @@ import React from 'react';
 import Pfooter from '../components/Pfooter';
 import { Button } from "@material-tailwind/react";
 import saitama from "../assets/saitama.png";
-import Accueil from "../assets/Image-accueil.svg";
-import ReadBook1 from "../assets/Ellipse3.svg";
-import ReadBook2 from "../assets/Ellipse2.svg";
+import Accueil from "../assets/Image-accueil1.svg";
+import ReadBook1 from "../assets/Ellipse3.jpeg";
+import ReadBook2 from "../assets/Ellipse4.svg";
 import { useNavigate } from 'react-router-dom';
 
 const Presentation = () => {
@@ -31,15 +31,21 @@ const Presentation = () => {
               onClick={() => {
                 router('/auth');
               }}
-              className="cursor-pointer hover:text-blue-400" id="connexion"> Connexion
+              className="cursor-pointer hover:text-blue-400"
+              id="connexion">
+              Connexion
             </span>
           </div>
         </section>
       </header>
       <main className="mb-10">
         <section className="bg-gray-200 flex justify-around">
-          <div className="text-center flex justify-center items-center w-[50%] m-10 pt-4">
-            <img src={Accueil} alt="Accueil" className="w-[60%] mt-8" />
+          <div className="text-center flex justify-center items-center w-[50%] m-10 pt-4 bg-gray-200 text-gray-200">
+            <img
+              src={Accueil}
+              alt="Accueil"
+              className="w-[600px] h-[400px] mt-8 bg-gray-200 text-gray-200"
+            />
           </div>
           <div className="text-center m-10 w-[50%]">
             <p className="font-bold text-5xl pt-10 pb-6 text-left mt-8">
@@ -50,9 +56,7 @@ const Presentation = () => {
                 onClick={() => {
                   router('/home');
                 }}
-                className="text-lg"
-                color="red"
-                w-3>
+                className="text-lg bg-red-700 ">
                 Continuer
               </Button>
             </div>
@@ -61,10 +65,18 @@ const Presentation = () => {
         <section className="flex flex-col">
           <div className="flex justify-around p-10">
             <span>
-              <img src={ReadBook1} alt="ReadBook" className="w-[40%] ml-48" />
+              <img
+                src={ReadBook1}
+                alt="ReadBook"
+                className="w-[250px] h-[250px] bg-#28a69b"
+              />
             </span>
             <span>
-              <img src={ReadBook2} alt="ReadBook" className="w-[60%]" />
+              <img
+                src={ReadBook2}
+                alt="ReadBook"
+                className="w-[250px] h-[250px]"
+              />
             </span>
           </div>
           <div
@@ -74,11 +86,9 @@ const Presentation = () => {
             <span className="">
               <Button
                 onClick={() => {
-                  router( '/home' );
-                  
+                  router('/home');
                 }}
-                className="text-lg"
-                color="red">
+                className="text-lg bg-red-700">
                 Découvrez nos programmes
               </Button>
             </span>

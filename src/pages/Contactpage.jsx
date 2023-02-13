@@ -17,8 +17,8 @@ const Contactpage = () => {
             </a>
           </div>
           <div
-            className="flex gap-10 font-semibold mr-1
-        text-lg bg-gray-300 text-white border-gray-900 border-2 px-4 py-4 ">
+            className="flex gap-6 font-semibold mr-1 h-14 mt-4
+        text-lg bg-gray-300 border-2 px-4 py-2 ">
             <span onClick={() => router('/home')} className="cursor-pointer">
               Home
             </span>
