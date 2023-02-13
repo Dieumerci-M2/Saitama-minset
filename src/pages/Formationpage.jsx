@@ -6,7 +6,6 @@ import Formation from '../assets/Formation 1.svg';
 import Formation1 from '../assets/Formation-relatif-1.svg';
 import Formation2 from '../assets/Formation-relatif-2.svg';
 import InfoLivre from '../components/InfoLivre';
-import BoutonsRouge from "../components/ButtonsRouges"
 import NewsLetter from '../components/NewsLetter';
 import FormReact1 from "../assets/Formation-dispo-1.png"
 import FormReact2 from "../assets/Formation-dispo-2.png"
@@ -15,13 +14,15 @@ import FormReact4 from '../assets/Formation-dispo-4.png';
 import { useNavigate } from 'react-router-dom';
 
 const Formationpage = () => {
-  const route = useNavigate();
+  const router = useNavigate();
   return (
     <article>
-      <header>
+      <header className="mx-10">
         <section className="flex justify-between">
           <div className="w-[150px]  h-[50px] my-3 mr-2 mt-4 ml-2">
-            <img src={Saitama} alt="logo" className="cursor-pointer" />
+            <a href="https://t.me/Moneygrr" target="_blank">
+              <img src={Saitama} alt="logo" className="cursor-pointer" />
+            </a>
           </div>
           <div className="flex flex-row mt-6 mx-4 rounded-l-xl h-10">
             <input
@@ -43,24 +44,29 @@ const Formationpage = () => {
             </span>
           </div>
           <div
-            className="flex gap-10 font-semibold mr-1
-        text-lg bg-gray-300 text-white border-gray-900 border-2 px-4 py-4 ">
-            <span onClick={() => router('/home')} className="cursor-pointer ml-8">
+            className="flex gap-6 font-semibold mr-1 mt-4
+        text-lg bg-gray-300 border-2 px-4 py-4 ">
+            <span onClick={() => router('/home')} className="cursor-pointer hover:text-[#1E7DBD]">
               Home
             </span>
-            <span onClick={() => router('/formation')} className="cursor-pointer ">
+            <span
+              onClick={() => router('/formation')}
+              className="cursor-pointer hover:text-[#1E7DBD]">
               Formations
             </span>
-            <span onClick={() => router('/books')} className="cursor-pointer ">
+            <span onClick={() => router('/books')} className="cursor-pointer hover:text-[#1E7DBD]">
               Nos livres
             </span>
-            <span onClick={() => router('/contact')} className="cursor-pointer ">
+            <span
+              onClick={() => router('/contact')}
+              className="cursor-pointer hover:text-[#1E7DBD]">
               Contact
             </span>
           </div>
         </section>
       </header>
-      <main className="my-10">
+      <main className="m-10">
+        <h1 className="text-5xl my-10">Mes Videos</h1>
         <article className="flex flex-row">
           <section className="w-[33%] h-[500px]">
             <div className="ml-1 bg-black">
@@ -95,9 +101,9 @@ const Formationpage = () => {
             </div>
           </section>
         </article>
-        <BoutonsRouge />
+        <h1 className="text-5xl my-10">Les plus téléchargées</h1>
         <article className="flex flex-row justify-between ">
-          <section className="grid grid-cols-2 gap-10 w-[68%] text-center ml-10">
+          <section className="grid grid-cols-2 gap-10 w-[68%] text-center">
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
               <img src={FormReact1} alt="harry" className=" bg-cover h-[100%] cursor-pointer" />
               <span className="text-lg font-semibold">React js et native pour debutants</span>
@@ -117,12 +123,12 @@ const Formationpage = () => {
               </span>
             </div>
           </section>
-          <section className="mr-10">
+          <section className="mr-6">
             <NewsLetter />
           </section>
         </article>
       </main>
-      <footer className="">
+      <footer className="mt-20">
         <Footer />
       </footer>
     </article>

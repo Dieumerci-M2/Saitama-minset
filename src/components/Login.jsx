@@ -1,8 +1,5 @@
 import {
-    Card,
     CardBody,
-    CardFooter,
-    Typography,
     Input,
     Checkbox,
     Button,
@@ -12,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import "./Auth.css"
 
   export default function Example() {
-    
+    const navigateTo = useNavigate();
     return (
       <body clasName="flex flex-row justify-center items-center text-center mx-auto">
         <div className="flex flex-row flex-wrap items-center ">
@@ -33,7 +30,7 @@ import "./Auth.css"
               <div className="-ml-2.5">
                 <Checkbox className="bg-red" label="se souvenir de moi" />
               </div>
-              <p className="flex flex-row justify-center text-blue-400 cursor-pointer">
+              <p onClick={()=>navigateTo('/register')} className="flex flex-row justify-center text-blue-400 cursor-pointer">
                 Vous n'avez pas un compte?
               </p>
               <Button className="bg-[red]" fullWidth>

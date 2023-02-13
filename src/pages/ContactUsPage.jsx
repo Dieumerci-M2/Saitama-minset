@@ -2,17 +2,9 @@ import React from 'react'
 import Menus from "../components/Menus"
 import Footer from "../components/Footer"
 import Reduction from '../assets/reduction.svg'
-import Livraison from '../components/Livraison'
 import Categories from '../components/CategoriesSearch'
 import Affiche from '../assets/Affiche.jpg'
-import SousMenus from '../components/SousMenus'
-import ButtonsRouge from '../components/ButtonsRouges'
-import InfoLivre from '../components/InfoLivre'
-import Harry1 from "../assets/BooksReal.jpg"
-import Harry2 from "../assets/Harry-Potter-de-J.K.-Rowling.jpg"
-import Harry3 from "../assets/HenryPorter1.jpg"
 import ContactForm from '../components/ContactForm'
-
 
 const ContactUsPage = () => {
   return (

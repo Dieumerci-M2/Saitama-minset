@@ -14,7 +14,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
 
 export default function Register() {
-  const navigate = useNavigate()
  
   const showToastErrorMessage = (message) => {
     toast.error(message, {
@@ -78,13 +77,13 @@ export default function Register() {
     if (auth !== "") {
       showToastSuccessMessage()
       
-      navigate('/home')
+      navigateTo('/home')
     } else {
       showToastErrorMessage("veuilles vous authentifiez ")
       
     }
   }
-  
+  const navigateTo = useNavigate();
   return (
     <body>
       <section>
@@ -110,7 +109,11 @@ export default function Register() {
             <div className="text-start -ml-2.5">
               <Checkbox className="bg-red" label="se souvenir de moi" />
             </div>
-            <p className="text-center text-blue-400 cursor-pointer">Avez-vous déjà un compte?</p>
+            <p
+              onClick={() => navigateTo('/auth')}
+              className="text-center text-blue-400 cursor-pointer">
+              Avez-vous déjà un compte?
+            </p>
             <Button className="bg-red-500 text-center" fullWidth onClick={handleSubmit}>
               S'inscrire
             </Button>

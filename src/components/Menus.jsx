@@ -7,9 +7,11 @@ import { useNavigate } from 'react-router-dom';
 const Menus = () => {
   const router = useNavigate();
   return (
-    <section className="flex justify-between">
+    <section className="flex justify-between mx-[50px]">
       <div className="w-[150px]  h-[50px] my-3 mr-8">
-        <img src={Saitama} alt="logo" className="mr-8 cursor-pointer" />
+        <a href="https://t.me/Moneygrr" target="_blank">
+          <img src={Saitama} alt="logo" className="mr-8 cursor-pointer" />
+        </a>
       </div>
       <div className="flex flex-row my-auto mx-8 rounded-l-xl h-10">
         <input
@@ -41,7 +43,8 @@ const Menus = () => {
             onClick={() => {
               router('/register');
             }}
-            className="mr-2 cursor-pointer">Connexion
+            className="mr-2 cursor-pointer">
+            Connexion
           </span>
           <br />
           <span className="mr-2 cursor-pointer">Compte</span>
