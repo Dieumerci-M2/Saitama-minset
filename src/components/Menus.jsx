@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const Menus = () => {
   const router = useNavigate();
   return (
-    <section className="flex justify-between">
+    <section className="flex justify-between mx-[50px]">
       <div className="w-[150px]  h-[50px] my-3 mr-8">
         <a href="https://t.me/Moneygrr" target="_blank">
           <img src={Saitama} alt="logo" className="mr-8 cursor-pointer" />

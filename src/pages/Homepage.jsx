@@ -25,7 +25,7 @@ const Homepage = () => {
   return (
     <article className="">
       <header className="flex justify-center flex-col items-center">
-        <div className="flex justify-between w-[1200px] h-[30px] bg-gray-300">
+        <div className="flex justify-between w-full h-[30px] bg-gray-300">
           <div className="flex flex-row ml-2 gap-4">
             <span>
               <img src={Reduction} alt="reduction cursor-pointer" />
@@ -110,6 +110,7 @@ const Homepage = () => {
           </section>
         </article>
         <Livraison />
+        <h1 className='text-5xl -mt-10 pb-10'>Nos Livres</h1>
         <article className="flex flex-row">
           <section className="w-[33%] h-[500px]">
             <div className="ml-1" onClick={() => setShowpayement(true)}>
@@ -152,7 +153,7 @@ const Homepage = () => {
             </div>
           </section>
         </article>
-        <ButtonsRouge />
+        <h1 className='text-5xl my-10'>Nos Formations</h1>
         <article className="flex flex-row">
           <section className="w-[33%] h-[500px]">
             <div className="ml-1 bg-black">

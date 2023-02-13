@@ -74,7 +74,8 @@ const Presentation = () => {
             <span className="">
               <Button
                 onClick={() => {
-                  router('/home');
+                  router( '/home' );
+                  
                 }}
                 className="text-lg"
                 color="red">
