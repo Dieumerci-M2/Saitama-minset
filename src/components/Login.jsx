@@ -33,7 +33,7 @@ import "./Auth.css"
               <p onClick={()=>navigateTo('/register')} className="flex flex-row justify-center text-blue-400 cursor-pointer">
                 Vous n'avez pas un compte?
               </p>
-              <Button className="bg-[red]" fullWidth>
+              <Button className="bg-red-700" fullWidth>
                 Se connecter
               </Button>
             </CardBody>
