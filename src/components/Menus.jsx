@@ -39,11 +39,11 @@ const Menus = () => {
           <img src={Search} alt="Search" className="m-auto my-2 text-[#FFFFFF]" />
         </span>
       </div>
-      <div className="flex flex-row h-12 w-[170px] bg-gray-100 my-auto mt-3 mx-8 lg:mx-8 xl-8
+      <div className="flex flex-row h-12 w-48 bg-gray-100 my-auto mt-3 mx-8 lg:mx-8 xl-8
       ml-8 lg:ml-8 xl:ml-16"
       >
         <img
-          className="inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4"
+          className="inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-1 xl:ml-4 lg:ml-1"
           src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
           alt=""
         />

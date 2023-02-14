@@ -2,7 +2,7 @@ import React from 'react'
 
 const InfoLivre = () => {
   return (
-    <section className="flex flex-col text-center p-12 justify-center items-center gap-6 shadow-xl">
+    <section className="flex flex-col text-center p-10 lg:p-8 xl:p-10 justify-center items-center gap-3 shadow-xl">
       <span className="text-red-900 text-lg">J.K ROWLING</span>
       <span className="font-semibold text-2xl">HARRY POTTER AND THE CURSED CHILD</span>
       <div>
@@ -14,17 +14,17 @@ const InfoLivre = () => {
         fugiat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur atque sint
         consequuntur fugiat
       </span>
-      <div>
+      <div className='w-[100%]'>
         <div className="flex flex-row justify-between">
           <span>Solde: 10</span>
           <span>Disponible: 60</span>
         </div>
-        <div className="w-[335px] h-[10px] bg-gray-300 rounded-md">
-          <div className="w-[64px] h-[8px] bg-blue-400 rounded-md"></div>
+        <div className=" h-[10px] bg-gray-300 rounded-md">
+          <div className="w-[16%] h-[8px] bg-blue-400 rounded-md"></div>
         </div>
       </div>
       <span>L'offre se termine dans:</span>
-      <div className="flex flex-row gap-4 ">
+      <div className="flex gap-2">
         <div className="flex flex-col gap-2 justify-center items-center">
           <span className="p-4 bg-gray-400 rounded-md text-2xl font-semibold">00</span>
           <span className="text-[8px]">Hours</span>
