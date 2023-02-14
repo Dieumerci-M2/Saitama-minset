@@ -14,76 +14,70 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
 
 export default function Register() {
- 
+   const navigateTo = useNavigate();
+   const dispatch = useDispatch()
   const showToastErrorMessage = (message) => {
     toast.error(message, {
       position: "top-right",
-      autoClose: 2000,
+      autoClose: 5000,
       pauseOnHover: true,
       draggable: true,
       theme: "light",
     });
   }
   const showToastSuccessMessage = () => {
-         toast.success("Merci d'avoir choisi(E) Saitama Mindset 😀 !", {
+         toast.success("Merci d'avoir choisi(e) Saitama Mindset 😀 !", {
           position: "top-right",
           autoClose: 2000,
           pauseOnHover: true,
           draggable: true,
           theme: "light",
 });
-    };
-  const [userstate,setUserState] = useState({
-    username: "",
-    email: "",
-    password: "",
-    confirmPass : ""
-  })
-   const [userstates,setUserStates] = useState("")
-  const Dispatch = useDispatch()
-  const handleChange = (e) => {
-   
-    setUserStates(e.target.value)
-    setUserState({
-      username: userstate.username,
-      email: userstate.email,
-      password: userstate.password,
-      confirmPass : userstate.confirmPass
-      
-    })
-  }
+  navigateTo('/home') 
+  };
+  const [userName, setUserName] = useState("")
+  const [email, setUserEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [confirmPass, setConfirmPass] = useState("")
+
+  const handleUsernameChange = (e) => {
+    setUserName(e.target.value)
+}
+
+    const handleemailChange = (e) => {
+    setUserEmail(e.target.value)
+} 
+  
+    const handlepasswordChange = (e) => {
+    setPassword(e.target.value)
+  } 
+      const handleconfirmPassChange = (e) => {
+    setConfirmPass(e.target.value)
+} 
+  
+  
+ 
   const handleSubmit = (e) => {
-    console.log("jfdncjns")
     e.preventDefault()
-    
-    if (userstate.username === "" || userstate.email === "" || userstate.password === "" || userstate.confirmPass === "") {
-      showToastErrorMessage(`L'un de vos champs n'est pas rempli`)
-    }
-     if (userstate.username === "" && userstate.email === "" && userstate.password === "" && userstate.confirmPass === "") {
-      showToastErrorMessage(`Veuillez remplir tout les champs`)
-    }
-    if (userstate.password !== userstate.confirmPass) {
-      showToastErrorMessage(`Votre mot de passe n'est pas identique, veuilez mettre votre mot de passe`)
-    }
-    else {
-      
-        Dispatch(createUsers({
-          username: userstate.username,
-          email: userstate.email,
-          password : userstate.password
+    if (password === confirmPass) {
+      if (userName !== "" && email !== "") {
+        dispatch(createUsers({
+          username: userName,
+          email: email,
+          password :password
         }))
-    }
-    const auth = localStorage.getItem('users')
-    if (auth !== "") {
-      showToastSuccessMessage()
+        showToastSuccessMessage()
+        
+
+      } else if (userName === "" && email === "") {
+               showToastErrorMessage(`Votre champ nom est vide ou votre champ email est vide `)
+      }  
+    } else if (password !== confirmPass) {
       
-      navigateTo('/home')
-    } else {
-      showToastErrorMessage("veuilles vous authentifiez ")
-      
+       showToastErrorMessage(`Votre mot de passe n'est pas identique, veuilez mettre votre mot de passe`)
     }
   }
-  const navigateTo = useNavigate();
+ 
   return (
     <body>
       <section>
@@ -100,26 +94,26 @@ export default function Register() {
             Inscrivez-vous maintenant et joignez le grand Team Saitama !
           </p>
         </div>
-        <div className="h-[350px] w-[350px] mb-14">
-          <CardBody className="flex flex-col flex-wrap gap-4 w-96 p-10 shadow-xl">
-            <Input label="text" size="lg" name="username" onChange={handleChange} />
-            <Input label="Email" size="lg" name="email" onChange={handleChange} />
-            <Input label="Password" size="lg" name="password" onChange={handleChange} />
-            <Input label="Confirm Password" size="lg" />
+        <form className="h-[350px] w-[350px] mb-14"   >
+          <CardBody className="flex flex-col flex-wrap gap-4 w-96 p-10 shadow-xl" >
+            <Input value={userName}  type="text"  required   autoComplete="off" label="Nom" size="lg" name="username" onChange={handleUsernameChange} />
+            <Input value={email}  type="email" required autoComplete="off"  label="Email" size="lg" name="email" onChange={handleemailChange} />
+            <Input value={password}  type="password" required  autoComplete="off"  label="Password" size="lg" name="password" onChange={handlepasswordChange} />
+            <Input value={confirmPass}  type="password" required  autoComplete="off"  label="Confirmez votre Password" name="confirmPass" onChange={handleconfirmPassChange} size="lg" />
             <div className="text-start -ml-2.5">
-              <Checkbox className="bg-red" label="se souvenir de moi" />
+              <Checkbox className="bg-red" 
+              label="se souvenir de moi" />
             </div>
-            <p
-              onClick={() => navigateTo('/auth')}
-              className="text-center text-blue-400 cursor-pointer">
-              Avez-vous déjà un compte?
-            </p>
-            <Button className="bg-red-700 text-center" fullWidth onClick={handleSubmit}>
+            <p className="text-center text-blue-400 cursor-pointer">Avez-vous déjà un compte?</p>
+            <Button type="submit" onClick={(e) => {
+              handleSubmit(e)
+            }} className="bg-red-500 text-center" fullWidth >
               S'inscrire
             </Button>
           </CardBody>
-        </div>
+        </form>
       </section>
+      <ToastContainer/>
     </body>
   );
 }

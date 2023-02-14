@@ -1,7 +1,75 @@
 import React from 'react'
-
+import {useDispatch,useSelector} from 'react-redux'
+import { createUsers } from "../feature/usersSlice";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function Forms() {
+     const navigateTo = useNavigate();
+   const dispatch = useDispatch()
+  const showToastErrorMessage = (message) => {
+    toast.error(message, {
+      position: "top-right",
+      autoClose: 5000,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+    });
+  }
+  const showToastSuccessMessage = () => {
+         toast.success("Merci d'avoir choisi(e) Saitama Mindset 😀 !", {
+          position: "top-right",
+          autoClose: 2000,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "light",
+});
+  navigateTo('/home') 
+  };
+  const [userName, setUserName] = useState("")
+  const [email, setUserEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [confirmPass, setConfirmPass] = useState("")
+
+  const handleUsernameChange = (e) => {
+    setUserName(e.target.value)
+}
+
+    const handleemailChange = (e) => {
+    setUserEmail(e.target.value)
+} 
+  
+    const handlepasswordChange = (e) => {
+    setPassword(e.target.value)
+  } 
+      const handleconfirmPassChange = (e) => {
+    setConfirmPass(e.target.value)
+} 
+  
+  
+ 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (password === confirmPass) {
+      if (userName !== "" && email !== "") {
+        dispatch(createUsers({
+          username: userName,
+          email: email,
+          password :password
+        }))
+        showToastSuccessMessage()
+        
+
+      } else if (userName === "" && email === "") {
+               showToastErrorMessage(`Votre champ nom est vide ou votre champ email est vide `)
+      }  
+    } else if (password !== confirmPass) {
+      
+       showToastErrorMessage(`Votre mot de passe n'est pas identique, veuilez mettre votre mot de passe`)
+    }
+  }
 
   return (
 

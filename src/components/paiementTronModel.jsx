@@ -2,49 +2,23 @@ import React,{useState} from 'react'
 import { Button } from '@material-tailwind/react';
 import axios from 'axios';
 
-const PaiyementModal = ({ Visible, Desciption, Prix, onClose }) => {
-  const [stateItem,setStateItem] = useState("")
-  const items = {
-    Prix: 10,
-    Description : "il s'agit d'un livre publié par MOHAMED qui parle de cryptomonaie qui defini ses principes"
-    
-  }
-    
-  const handleChangeBitcoin = (e) => {
+const PaiyementTronModal = ({ Visible, Desciption, Prix, onClose }) => {
+	const [stateItem, setStateItem] = useState("")
+	const [stateItemprivatekey,setStateItemprivatekey] = useState("")    	
+	  const handleChangeTronEmail = (e) => {
     setStateItem(e.target.value)
-  }
-  const handleBitcoinClick =  () => {      
-    axios.post('http://localhost:8080/api/v1/btn', {
-          description: items.Description,
-        email: stateItem,
-        amount: items.Prix
-  })
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });  
-    
-  }
-    const handleTronClick =  () => {      
-  //   axios.post('https://api.trongrid.io/wallet/createtransaction', {
-  //         owner_address: "41dc8e2c47df5666a9f3cd50c1121b78e15c3f587d",
-  //         to_address: "41ed2642305ac586569176d0507cc94525127b48d2",
-  //         amount: 1
-  // })
-  // .then(function (response) {
-  //   console.log(response);
-  // })
-  // .catch(function (error) {
-  //   console.log(error);
-  // });
+	  }
+	
+	  const handleChangeTronPrivatekey = (e) => {
+    setStateItemprivatekey(e.target.value)
+	  }
+    const handleTronClick =  () => {     
       
       const options = {
   method: 'POST',
   url: 'https://api.shasta.trongrid.io/wallet/easytransferbyprivate',
   headers: {accept: 'application/json', 'content-type': 'application/json'},
-  data: {privateKey: 'string', toAddress: 'string', amount: 0}
+  data: {privateKey: `${stateItemprivatekey}`, toAddress: `41dc8e2c47df5666a9f3cd50c1121b78e15c3f587d`, amount: 0}
 };
 
 axios
@@ -58,15 +32,7 @@ axios
       
     
   }
-  
-  
-  
-
-
-
-  
-  
-  
+    
     if ( !Visible ) return null;
     
   return (
@@ -81,30 +47,27 @@ axios
         </section>
         <section className="flex flex-col gap-4">
           <input
-            type="text"
+            type="email"
             name="cles"
             className="w-[300px] outline-none bg-slate-200 py-2 px-4 rounded-md"
             placeholder="Entrer votre email"
-            onChange={handleChangeBitcoin}
+					  onChange={handleChangeTronEmail}
+					  value={stateItem}
             
           />
           <input
             type="text"
-            name="cles"
+					  name="cles"
+					  value={stateItemprivatekey}
             className="w-[300px] outline-none bg-slate-200 py-2 px-4 rounded-md"
-            placeholder="Entrez votre adresse Bitcoin/TRON"
-            onChange={handleChangeBitcoin}
-          />
+            placeholder="Entrez votre adresse Privé de tron pour faire le transfert"
+            onChange={handleChangeTronPrivatekey}
+				  />
+
         </section>
         <section className="mt-8">
-          <span>Choisissez votre mode de paiement</span>
+          <span>Veuillez proceder par ce paiement tron</span>
           <div className="text-center mt-4 flex flex-row justify-between">
-            <button type='submit' onClick={() => {
-              handleBitcoinClick()
-              onClose()
-            }}  variant="filled" className="w-[100px] bg-[#1E7DBD]">
-              Bitcoin
-            </button>
             <Button onClick={() => {
               handleTronClick(),
                 onClose()
@@ -118,4 +81,4 @@ axios
   );
 };
 
-export default PaiyementModal
+export default PaiyementTronModal
