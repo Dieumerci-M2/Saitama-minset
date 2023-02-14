@@ -1,27 +1,26 @@
-import React, {useState} from 'react'
-import Menus from "../components/Menus"
-import Footer from "../components/Footer"
-import Reduction from '../assets/reduction.svg'
-import Livraison from '../components/Livraison'
-import Categories from '../components/CategoriesSearch'
-import Affiche from '../assets/Affiche.jpg'
-import SousMenus from '../components/SousMenus'
-import InfoLivre from '../components/InfoLivre'
-import Harry1 from "../assets/BooksReal.jpg"
-import Harry2 from "../assets/Harry-Potter-de-J.K.-Rowling.jpg"
-import Harry3 from "../assets/HenryPorter1.jpg"
-import Formation from "../assets/Formation 1.svg"
-import Formation1 from "../assets/Formation-relatif-1.svg"
-import Formation2 from "../assets/Formation-relatif-2.svg"
-import Bed from "../assets/Bed.jpg"
-import Payement from "../components/PaiyementModal"
-
+import React, { useState } from 'react';
+import Menus from '../components/Menus';
+import Footer from '../components/Footer';
+import Reduction from '../assets/reduction.svg';
+import Livraison from '../components/Livraison';
+import Categories from '../components/CategoriesSearch';
+import Affiche from '../assets/Affiche.jpg';
+import SousMenus from '../components/SousMenus';
+import InfoLivre from '../components/InfoLivre';
+import Harry1 from '../assets/BooksReal.jpg';
+import Harry2 from '../assets/Harry-Potter-de-J.K.-Rowling.jpg';
+import Harry3 from '../assets/HenryPorter1.jpg';
+import Formation from '../assets/Formation 1.svg';
+import Formation1 from '../assets/Formation-relatif-1.svg';
+import Formation2 from '../assets/Formation-relatif-2.svg';
+import Bed from '../assets/Bed.jpg';
+import Payement from '../components/PaiyementModal';
 
 const Homepage = () => {
-  const [ showpayment, setShowpayement ] = useState( false )
- const HandlerOnclose = ()=>setShowpayement(false)
+  const [showpayment, setShowpayement] = useState(false);
+  const HandlerOnclose = () => setShowpayement(false);
   return (
-    <article className="">
+    <article className="text-sm lg:text-sm xl:text-base">
       <header className="flex justify-center flex-col items-center">
         <div className="flex justify-between w-full h-[30px] bg-gray-300">
           <div className="flex flex-row ml-2 gap-4">
@@ -49,16 +48,16 @@ const Homepage = () => {
         </div>
         <Menus />
       </header>
-      <main className="my-[30px] mx-10">
+      <main className="my-8 mx-10">
         <Payement onClose={HandlerOnclose} Visible={showpayment} />
-        <article className="flex flex-row gap-4">
-          <section className="ml-2">
+        <article className="flex justify-center gap-3 m-2 lg:m-0 xl:m-2 ">
+          <section className=" w-[20%] mr-0 lg:mr-0 xl:mr-2">
             <Categories />
           </section>
-          <section className="flex flex-row">
+          <section className="flex  w-[40%] mr-0 lg:mr-0 xl:mr-1">
             <div
               className="flex flex-col justify-center items-center text-center p-8 pt-8 gap-6 text-lg
-             bg-slate-200 w-[50%]">
+             bg-slate-200 w-[50%] lg:text-base xl:text-lg">
               <span className="text-red-900 mt-3">J.K ROWLING</span>
               <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
               <span className="text-red-900"> $13.22 </span>
@@ -77,12 +76,12 @@ const Homepage = () => {
               />
             </div>
           </section>
-          <section>
+          <section className="w-[40%]">
             <SousMenus />
-            <section className="flex flex-row mr-1 gap-4 mt-4">
+            <section className="flex  gap-4 mt-4">
               <div
                 className="flex flex-col text-center p-8 pt-2 justify-center
-               items-center gap-4 text-lg bg-slate-200 w-[50%]">
+               items-center gap-4 text-lg bg-slate-200 w-[50%] lg:text-base xl:text-lg">
                 <span className="text-red-900 mt-3">J.K ROWLING</span>
                 <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
                 <span className="text-red-900">$13.22</span>
@@ -94,7 +93,7 @@ const Homepage = () => {
               </div>
               <div
                 className="flex flex-col text-center justify-center items-center
-               p-8 pt-2 gap-4 text-lg bg-slate-200 w-[50%]">
+               p-8 pt-2 gap-4 text-lg bg-slate-200 w-[50%] lg:text-base xl:text-lg">
                 <span className="text-red-900 mt-3">J.K ROWLING</span>
                 <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
                 <span className="text-red-900">$13.22</span>
@@ -110,18 +109,18 @@ const Homepage = () => {
         <Livraison />
         <h1 className="text-5xl -mt-10 pb-10">Nos Livres</h1>
         <article className="flex flex-row">
-          <section className="w-[33%] h-[500px]">
+          <section className="w-[33%] h-128 lg:h-[500px]">
             <div className="ml-1" onClick={() => setShowpayement(true)}>
-              <img src={Harry2} alt="book" className="bg-cover h-[578px] w-[100%] cursor-pointer" />
+              <img src={Harry2} alt="book" className="bg-cover h-128 lg:h-[500px] xl:h-[500px] w-[100%] cursor-pointer" />
             </div>
           </section>
-          <section className="w-[33%]">
+          <section className="w-[33%] h-128 lg:h-[500px] xl:h-[500px] ">
             <InfoLivre />
           </section>
-          <section className="w-[34%] flex flex-col gap-4">
+          <section className="w-[34%] h-128 flex flex-col gap-4">
             <div className="flex flex-row">
               <div className="flex flex-col justify-start items-center text-center gap-4 bg-slate-200 p-6 w-[50%]">
-                <span className="text-red-900 mt-3">J.K ROWLING</span>
+                <span className="text-red-900">J.K ROWLING</span>
                 <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
                 <span className="text-red-900">$13.22</span>
                 <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
@@ -130,7 +129,7 @@ const Homepage = () => {
                 <img
                   src={Harry1}
                   alt="harry"
-                  className="bg-cover h-[280px] w-[100%] cursor-pointer"
+                  className="bg-cover h-56 w-[100%] cursor-pointer"
                 />
               </div>
             </div>
@@ -290,6 +289,6 @@ const Homepage = () => {
       </footer>
     </article>
   );
-}
+};
 
-export default Homepage
+export default Homepage;
