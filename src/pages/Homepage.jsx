@@ -1,25 +1,24 @@
-import React, {useState} from 'react'
-import Menus from "../components/Menus"
-import Footer from "../components/Footer"
-import Reduction from '../assets/reduction.svg'
-import Livraison from '../components/Livraison'
-import Categories from '../components/CategoriesSearch'
-import Affiche from '../assets/Affiche.jpg'
-import SousMenus from '../components/SousMenus'
-import InfoLivre from '../components/InfoLivre'
-import Harry1 from "../assets/BooksReal.jpg"
-import Harry2 from "../assets/Harry-Potter-de-J.K.-Rowling.jpg"
-import Harry3 from "../assets/HenryPorter1.jpg"
-import Formation from "../assets/Formation 1.svg"
-import Formation1 from "../assets/Formation-relatif-1.svg"
-import Formation2 from "../assets/Formation-relatif-2.svg"
-import Bed from "../assets/Bed.jpg"
-import Payement from "../components/PaiyementModal"
-
+import React, { useState } from 'react';
+import Menus from '../components/Menus';
+import Footer from '../components/Footer';
+import Reduction from '../assets/reduction.svg';
+import Livraison from '../components/Livraison';
+import Categories from '../components/CategoriesSearch';
+import Affiche from '../assets/Affiche.jpg';
+import SousMenus from '../components/SousMenus';
+import InfoLivre from '../components/InfoLivre';
+import Harry1 from '../assets/BooksReal.jpg';
+import Harry2 from '../assets/Harry-Potter-de-J.K.-Rowling.jpg';
+import Harry3 from '../assets/HenryPorter1.jpg';
+import Formation from '../assets/Formation 1.svg';
+import Formation1 from '../assets/Formation-relatif-1.svg';
+import Formation2 from '../assets/Formation-relatif-2.svg';
+import Bed from '../assets/Bed.jpg';
+import Payement from '../components/PaiyementModal';
 
 const Homepage = () => {
-  const [ showpayment, setShowpayement ] = useState( false )
- const HandlerOnclose = ()=>setShowpayement(false)
+  const [showpayment, setShowpayement] = useState(false);
+  const HandlerOnclose = () => setShowpayement(false);
   return (
     <article className="">
       <header className="flex justify-center flex-col items-center">
@@ -51,11 +50,11 @@ const Homepage = () => {
       </header>
       <main className="my-[30px] mx-10">
         <Payement onClose={HandlerOnclose} Visible={showpayment} />
-        <article className="flex flex-row gap-4">
-          <section className="ml-2">
+        <article className="flex justify-center gap-3 m-2 lg:m-0 xl:m-2 ">
+          <section className=" w-[20%]">
             <Categories />
           </section>
-          <section className="flex flex-row">
+          <section className="flex  w-[40%]">
             <div
               className="flex flex-col justify-center items-center text-center p-8 pt-8 gap-6 text-lg
              bg-slate-200 w-[50%]">
@@ -77,9 +76,9 @@ const Homepage = () => {
               />
             </div>
           </section>
-          <section>
+          <section className="w-[40%]">
             <SousMenus />
-            <section className="flex flex-row mr-1 gap-4 mt-4">
+            <section className="flex  gap-4 mt-4">
               <div
                 className="flex flex-col text-center p-8 pt-2 justify-center
                items-center gap-4 text-lg bg-slate-200 w-[50%]">
@@ -290,6 +289,6 @@ const Homepage = () => {
       </footer>
     </article>
   );
-}
+};
 
-export default Homepage
+export default Homepage;
