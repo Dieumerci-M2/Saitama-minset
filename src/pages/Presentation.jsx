@@ -38,18 +38,18 @@ const Presentation = () => {
           </div>
         </section>
       </header>
-      <main className="mb-10">
-        <section className="bg-gray-200 flex justify-around">
-          <div className="text-center flex justify-center items-center w-[50%] m-10 pt-4 bg-gray-200 text-gray-200">
+      <main className="flex-col">
+        <section className="bg-gray-200 flex">
+          <div className="text-center flex-col m-10 pt-4 bg-gray-200 text-gray-200">
             <img
               src={Accueil}
               alt="Accueil"
-              className="w-[600px] h-[400px] mt-8 bg-gray-200 text-gray-200"
+              className="mt-8 bg-gray-200 text-gray-200"
             />
           </div>
-          <div className="text-center m-10 w-[50%]">
-            <p className="font-bold text-5xl pt-10 pb-6 text-left mt-8">
-              Le meilleur investissement que tu puisse faire c'est d'investir pour toi même
+          {/* <div className="text-center m-10 w-[50%]">
+            <p className="font-200 text-2xl pt-10">
+              Le meilleur investissement que tu puisse faire c'est d'investir dans toi même
             </p>
             <div className="mt-2 text-left text-lg">
               <Button
@@ -60,7 +60,7 @@ const Presentation = () => {
                 Continuer
               </Button>
             </div>
-          </div>
+          </div> */}
         </section>
         <section className="flex flex-col">
           <div className="flex justify-around p-10">
