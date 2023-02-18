@@ -83,24 +83,24 @@ export default function Register() {
       <section>
         <Navbar />
       </section>
-      <section className="flex flex-row justify-center items-center text-center mx-auto">
-        <div className="imgBackLogin bg-blue-400">
+      <section className="flex flex-row justify-center items-center text-center mx-auto max-mobile:flex-col">
+        <div className="imgBackLogin bg-blue-400 max-mobile:bg-white max-mobile:h-[10px] max-mobile:mb-[100px] max-mobile:mt-[-30px]">
           <p
             className="text-5xl font-bold px-10 pt-20 text-white
-           text-center">
+           text-center max-mobile:text-lg max-mobile:text-red-700">
             S'Inscrire
           </p>
-          <p className="px-10 pt-20  text-white text-center">
+          <p className="px-10 pt-20  text-white text-center max-mobile:hidden">
             Inscrivez-vous maintenant et joignez le grand Team Saitama !
           </p>
         </div>
-        <form className="h-[350px] w-[350px] mb-14"   >
-          <CardBody className="flex flex-col flex-wrap gap-4 w-96 p-10 shadow-xl" >
+        <form className="h-[350px] w-[350px] mb-14 max-mobile:w-full"   >
+          <CardBody className="flex flex-col flex-wrap gap-4 w-96 p-10 shadow-xl max-mobile:w-full max-mobile:gap-9" >
             <Input value={userName}  type="text"  required   autoComplete="off" label="Nom" size="lg" name="username" onChange={handleUsernameChange} />
             <Input value={email}  type="email" required autoComplete="off"  label="Email" size="lg" name="email" onChange={handleemailChange} />
             <Input value={password}  type="password" required  autoComplete="off"  label="Password" size="lg" name="password" onChange={handlepasswordChange} />
             <Input value={confirmPass}  type="password" required  autoComplete="off"  label="Confirmez votre Password" name="confirmPass" onChange={handleconfirmPassChange} size="lg" />
-            <div className="text-start -ml-2.5">
+            <div className="text-start -ml-2.5 max-mobile:hidden">
               <Checkbox className="bg-red" 
               label="se souvenir de moi" />
             </div>

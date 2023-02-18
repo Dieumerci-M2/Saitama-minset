@@ -21,7 +21,7 @@ specifiers:
   react-router-dom: ^6.8.0
   react-toastify: ^9.1.1
   redux: ^4.2.1
-  tailwindcss: ^3.2.4
+  tailwindcss: ^3.2.6
   uninstall: ^0.0.0
   vite: ^4.0.0
 
@@ -49,7 +49,7 @@ devDependencies:
   postcss: 8.4.21
   prettier: 2.8.3
   react-router-dom: 6.8.0_biqbaboplfbrettd7655fr4n2y
-  tailwindcss: 3.2.4_postcss@8.4.21
+  tailwindcss: 3.2.7_postcss@8.4.21
   vite: 4.0.4
 
 packages:
@@ -2148,8 +2148,8 @@ packages:
     resolution: {integrity: sha512-coziXxViLHbVtFvD1+jwSu+UmDJSFX4dhj9ZuqHCuhTzu9Wk5wMedAz5AVY3uUYw95TaO7NwgUS/dLGcWvtgqw==}
     dev: false
 
-  /tailwindcss/3.2.4_postcss@8.4.21:
-    resolution: {integrity: sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ==}
+  /tailwindcss/3.2.7_postcss@8.4.21:
+    resolution: {integrity: sha512-B6DLqJzc21x7wntlH/GsZwEXTBttVSl1FtCzC8WP4oBc/NKef7kaax5jeihkkCEWc831/5NDJ9gRNDK6NEioQQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
