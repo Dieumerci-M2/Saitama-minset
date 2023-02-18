@@ -162,14 +162,13 @@ const Presentation = () => {
 
       <section id="section">
         <div className=" bg-gray-200 container flex flex-col items-center px-6 mx-0 mt-0 space-y-0 tablette:space-y-0  tablette:flex-row">
-          <img src={Accueil} alt="Accueil" className="mt-2 bg-gray-200 text-gray-200" />
+          <img src={Accueil} alt="Accueil" className="mt-8 bg-gray-200 text-gray-200" />
           <div className="flex flex-col mb-5 -space-y-6 tablette:w-1/2">
-          <p className="max-w-tablette text-4xl font-bold text-center tablette:text-5xl tablette:text-left">
+            <p className="max-w-tablette text-4xl font-bold text-center tablette:text-5xl tablette:text-left">
               Le meilleur investissement que tu puisse faire c'est d'investir dans toi même
             </p>
             <div className="text-center flex-col m-2 pt-4  text-gray-200 items-center">
-              <div
-                className="mt-2  text-lg ">
+              <div className="mt-2  text-lg ">
                 <Button
                   onClick={() => {
                     router('/home');
@@ -179,11 +178,32 @@ const Presentation = () => {
                 </Button>
               </div>
             </div>
-           
           </div>
         </div>
       </section>
 
+      <section id="book">
+        <div className=" container flex flex-col items-center px-6 mx-0 mt-0 space-y-0 tablette:space-y-0  tablette:flex-row">
+        <span>
+              <img
+                src={ReadBook1}
+                alt="ReadBook"
+                className="w-[250px] h-[250px] bg-#28a69b"
+              />
+            </span>
+        
+          <div className="flex flex-col mb-5 -space-y-6 tablette:w-1/2">
+          <span>
+              <img
+                src={ReadBook2}
+                alt="ReadBook"
+                className="w-[250px] h-[250px]"
+              />
+            </span>
+          </div>
+        </div>
+      </section>
+      
     </>
   );
 };
