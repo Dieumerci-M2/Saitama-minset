@@ -11,7 +11,7 @@ const Presentation = () => {
   const router = useNavigate()
   return (
     <article className="box-border overflow-hidden">
-      <header className="fixed  w-full">
+      {/* <header className="fixed  w-full">
         <section className="flex  bg-white flex-row justify-between">
           <div className="border w-[150px]  h-[50px] m-2 ">
             <img src={saitama} alt="Logo" />
@@ -37,8 +37,8 @@ const Presentation = () => {
             </span>
           </div>
         </section>
-      </header>
-      <main className="flex-col">
+      </header> */}
+      {/* <main className="flex-col">
         <section className="bg-gray-200 flex">
           <div className="text-center flex-col m-10 pt-4 bg-gray-200 text-gray-200">
             <img
@@ -47,7 +47,7 @@ const Presentation = () => {
               className="mt-8 bg-gray-200 text-gray-200"
             />
           </div>
-          {/* <div className="text-center m-10 w-[50%]">
+          <div className="text-center m-10 w-[50%]">
             <p className="font-200 text-2xl pt-10">
               Le meilleur investissement que tu puisse faire c'est d'investir dans toi même
             </p>
@@ -60,7 +60,7 @@ const Presentation = () => {
                 Continuer
               </Button>
             </div>
-          </div> */}
+          </div>
         </section>
         <section className="flex flex-col">
           <div className="flex justify-around p-10">
@@ -94,7 +94,7 @@ const Presentation = () => {
             </span>
           </div>
         </section>
-      </main>
+      </main> */}
       <footer>
         <Pfooter />
       </footer>
