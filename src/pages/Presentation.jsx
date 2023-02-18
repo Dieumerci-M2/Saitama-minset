@@ -96,9 +96,9 @@ const Presentation = () => {
         </div>
       </section>
 
-      <section className="container flex flex-col justify-center tablette:flex-col">
+      <section className="container flex flex-col justify-center m-3 tablette:flex-col tablette:mt-2">
         {/* <div className=" tablette:justify-around p-10"> */}
-        <div className='tablette:flex tablette:flex-row tablette:justify-around'>
+        <div className='tablette:flex tablette:flex-row tablette:justify-around mt-2 tablette:mt-2'>
 
           <img src={ReadBook1} alt="ReadBook" className="w-[250px] h-[250px] bg-#28a69b" />
 
