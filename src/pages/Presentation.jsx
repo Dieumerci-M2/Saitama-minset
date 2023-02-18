@@ -1,20 +1,80 @@
 import React from 'react';
 import Pfooter from '../components/Pfooter';
-import { Button } from "@material-tailwind/react";
-import saitama from "../assets/saitama.png";
-import Accueil from "../assets/Image-accueil1.svg";
-import ReadBook1 from "../assets/Ellipse3.jpeg";
-import ReadBook2 from "../assets/Ellipse4.svg";
+import { Button } from '@material-tailwind/react';
+import saitama from '../assets/saitama.png';
+import Accueil from '../assets/Image-accueil1.svg';
+import ReadBook1 from '../assets/Ellipse3.jpeg';
+import ReadBook2 from '../assets/Ellipse4.svg';
 import { useNavigate } from 'react-router-dom';
 
 const Presentation = () => {
-  const router = useNavigate()
+  const router = useNavigate();
   return (
-    <article className="box-border overflow-hidden">
-      {/* <header className="fixed  w-full">
+    // NavBar
+    <>
+      <nav className="relative container mx-0 p-0">
+        {/* flex container */}
+        <div className="flex items-center justify-between">
+          {/* logo */}
+          <div className="pt-2">
+            <img src={saitama} alt="Logo" className="border w-[150px]  h-[50px] m-2" />
+          </div>
+          <div className="hiddden space-x6 tablette:flex">
+            <span
+              className="cursor-pointer hover:text-blue-400 mr-1"
+              id="inscription"
+              onClick={() => {
+                router('/register');
+              }}>
+              Inscription
+            </span>
+            <span
+              onClick={() => {
+                router('/auth');
+              }}
+              className="cursor-pointer hover:text-blue-400 ml-4"
+              id="connexion">
+              Connexion
+            </span>
+            {/* Menu */}
+          </div>
+          <button
+            id="btn-menu-mobile"
+            className="block humburger  tablette:hidden focus:outline-none">
+            <span className="hamburger-top"></span>
+            <span className="hamburger-middle"></span>
+            <span className="hamburger-bottom"></span>
+          </button>
+        </div>
+
+        {/* mobile Menu  */}
+        <div className="tablette:hidden">
+          <div
+            id="menu"
+            className="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-slate-600 mobile:w-auto mobile:self-center left-6 right-6 drop-shadow-md">
+            <span
+              className="cursor-pointer hover:text-blue-400"
+              id="inscription"
+              onClick={() => {
+                router('/register');
+              }}>
+              Inscription
+            </span>
+            <span
+              onClick={() => {
+                router('/auth');
+              }}
+              className="cursor-pointer hover:text-blue-400"
+              id="connexion">
+              Connexion
+            </span>
+          </div>
+        </div>
+
+        {/* <header className="fixed  w-full">
+        <img src={saitama} alt="Logo" />
         <section className="flex  bg-white flex-row justify-between">
           <div className="border w-[150px]  h-[50px] m-2 ">
-            <img src={saitama} alt="Logo" />
           </div>
           <div
             className="flex gap-10
@@ -38,7 +98,7 @@ const Presentation = () => {
           </div>
         </section>
       </header> */}
-      {/* <main className="flex-col">
+        {/* <main className="flex-col">
         <section className="bg-gray-200 flex">
           <div className="text-center flex-col m-10 pt-4 bg-gray-200 text-gray-200">
             <img
@@ -95,11 +155,37 @@ const Presentation = () => {
           </div>
         </section>
       </main> */}
-      <footer>
+        {/* <footer>
         <Pfooter />
-      </footer>
-    </article>
-  );
-}
+      </footer> */}
+      </nav>
 
-export default Presentation
+      <section id="section">
+        <div className=" bg-gray-200 container flex flex-col items-center px-6 mx-0 mt-0 space-y-0 tablette:space-y-0  tablette:flex-row">
+          <img src={Accueil} alt="Accueil" className="mt-2 bg-gray-200 text-gray-200" />
+          <div className="flex flex-col mb-5 -space-y-6 tablette:w-1/2">
+          <p className="max-w-tablette text-4xl font-bold text-center tablette:text-5xl tablette:text-left">
+              Le meilleur investissement que tu puisse faire c'est d'investir dans toi même
+            </p>
+            <div className="text-center flex-col m-2 pt-4  text-gray-200 items-center">
+              <div
+                className="mt-2  text-lg ">
+                <Button
+                  onClick={() => {
+                    router('/home');
+                  }}
+                  className="text-lg bg-red-700 ">
+                  Continuer
+                </Button>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </section>
+
+    </>
+  );
+};
+
+export default Presentation;
