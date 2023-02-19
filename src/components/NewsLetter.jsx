@@ -33,7 +33,7 @@ const NewsLetter = () => {
         <div className="desktop:w-36 desktop:h-36">
           <img src={Toppost} alt="toppost" className="bg-cover desktop:w-[100%] desktop:h-[100%]" />
         </div>
-        <div className="flex flex-col gap-2 justify-start w-36 h-36 p-4">
+        <div className="flex flex-col gap-2 justify-center w-36 h-36 p-4">
           <span className="typcn typcn-spanner">LOREM</span>
           <span className="text-[10px]">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum..
