@@ -69,15 +69,15 @@ const Formationpage = () => {
         <h1 className="text-5xl flex before:justify-center">Mes Videos</h1>
         <article className="flex flex-col desktop:flex-row">
           <section className="desktop:w-[33%] desktop:h-[500px]">
-            <div className="ml-1 bg-black">
+            <div className="ml-1 bg-black ">
               <img
                 src={Formation}
                 alt="book"
-                className="bg-cover h-[578px] w-[100%] cursor-pointer"
+                className="desktop:bg-cover desktop:h-[578px] desktop:w-[100%] cursor-pointer mt-2"
               />
             </div>
           </section>
-          <section className="w-[33%]">
+          <section className=" desktop:w-[33%]">
             <InfoLivre />
           </section>
           <section className="w-[34%] flex flex-col gap-4">
