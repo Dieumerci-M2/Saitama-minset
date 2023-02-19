@@ -95,14 +95,14 @@ export default function Register() {
           </p>
         </div>
         <form className="h-[350px] w-[350px] mb-14 max-mobile:w-full"   >
-          <CardBody className="flex flex-col flex-wrap gap-4 w-96 p-10 shadow-xl max-mobile:w-full max-mobile:gap-9" >
-            <Input value={userName}  type="text"  required   autoComplete="off" label="Nom" size="lg" name="username" onChange={handleUsernameChange} />
-            <Input value={email}  type="email" required autoComplete="off"  label="Email" size="lg" name="email" onChange={handleemailChange} />
-            <Input value={password}  type="password" required  autoComplete="off"  label="Password" size="lg" name="password" onChange={handlepasswordChange} />
-            <Input value={confirmPass}  type="password" required  autoComplete="off"  label="Confirmez votre Password" name="confirmPass" onChange={handleconfirmPassChange} size="lg" />
-            <div className="text-start -ml-2.5 max-mobile:hidden">
-              <Checkbox className="bg-red" 
-              label="se souvenir de moi" />
+          <CardBody className="flex flex-col justify-center gap-[26.5px] mt-[8px] h-[450px] w-96 p-10 shadow-xl max-mobile:w-full max-mobile:gap-9" >
+            <Input value={userName}  type="text"   autoComplete="off" placeholder="Nom" size="lg" name="username" onChange={handleUsernameChange} />
+            <Input value={email}  type="email" autoComplete="off"  placeholder="Email" size="lg" name="email" onChange={handleemailChange} />
+            <Input value={password}  type="password"  autoComplete="off" placeholder="Password" size="lg" name="password" onChange={handlepasswordChange} />
+            <Input value={confirmPass}  type="password"  autoComplete="off" placeholder="Confirmez votre Password" name="confirmPass" onChange={handleconfirmPassChange} size="lg" />
+            <div className="flex items-center text-start -ml-2.5 max-mobile:hidden">
+              <Checkbox className="bg-red" id="register-checkbox"/>
+              <label for="register-checkbox">se souvenir de moi</label>
             </div>
             <p className="text-center text-blue-400 cursor-pointer">Avez-vous déjà un compte?</p>
             <Button type="submit" onClick={(e) => {
