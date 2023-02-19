@@ -67,7 +67,7 @@ import { useState } from "react";
   }
     return (
       <body clasName="flex flex-row justify-center items-center text-center mx-auto">
-        <div className="flex flex-row flex-wrap items-center ">
+        <div className="flex flex-row flex-wrap items-center">
           <div className="imgBackLogin bg-blue-400 max-mobile:bg-white max-mobile:h-7 max-mobile:mb-[30px] max-mobile:mt-[-30px]">
             <p
               className="text-5xl font-bold px-10 pt-20 text-white
@@ -79,12 +79,13 @@ import { useState } from "react";
             </p>
           </div>
           <ToastContainer/>
-          <div className="h-[350px] w-[350px] mt-[180px] max-mobile:w-full max-mobile:mt-16">
-            <CardBody className="flex flex-col flex-wrap gap-4 w-96 p-10 shadow-xl max-mobile:w-full max-mobile:gap-9">
-              <Input label="Email"  value={email} required size="lg" onChange={handleemailChange}  />
-              <Input label="Password" value={password}  required size="lg" onChange={handlepasswordChange}  />
-              <div className="-ml-2.5 max-mobile:hidden">
-                <Checkbox className="bg-red" label="se souvenir de moi" />
+          <div className="h-[400px] w-[350px] max-mobile:w-full max-mobile:mt-16">
+            <CardBody className="cardBody flex flex-col justify-center gap-6 w-96 h-[450px] mt-[5px] p-10 shadow-xl max-mobile:w-full max-mobile:gap-9">
+              <Input placeholder="Email" id="email"  value={email} size="lg" onChange={handleemailChange}  />
+              <Input placeholder="Password" value={password} size="lg" onChange={handlepasswordChange}  />
+              <div className=" flex items-center -ml-2.5 max-mobile:hidden">
+                <Checkbox className="bg-red" id="login-checkbox"/>
+                <label for="login-checkbox">se souvenir de moi</label>
               </div>
               <p onClick={()=>navigateTo('/register')} className="flex flex-row justify-center text-blue-400 cursor-pointer">
                 Vous n'avez pas un compte?
