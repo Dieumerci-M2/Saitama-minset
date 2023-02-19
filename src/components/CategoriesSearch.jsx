@@ -1,6 +1,4 @@
 import React from 'react';
-import { BsList } from 'react-icons/bs';
-import { BsChevronRight } from 'react-icons/bs';
 
 function CategoriesSearch() {
   return (
@@ -8,9 +6,8 @@ function CategoriesSearch() {
       className="flex flex-col  p-2 w-[100%] border-b-2 border-[white]-600
      bg-slate-200 ">
       <div className="flex flex-row w-[100%] justify-between">
-        <div className=" flex border-b-2 p-2 border-blue-400 bg-red-700">
-          <span className="flex  text-white flex-row justify-around gap-2">
-            <BsList size={40} color={'white'} />
+        <div className=" flex border-b-2 p-2 border-blue-400 bg-red-700 w-full">
+          <span className="text-white text-[16px] font-bold">
             Rechercher une catégorie
           </span>
         </div>
