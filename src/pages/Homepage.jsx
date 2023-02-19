@@ -173,43 +173,43 @@ const Homepage = () => {
                     </article>
 
 
-                    {/* <h1 className="text-5xl my-10">Nos Formations</h1>
-                    <article className="flex flex-row">
-                        <section className="w-[33%] h-[500px]">
+                    <h1 className="text-4xl flex justify-center desktop:text-4xl my-4">Nos Formations</h1>
+                    <article className="flex flex-col desktop:flex desktop:flex-row">
+                        <section className="desktop:h-[500px] desktop:w-[33%]">
                             <div className="ml-1 bg-black">
                                 <img src={Formation}
                                     alt="book"
-                                    className="bg-cover h-[578px] w-[100%] cursor-pointer"/>
+                                    className="bg-cover   desktop:w-[100%] desktop:h-[578px] cursor-pointer" />
                             </div>
                         </section>
-                        <section className="w-[33%]">
-                            <InfoLivre/>
+                        <section className=" desktop:w-[33%]">
+                            <InfoLivre />
                         </section>
-                        <section className="w-[34%] flex flex-col gap-4">
-                            <div className="flex flex-row">
-                                <div className="w-[100%]"
+                        <section className="desktop:w-[34%] flex desktop:flex-col desktop:gap-4 ">
+                            <div className="flex desktop:flex-row">
+                                <div className="desktop:w-[100%]"
                                     onClick={
                                         () => setShowpayement(true)
-                                }>
+                                    }>
                                     <img src={Formation1}
                                         alt="harry"
-                                        className="bg-cover h-[280px] w-[100%] cursor-pointer"/>
+                                        className="desktop:bg-cover desktop:h-[280px] desktop:w-[100%] cursor-pointer" />
                                 </div>
                             </div>
                             <div className="flex flex-row">
-                                <div className="w-[100%]"
+                                <div className="desktop:w-[100%]"
                                     onClick={
                                         () => setShowpayement(true)
-                                }>
+                                    }>
                                     <img src={Formation2}
                                         alt="harry"
-                                        className="bg-cover h-[280px] w-[100%] cursor-pointer"/>
+                                        className="desktop:bg-cover desktop:h-[280px] desktopw-[100%] cursor-pointer" />
                                 </div>
                             </div>
                         </section>
-                    </article> */}
+                        {/* </article> 
                     <article className="flex flex-row justify-around mx-1 my-20">
-                        {/* <section className="flex flex-col gap-14">
+                      <section className="flex flex-col gap-14">
                             <div className="flex flex-row w-[700px] h-[300px] rounded-2xl shadow-xl">
                                 <div className="w-[300px] h-[300px]">
                                     <img src={Bed}
@@ -260,7 +260,7 @@ const Homepage = () => {
                                     </div>
                                 </div>
                             </div>
-                        </section> */}
+                        </section>  */}
                         {/* <section>
                             <div className="flex flex-col justify-center items-center h-[650px] w-[350px] rounded-2xl shadow-xl">
                                 <div className="h-[300px] w-[350px]">
@@ -286,7 +286,8 @@ const Homepage = () => {
                                     </div>
                                 </div>
                             </div>
-                        </section> */} </article>
+                        </section>  */}
+                    </article>
                 </main>
                 <footer>
                     <Footer />
