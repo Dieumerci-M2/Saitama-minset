@@ -102,9 +102,9 @@ const Formationpage = () => {
           </section>
         </article>
         <h1 className="desktop:text-5xl desktop:my-10 text-3xl justify-center">Les plus téléchargées</h1>
-        <article className="flex flex-row justify-between ">
-          <section className="grid grid-cols-2 gap-10 w-[68%] text-center">
-            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
+        <article className="flex flex-col desktop:flex-row desktop:justify-between">
+          <section className="grid desktop:grid-cols-2 desktop:gap-10 desktop:w-[68%] text-center">
+            <div className="desktop:h-[300px] flex-row flex desktop:flex-col desktop:gap-2 desktop:w-[100%]">
               <img src={FormReact1} alt="harry" className=" bg-cover h-[100%] cursor-pointer" />
               <span className="text-lg font-semibold">React js et native pour debutants</span>
             </div>
