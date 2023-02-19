@@ -90,8 +90,8 @@ const Formationpage = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-row">
-              <div className="w-[100%]">
+            <div className="flex desktopflex-row">
+              <div className="desktop:w-[100%]">
                 <img
                   src={Formation2}
                   alt="harry"
@@ -101,7 +101,7 @@ const Formationpage = () => {
             </div>
           </section>
         </article>
-        <h1 className="text-5xl my-10">Les plus téléchargées</h1>
+        <h1 className="desktop:text-5xl desktop:my-10 text-3xl justify-center">Les plus téléchargées</h1>
         <article className="flex flex-row justify-between ">
           <section className="grid grid-cols-2 gap-10 w-[68%] text-center">
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
