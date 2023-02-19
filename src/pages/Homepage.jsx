@@ -20,10 +20,25 @@ const Homepage = () => {
   const [showpayment, setShowpayement] = useState(false);
   const HandlerOnclose = () => setShowpayement(false);
   return (
-    <article className="text-sm lg:text-sm xl:text-base">
-      <header className="flex justify-center flex-col items-center">
-        <div className="flex justify-between w-full h-[30px] bg-gray-300">
-          <div className="flex flex-row ml-2 gap-4">
+    <article className="text-sm lg:text-sm xl:text-base ">
+      <header className="
+      flex justify-center flex-col items-center
+
+      tablette:flex tablette:justifiy-center tablette:flex-col tablette:items-center
+      desktop:flex desktop:justify-center desktop:flex-col desktop:items-center
+      
+      " 
+      
+      >
+        <div className="flex justify-between w-full h-[30px] bg-gray-300
+        tablette:flex tablette:justifiy-between tablette:w-full
+        desktop:flex desktop:justify-between desktop:w-full
+  "
+        >
+          <div className="flex flex-row ml-2 gap-4
+          tablette:flex tablette:flex-row 
+          desktop:flex desktop:flex-row
+          ">
             <span>
               <img src={Reduction} alt="reduction cursor-pointer" />
             </span>
