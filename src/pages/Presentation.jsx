@@ -85,11 +85,11 @@ const Presentation = () => {
         <div className=" bg-gray-200 flex flex-col justify-center px-6 gap-5 mx-0 mt-0 space-y-0 tablette:space-y-0  tablette:flex-row">
           <img src={Accueil} alt="Accueil" className="my-8 bg-gray-200 text-gray-200 " />
           <div className="flex flex-col mb-5 -space-y-6 justify-center">
-            <p className="text-4xl font-bold flex  tablette:text-4xl laptop:text-5xl mobile:text-2xl">
+            <p className="text-2xl font-bold flex  tablette:text-4xl laptop:text-5xl mobile:text-2xl">
               Le meilleur investissement que tu puisse faire c'est d'investir dans toi même
             </p>
             <div className="text-center flex-col m-2 pt-4 flex text-gray-200 items-center justify-center">
-              <div className="mt-14 text-lg text-left">
+              <div className="mt-10 text-lg text-left mb-7">
                 <Button
                   onClick={() => {
                     router('/home');
@@ -105,10 +105,10 @@ const Presentation = () => {
 
       <section className="flex flex-col justify-center m-3 tablette:flex-col tablette:mt-2">
         {/* <div className=" tablette:justify-around p-10"> */}
-        <div className="tablette:flex tablette:flex-row tablette:justify-around mt-2 tablette:mt-2">
-          <img src={ReadBook1} alt="ReadBook" className="w-[250px] h-[250px] bg-#28a69b" />
+        <div className="tablette:flex flex flex-col justify-center tablette:flex-row tablette:justify-around mt-2 tablette:mt-2">
+          <img src={ReadBook1} alt="ReadBook" className="desktop:w-[250px] desktop:h-[250px] bg-#28a69b" />
 
-          <img src={ReadBook2} alt="ReadBook" className="w-[250px] h-[250px]" />
+          <img src={ReadBook2} alt="ReadBook" className=" mb-2 desktop:w-[250px] desktop:h-[250px]" />
         </div>
 
         <div
