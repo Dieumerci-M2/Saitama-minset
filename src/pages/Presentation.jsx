@@ -108,7 +108,7 @@ const Presentation = () => {
         <div className="tablette:flex flex flex-col justify-center tablette:flex-row tablette:justify-around mt-2 tablette:mt-2">
           <img src={ReadBook1} alt="ReadBook" className="desktop:w-[250px] desktop:h-[250px] bg-#28a69b" />
 
-          <img src={ReadBook2} alt="ReadBook" className="desktop:w-[250px] desktop:h-[250px]" />
+          <img src={ReadBook2} alt="ReadBook" className=" mb-2 desktop:w-[250px] desktop:h-[250px]" />
         </div>
 
         <div
