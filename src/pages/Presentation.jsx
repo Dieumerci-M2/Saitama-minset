@@ -82,14 +82,15 @@ const Presentation = () => {
       </nav>
 
       <section id="section">
-        <div className=" bg-gray-200 flex flex-col justify-center px-6 gap-5 mx-0 mt-0 space-y-0 tablette:space-y-0  tablette:flex-row">
-          <img src={Accueil} alt="Accueil" className="my-8 bg-gray-200 text-gray-200 " />
-          <div className="flex flex-col mb-5 -space-y-6 justify-center">
-            <p className="text-2xl font-bold flex  tablette:text-4xl laptop:text-5xl mobile:text-2xl">
+        <div className=" bg-gray-200 flex flex-col justify-center px-6 tablette:px-14 gap-5 tablette:gap-20 mx-0 mt-0 
+        space-y-0 tablette:space-y-0  tablette:flex-row">
+          <img src={ Accueil } alt="Accueil" className="my-8 bg-gray-200 text-gray-200
+           w-[inset] tablette:w-[50%]" />
+          <div className="flex flex-col mb-5 justify-center">
+            <p className="text-2xl font-bold flex  tablette:text-5xl">
               Le meilleur investissement que tu puisse faire c'est d'investir dans toi même
             </p>
-            <div className="text-center flex-col m-2 pt-4 flex text-gray-200 items-center justify-center">
-              <div className="mt-10 text-lg text-left mb-7">
+              <div className="mt-10 text-lg text-center tablette:text-left mb-7">
                 <Button
                   onClick={() => {
                     router('/home');
@@ -97,7 +98,6 @@ const Presentation = () => {
                   className="text-lg bg-red-700 ">
                   Continuer
                 </Button>
-              </div>
             </div>
           </div>
         </div>
