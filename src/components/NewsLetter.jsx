@@ -29,9 +29,9 @@ const NewsLetter = () => {
         </div>
       </div>
       <h1 className="desktop:text-start text-2xl  flex justify-center font-bold">TOP POST</h1>
-      <div className="flex flex-row">
-        <div className="w-36 h-36">
-          <img src={Toppost} alt="toppost" className="bg-cover w-[100%] h-[100%]" />
+      <div className="flex desktop:flex-row">
+        <div className="desktop:w-36 desktop:h-36">
+          <img src={Toppost} alt="toppost" className="bg-cover desktop:w-[100%] desktop:h-[100%]" />
         </div>
         <div className="flex flex-col gap-2 justify-start w-36 h-36 p-4">
           <span className="typcn typcn-spanner">LOREM</span>
