@@ -208,15 +208,16 @@ const Homepage = () => {
                             </div>
                         </section>
                     </article>
-                    <article className="flex flex-col my-3 desktop:my-6 desktop:flex-row desktop:justify-between">
-                        <section className="flex flex-col">
-                            <div className="flex desktop:flex-row desktop:w-[700px] desktop:h-[300px] rounded-2xl shadow-xl">
-                                <div className=" desktop:w-[300px] desktop:h-[300px]">
+                    <article className="flex flex-col  my-10 desktop:my-6 desktop:flex-row desktop:justify-around">
+
+                        <section>
+                            <div className="flex flex-col justify-center items-center h-[650px] w-[350px] rounded-2xl shadow-xl">
+                                <div className="h-[300px] w-[350px]">
                                     <img src={Bed}
                                         alt="bed"
-                                        className="desktop:bg-cover desktop:w-[300px] desktop:h-[100%] rounded-l-2xl cursor-pointer" />
+                                        className="bg-cover h-[300px] w-[100%] rounded-t-2xl cursor-pointer" />
                                 </div>
-                                <div className="flex desktop:flex-col desktop:gap-4 desktop:w-[400px] desktop:h-[300px] desktop:px-8 desktop:py-4 ">
+                                <div className="flex flex-col justify-center items-center text-center gap-4 h-[350px] w-[350px] px-8 py-4 ">
                                     <span className="font-bold">
                                         Netus vestibulum a vulputate sollicitudin id vitae convallis
                                     </span>
@@ -224,7 +225,7 @@ const Homepage = () => {
                                         At accumsan condimentum donec dictumst eros, tempus in diam. Ornare gravida quis
                                         eu blandit lectus vestibulum egestas.
                                     </span>
-                                    <div className="flex flex-row h-12 w-[250px] bg-gray-100 my-auto mt-3">
+                                    <div className="flex flex-row text-center h-12 w-[250px] bg-gray-100 my-auto mt-3">
                                         <img className="cursor-pointer inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
                                         <div>
                                             <span className="mr-2 cursor-pointer font-semibold">Jhon Doe</span>
@@ -234,40 +235,13 @@ const Homepage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <div className="flex flex-col desktop:flex-row desktop:w-[700px] desktop:h-[300px] rounded-2xl shadow-xl">
-                                    <div className="desktop:w-[300px] desktop:h-[300px]">
-                                        <img src={Bed}
-                                            alt="bed"
-                                            className="bg-cover desktop:w-[300px] desktop:h-[100%] rounded-l-2xl cursor-pointer" />
-                                    </div>
-                                    <div className="flex flex-row desktop:flex-col gap-4 desktop:w-[400px] desktop:h-[300px] desktop:px-8 desktop:py-4 ">
-                                        <span className="font-bold">
-                                            Netus vestibulum a vulputate sollicitudin id vitae convallis
-                                        </span>
-                                        <span className="text-md">
-                                            At accumsan condimentum donec dictumst eros, tempus in diam. Ornare gravida quis
-                                            eu blandit lectus vestibulum egestas.
-                                        </span>
-                                        <div className="flex flex-col desktop:flex-row desktop:h-12 desktop:w-[250px] bg-gray-100 desktop:my-auto desktop:mt-3">
-                                            <img className="cursor-pointer inline-block desktop:h-10 desktop:w-10 rounded-full ring-2 ring-white desktop:m-auto desktop:mt-1 desktop:ml-4" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="jhon Doe" />
-                                            <div
-                                            >
-                                                <span className="mr-2 cursor-pointer font-semibold">Jhon Doe</span>
-                                                <br />
-                                                <span className="mr-2 cursor-pointer">Blogeur international</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </section>
-                        {/* <section>
+                        <section>
                             <div className="flex flex-col justify-center items-center h-[650px] w-[350px] rounded-2xl shadow-xl">
                                 <div className="h-[300px] w-[350px]">
                                     <img src={Bed}
                                         alt="bed"
-                                        className="bg-cover h-[300px] w-[100%] rounded-t-2xl cursor-pointer"/>
+                                        className="bg-cover h-[300px] w-[100%] rounded-t-2xl cursor-pointer" />
                                 </div>
                                 <div className="flex flex-col justify-center items-center text-center gap-4 h-[350px] w-[350px] px-8 py-4 ">
                                     <span className="font-bold">
@@ -275,19 +249,45 @@ const Homepage = () => {
                                     </span>
                                     <span className="text-md">
                                         At accumsan condimentum donec dictumst eros, tempus in diam. Ornare gravida quis
-                                                          eu blandit lectus vestibulum egestas.
+                                        eu blandit lectus vestibulum egestas.
                                     </span>
                                     <div className="flex flex-row text-center h-12 w-[250px] bg-gray-100 my-auto mt-3">
-                                        <img className="cursor-pointer inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+                                        <img className="cursor-pointer inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
                                         <div>
                                             <span className="mr-2 cursor-pointer font-semibold">Jhon Doe</span>
-                                            <br/>
+                                            <br />
                                             <span className="mr-2 cursor-pointer">Blogeur international</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </section>  */}
+                        </section>
+                        <section>
+                            <div className="flex flex-col justify-center items-center h-[650px] w-[350px] rounded-2xl shadow-xl">
+                                <div className="h-[300px] w-[350px]">
+                                    <img src={Bed}
+                                        alt="bed"
+                                        className="bg-cover h-[300px] w-[100%] rounded-t-2xl cursor-pointer" />
+                                </div>
+                                <div className="flex flex-col justify-center items-center text-center gap-4 h-[350px] w-[350px] px-8 py-4 ">
+                                    <span className="font-bold">
+                                        Netus vestibulum a vulputate sollicitudin id vitae convallis
+                                    </span>
+                                    <span className="text-md">
+                                        At accumsan condimentum donec dictumst eros, tempus in diam. Ornare gravida quis
+                                        eu blandit lectus vestibulum egestas.
+                                    </span>
+                                    <div className="flex flex-row text-center h-12 w-[250px] bg-gray-100 my-auto mt-3">
+                                        <img className="cursor-pointer inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
+                                        <div>
+                                            <span className="mr-2 cursor-pointer font-semibold">Jhon Doe</span>
+                                            <br />
+                                            <span className="mr-2 cursor-pointer">Blogeur international</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </article>
                 </main>
                 <footer>
