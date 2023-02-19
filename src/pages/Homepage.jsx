@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Menus from '../components/Menus';
 import Footer from '../components/Footer';
 import Reduction from '../assets/reduction.svg';
@@ -39,7 +39,7 @@ const Homepage = () => {
                                                                           ">
                             <span>
                                 <img src={Reduction}
-                                    alt="reduction cursor-pointer"/>
+                                    alt="reduction cursor-pointer" />
                             </span>
                             <span className="text-white">Nos réductions vont jusqu’à 70%</span>
                         </div>
@@ -54,17 +54,17 @@ const Homepage = () => {
                             </select>
                         </div>
                     </div>
-                    <Menus/>
+                    <Menus />
                 </header>
                 <main className="my-5 mx-5">
                     <Payement onClose={HandlerOnclose}
-                        Visible={showpayment}/>
+                        Visible={showpayment} />
                     <article className="flex flex-col  laptop:m-0 desktop:m-2 justify-center
                     desktop:justify-center laptop:justify-center desktop:gap-3 tablette:flex-row
 
                                                                 ">
                         <section className="  mr-0 laptop:mr-0 xl:mr-2">
-                            <Categories/>
+                            <Categories />
                         </section>
                         <section className="flex   mr-0 laptop:mr-0 xl:mr-1 mt-4">
                             <div className="flex flex-col justify-center items-center text-center p-8 pt-8 gap-6 text-laptop
@@ -75,23 +75,23 @@ const Homepage = () => {
                                     $13.22
                                 </span>
                                 <button onClick={
-                                        () => setShowpayement(true)
-                                    }
+                                    () => setShowpayement(true)
+                                }
                                     className="py-1 px-4 text-white bg-[#1E7DBD] ">
                                     Lire plus
                                 </button>
                             </div>
                             <div className="w-[50%] bg-cover ">
                                 <img onClick={
-                                        () => setShowpayement(true)
-                                    }
+                                    () => setShowpayement(true)
+                                }
                                     src={Affiche}
                                     alt="affiche"
-                                    className="bg-cover h-[100%] cursor-pointer"/>
+                                    className="bg-cover h-[100%] cursor-pointer" />
                             </div>
                         </section>
                         <section className="">
-                            <SousMenus/>
+                            <SousMenus />
                             <section className="flex  gap-4 mt-4">
                                 <div className="flex flex-col text-center p-8 pt-2 justify-center
                                                                                                items-center gap-4 text-laptop bg-slate-200 w-[50%] laptop:text-base xl:text-laptop">
@@ -99,8 +99,8 @@ const Homepage = () => {
                                     <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
                                     <span className="text-red-900">$13.22</span>
                                     <button onClick={
-                                            () => setShowpayement(true)
-                                        }
+                                        () => setShowpayement(true)
+                                    }
                                         className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">
                                         Lire plus
                                     </button>
@@ -111,8 +111,8 @@ const Homepage = () => {
                                     <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
                                     <span className="text-red-900">$13.22</span>
                                     <button onClick={
-                                            () => setShowpayement(true)
-                                        }
+                                        () => setShowpayement(true)
+                                    }
                                         className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">
                                         Lire plus
                                     </button>
@@ -120,20 +120,21 @@ const Homepage = () => {
                             </section>
                         </section>
                     </article>
-                    <Livraison/> {/* <h1 className="text-5xl -mt-10 pb-10">Nos Livres</h1>
-                    <article className="flex flex-row">
-                        <section className="w-[33%] h-128 laptop:h-[500px]">
+                    <Livraison />
+                    <article className="flex flex-col tablette:flex-row justify-center">
+                        <h1 className="text-5xl mt-10 pb-5 justify-center">Nos Livres</h1>
+                        <section className=" ">
                             <div className="ml-1"
                                 onClick={
                                     () => setShowpayement(true)
-                            }>
+                                }>
                                 <img src={Harry2}
                                     alt="book"
-                                    className="bg-cover h-128 laptop:h-[500px] xl:h-[500px] w-[100%] cursor-pointer"/>
+                                    className="bg-cover h-128 laptop:h-[500px] xl:h-[500px] w-[100%] cursor-pointer" />
                             </div>
                         </section>
                         <section className="w-[33%] h-128 laptop:h-[500px] xl:h-[500px] ">
-                            <InfoLivre/>
+                            <InfoLivre />
                         </section>
                         <section className="w-[34%] h-128 flex flex-col gap-4">
                             <div className="flex flex-row">
@@ -146,10 +147,10 @@ const Homepage = () => {
                                 <div className="w-[50%]"
                                     onClick={
                                         () => setShowpayement(true)
-                                }>
+                                    }>
                                     <img src={Harry1}
                                         alt="harry"
-                                        className="bg-cover h-56 w-[100%] cursor-pointer"/>
+                                        className="bg-cover h-56 w-[100%] cursor-pointer" />
                                 </div>
                             </div>
                             <div className="flex flex-row">
@@ -162,14 +163,15 @@ const Homepage = () => {
                                 <div className="w-[50%]"
                                     onClick={
                                         () => setShowpayement(true)
-                                }>
+                                    }>
                                     <img src={Harry3}
                                         alt="harry"
-                                        className="bg-cover h-[280px] w-[100%] cursor-pointer"/>
+                                        className="bg-cover h-[280px] w-[100%] cursor-pointer" />
                                 </div>
                             </div>
                         </section>
-                    </article> */}
+                    </article>
+
                     {/* <h1 className="text-5xl my-10">Nos Formations</h1>
                     <article className="flex flex-row">
                         <section className="w-[33%] h-[500px]">
@@ -286,7 +288,7 @@ const Homepage = () => {
                         </section> */} </article>
                 </main>
                 <footer>
-                    <Footer/>
+                    <Footer />
                 </footer>
             </article>
 
