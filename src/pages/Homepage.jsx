@@ -121,8 +121,8 @@ const Homepage = () => {
                         </section>
                     </article>
                     <Livraison />
+                    <h1 className="text-5xl mt-10 pb-5 flex justify-center tablette:justify-center laptop:justify-center desktop:justify-center">Nos Livres</h1>
                     <article className="flex flex-col tablette:flex-row justify-center">
-                        <h1 className="text-5xl mt-10 pb-5 justify-center">Nos Livres</h1>
                         <section className=" ">
                             <div className="ml-1"
                                 onClick={
