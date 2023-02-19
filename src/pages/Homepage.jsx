@@ -42,7 +42,7 @@ const Homepage = () => {
                             <span>
                                 <img src={Reduction} alt="reduction cursor-pointer" />
                             </span>
-                            <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=timenewreman&weight=400&size=23&duration=2500&pause=1000&color=7C3AED&background=8672FF00&width=206&lines=Nos+réductions;vont+jusqu’à;70%" alt="Typing SVG" /></a>
+                            <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=timenewreman&weight=400&size=23&duration=2500&pause=1000&color=7C3AED&background=8672FF00&width=460&lines=Nos+réductions+vont+jusqu+’à+70%" alt="Typing SVG" className='flex justify-center' /></a>
 
 
                         </div>
