@@ -80,7 +80,7 @@ const Formationpage = () => {
           <section className=" desktop:w-[33%]">
             <InfoLivre />
           </section>
-          <section className="w-[34%] flex flex-col gap-4">
+          <section className="desktop:w-[34%] flex desktop:flex-col desktop:gap-4 flex-col ">
             <div className="flex flex-row">
               <div className="w-[100%]">
                 <img
