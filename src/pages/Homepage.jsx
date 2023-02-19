@@ -130,15 +130,15 @@ const Homepage = () => {
                                 }>
                                 <img src={Harry2}
                                     alt="book"
-                                    className="bg-cover h-128 laptop:h-[500px] xl:h-[500px] w-[100%] cursor-pointer" />
+                                    className="bg-cover  cursor-pointer" />
                             </div>
                         </section>
-                        <section className="w-[33%] h-128 laptop:h-[500px] xl:h-[500px] ">
+                        <section className=" ">
                             <InfoLivre />
                         </section>
-                        <section className="w-[34%] h-128 flex flex-col gap-4">
+                        <section className=" flex flex-col gap-4">
                             <div className="flex flex-row">
-                                <div className="flex flex-col justify-start items-center text-center gap-4 bg-slate-200 p-6 w-[50%]">
+                                <div className="flex flex-col justify-start items-center text-center gap-4 bg-slate-200 p-6 ">
                                     <span className="text-red-900">J.K ROWLING</span>
                                     <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
                                     <span className="text-red-900">$13.22</span>
@@ -150,23 +150,23 @@ const Homepage = () => {
                                     }>
                                     <img src={Harry1}
                                         alt="harry"
-                                        className="bg-cover h-56 w-[100%] cursor-pointer" />
+                                        className="bg-cover h-56  cursor-pointer" />
                                 </div>
                             </div>
                             <div className="flex flex-row">
-                                <div className="flex flex-col justify-start items-center text-center gap-4 bg-slate-200 p-6 w-[50%]">
+                                <div className="flex flex-col justify-start items-center text-center gap-4 bg-slate-200 p-6 ">
                                     <span className="text-red-900 mt-3">J.K ROWLING</span>
                                     <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
                                     <span className="text-red-900">$13.22</span>
                                     <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
                                 </div>
-                                <div className="w-[50%]"
+                                <div className=""
                                     onClick={
                                         () => setShowpayement(true)
                                     }>
                                     <img src={Harry3}
                                         alt="harry"
-                                        className="bg-cover h-[280px] w-[100%] cursor-pointer" />
+                                        className="bg-cover cursor-pointer" />
                                 </div>
                             </div>
                         </section>
