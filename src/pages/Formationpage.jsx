@@ -23,8 +23,11 @@ const Formationpage = () => {
         <section className="flex flex-col desktop:justify-between ">
 
           < Menus />
-          <SousMenus />
         </section>
+        <div className='desktop:hidden'>
+
+          <SousMenus className="desktop:hidden" />
+        </div>
       </header>
       <main className="m-5">
         <h1 className="text-5xl flex before:justify-center">Mes Videos</h1>
