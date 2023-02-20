@@ -93,7 +93,7 @@ const Bookspage = () => {
         </article>
         <h1 className="desktop:text-5xl text-3xl desktop:my-10 flex justify-center">Les plus achetés</h1>
         <article className="flex desktop:flex-row desktop:justify-between flex-col ">
-          {/* <section className="desktop:grid desktop:grid-cols-2 desktop:gap-10 desktop:w-[68%] text-center my-7 mx-5">
+          <section className="desktop:grid desktop:grid-cols-2 desktop:gap-10 desktop:w-[68%] text-center my-7 mx-5">
             <div className="desktop:h-[300px] flex flex-col desktop:flex-col gap-2 desktop:w-[100%]">
               <img src={Harry2} alt="harry" className=" bg-cover desktop:h-[100%] cursor-pointer" />
               <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
@@ -110,7 +110,7 @@ const Bookspage = () => {
               <img src={Harry2} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
               <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
             </div>
-          </section> */}
+          </section>
           <section className="">
             <NewsLetter />
           </section>
