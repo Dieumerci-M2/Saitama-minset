@@ -17,14 +17,14 @@ const Formationpage = () => {
   const router = useNavigate();
   return (
     <article>
-      <header className="mx-10">
-        <section className="flex justify-between">
-          <div className="w-[150px]  h-[50px] my-3 mr-2 mt-4 ml-2">
+      <header className="">
+        <section className="flex flex-col desktop:justify-between ">
+          <div className="w-[150px]  h-[50px] my-3 mr-2 mt-4 desktop:ml-2">
             <a href="https://t.me/Moneygrr" target="_blank">
               <img src={Saitama} alt="logo" className="cursor-pointer" />
             </a>
           </div>
-          <div className="flex flex-row mt-6 mx-4 rounded-l-xl h-10">
+          <div className="flex flex-row mt-6 desktop:mx-4 rounded-l-xl h-10 ml-2 mr-2">
             <input
               className="placeholder:italic placeholder:text-slate-400 block
              bg-gray-100 w-full border border-slate-300 py-2 pl-9 pr-3 shadow-sm 
@@ -39,12 +39,12 @@ const Formationpage = () => {
               <option>Selon le prix des livres</option>
               <option>Selon le prix des livres</option>
             </select>
-            <span className="w-20 h-10 bg-red-700 cursor-pointer">
+            <span className="desktop:w-20 desktop:h-10 bg-red-700 cursor-pointer">
               <img src={Search} alt="Search" className="m-auto my-2 text-[#FFFFFF]" />
             </span>
           </div>
           <div
-            className="flex gap-6 font-semibold mr-1 mt-4
+            className="flex justify-between font-semibold mr-2 mt-4 ml-2
         text-lg bg-gray-300 border-2 px-4 py-4 ">
             <span onClick={() => router('/home')} className="cursor-pointer hover:text-[#1E7DBD]">
               Home
@@ -65,22 +65,22 @@ const Formationpage = () => {
           </div>
         </section>
       </header>
-      <main className="m-10">
-        <h1 className="text-5xl my-10">Mes Videos</h1>
-        <article className="flex flex-row">
-          <section className="w-[33%] h-[500px]">
-            <div className="ml-1 bg-black">
+      <main className="m-5">
+        <h1 className="text-5xl flex before:justify-center">Mes Videos</h1>
+        <article className="flex flex-col desktop:flex-row">
+          <section className="desktop:w-[33%] desktop:h-[500px]">
+            <div className="ml-1 bg-black ">
               <img
                 src={Formation}
                 alt="book"
-                className="bg-cover h-[578px] w-[100%] cursor-pointer"
+                className="desktop:bg-cover desktop:h-[578px] desktop:w-[100%] cursor-pointer mt-2"
               />
             </div>
           </section>
-          <section className="w-[33%]">
+          <section className=" desktop:w-[33%]">
             <InfoLivre />
           </section>
-          <section className="w-[34%] flex flex-col gap-4">
+          <section className="desktop:w-[34%] flex desktop:flex-col desktop:gap-4 flex-col ">
             <div className="flex flex-row">
               <div className="w-[100%]">
                 <img
@@ -90,8 +90,8 @@ const Formationpage = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-row">
-              <div className="w-[100%]">
+            <div className="flex desktopflex-row">
+              <div className="desktop:w-[100%]">
                 <img
                   src={Formation2}
                   alt="harry"
@@ -101,11 +101,11 @@ const Formationpage = () => {
             </div>
           </section>
         </article>
-        <h1 className="text-5xl my-10">Les plus téléchargées</h1>
-        <article className="flex flex-row justify-between ">
-          <section className="grid grid-cols-2 gap-10 w-[68%] text-center">
-            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
-              <img src={FormReact1} alt="harry" className=" bg-cover h-[100%] cursor-pointer" />
+        <h1 className="desktop:text-5xl desktop:my-10 text-3xl justify-center">Les plus téléchargées</h1>
+        <article className="flex flex-col desktop:flex-row desktop:justify-between">
+          <section className="grid desktop:grid-cols-2 desktop:gap-10 desktop:w-[68%] text-center">
+            <div className="desktop:h-[300px] flex-col flex desktop:flex-col desktop:gap-2 desktop:w-[100%]">
+              <img src={FormReact1} alt="harry" className=" bg-cover desktop:h-[100%] cursor-pointer" />
               <span className="text-lg font-semibold">React js et native pour debutants</span>
             </div>
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
@@ -128,7 +128,7 @@ const Formationpage = () => {
           </section>
         </article>
       </main>
-      <footer className="mt-20">
+      <footer className="">
         <Footer />
       </footer>
     </article>
