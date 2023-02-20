@@ -83,19 +83,19 @@ export default function Register() {
       <section>
         <Navbar />
       </section>
-      <section className="flex flex-row justify-center items-center text-center mx-auto max-mobile:flex-col">
-        <div className="imgBackLogin bg-blue-400 max-mobile:bg-white max-mobile:h-[10px] max-mobile:mb-[100px] max-mobile:mt-[-30px]">
+      <section className="flex flex-row justify-center items-center text-center mx-auto max-mobile:flex-col max-tablette:flex-col">
+        <div className="imgBackLogin bg-blue-400 max-mobile:bg-white max-mobile:h-[10px] max-mobile:mb-[100px] max-mobile:mt-[-30px] max-tablette:h-[10px] max-tablette:mb-[100px] max-tablette:mt-[-30px]">
           <p
             className="text-5xl font-bold px-10 pt-20 text-white
-           text-center max-mobile:text-lg max-mobile:text-red-700">
+           text-center max-mobile:text-lg max-mobile:text-red-700 max-tablette:text-lg max-tablette:text-red-700 ">
             S'Inscrire
           </p>
-          <p className="px-10 pt-20  text-white text-center max-mobile:hidden">
+          <p className="px-10 pt-20  text-white text-center max-mobile:hidden max-tablette:hidden">
             Inscrivez-vous maintenant et joignez le grand Team Saitama !
           </p>
         </div>
         <form className="h-[350px] w-[350px] mb-14 max-mobile:w-full"   >
-          <CardBody className="flex flex-col justify-center gap-[26.5px] mt-[8px] h-[450px] w-96 p-10 shadow-xl max-mobile:w-full max-mobile:gap-9" >
+          <CardBody className="flex flex-col justify-center gap-[26.5px] mt-[8px] h-[450px] w-96 p-10 shadow-xl max-mobile:w-full max-mobile:gap-9 max-tablette:w-full max-tablette:gap-9" >
             <Input value={userName}  type="text"   autoComplete="off" placeholder="Nom" size="lg" name="username" onChange={handleUsernameChange} />
             <Input value={email}  type="email" autoComplete="off"  placeholder="Email" size="lg" name="email" onChange={handleemailChange} />
             <Input value={password}  type="password"  autoComplete="off" placeholder="Password" size="lg" name="password" onChange={handlepasswordChange} />
