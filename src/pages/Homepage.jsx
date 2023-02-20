@@ -25,8 +25,7 @@ const Homepage = () => {
                 <header
                     className="flex justify-center flex-col items-center                        
                                                       tablette:flex tablette:justifiy-center tablette:flex-col tablette:items-center
-                                                      desktop:flex desktop:justify-center desktop:flex-col desktop:items-center
-                                                      ">
+                                                      desktop:flex desktop:justify-center desktop:flex-col desktop:items-center">
                     <div
                         className="flex justify-between w-full h-[30px] bg-slate-200
                                                                 tablette:flex tablette:justifiy-between tablette:w-full
