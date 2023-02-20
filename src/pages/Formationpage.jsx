@@ -13,6 +13,7 @@ import FormReact3 from '../assets/Formation-dispo-3.png';
 import FormReact4 from '../assets/Formation-dispo-4.png';
 import { useNavigate } from 'react-router-dom';
 import Menus from '../components/Menus';
+import SousMenus from '../components/SousMenus';
 
 const Formationpage = () => {
   const router = useNavigate();
@@ -22,26 +23,7 @@ const Formationpage = () => {
         <section className="flex flex-col desktop:justify-between ">
 
           < Menus />
-          <div
-            className="flex justify-between font-semibold mr-2 mt-4 ml-2
-              text-lg bg-gray-300 border-2 px-4 py-4 ">
-            <span onClick={() => router('/home')} className="cursor-pointer hover:text-[#1E7DBD]">
-              Home
-            </span>
-            <span
-              onClick={() => router('/formation')}
-              className="cursor-pointer hover:text-[#1E7DBD]">
-              Formations
-            </span>
-            <span onClick={() => router('/books')} className="cursor-pointer hover:text-[#1E7DBD]">
-              Nos livres
-            </span>
-            <span
-              onClick={() => router('/contact')}
-              className="cursor-pointer hover:text-[#1E7DBD]">
-              Contact
-            </span>
-          </div>
+          <SousMenus />
         </section>
       </header>
       <main className="m-5">
