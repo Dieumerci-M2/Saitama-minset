@@ -7,7 +7,7 @@ import Toppost from "../assets/Topblog.png"
 
 const NewsLetter = () => {
   return (
-    <div className="flex flex-col gap-3 desktop:gap-6 desktop:my-10">
+    <div className="flex flex-col gap-3 desktop:gap-4 desktop:my-7">
       <h1 className="text-start text-2xl flex justify-center font-bold">NEWSLETTER</h1>
       <div className="flex flex-row h-10 rounded-2xl w-[300px] justify-center ml-5">
         <span className="w-[50%] bg-slate-200 rounded-l-3xl"></span>
