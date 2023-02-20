@@ -75,14 +75,14 @@ const Bookspage = () => {
             <InfoLivre />
           </section>
           <section className="desktop:w-[34%] flex flex-col desktop:flex-col desktop:gap-4 my-3">
-            <div className="desktop:w-[100%]">
+            <div className="desktop:w-[100%] my-3 mx-4">
               <img
                 src={Harry1}
                 alt="harry"
                 className="bg-cover desktop:h-[280px] desktop:w-[100%] cursor-pointer"
               />
             </div>
-            <div className="desktop:w-[100%]">
+            <div className="desktop:w-[100%] my-3 mx-4">
               <img
                 src={Harry3}
                 alt="harry"
@@ -91,32 +91,32 @@ const Bookspage = () => {
             </div>
           </section>
         </article>
-        <h1 className="text-5xl my-10">Les plus achetés</h1>
-        <article className="flex flex-row justify-between ">
-          <section className="grid grid-cols-2 gap-10 w-[68%] text-center ml-1">
-            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
-              <img src={Harry2} alt="harry" className=" bg-cover h-[100%] cursor-pointer" />
+        <h1 className="desktop:text-5xl text-3xl desktop:my-10 flex justify-center">Les plus achetés</h1>
+        <article className="flex desktop:flex-row desktop:justify-between flex-col ">
+          {/* <section className="desktop:grid desktop:grid-cols-2 desktop:gap-10 desktop:w-[68%] text-center my-7 mx-5">
+            <div className="desktop:h-[300px] flex flex-col desktop:flex-col gap-2 desktop:w-[100%]">
+              <img src={Harry2} alt="harry" className=" bg-cover desktop:h-[100%] cursor-pointer" />
               <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
             </div>
-            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
-              <img src={Harry3} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
+            <div className="desktop:h-[300px] flex flex-col  desktop:flex-col desktop:gap-2 desktop:w-[100%]">
+              <img src={Harry3} alt="harry" className="bg-cover desktop:h-[100%] cursor-pointer" />
               <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
             </div>
-            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
-              <img src={Harry3} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
+            <div className="desktop:h-[300px] flex flex-col desktop:gap-2 desktop:w-[100%]">
+              <img src={Harry3} alt="harry" className="bg-cover desktop:h-[100%] cursor-pointer" />
               <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
             </div>
-            <div className="h-[300px] flex flex-col gap-2 w-[100%]">
+            <div className="desktop:h-[300px] flex-col flex desktop:flex-col desktop:gap-2 desktop:w-[100%]">
               <img src={Harry2} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
               <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
             </div>
-          </section>
-          <section className="mr-6">
+          </section> */}
+          <section className="">
             <NewsLetter />
           </section>
         </article>
       </main>
-      <footer className="mt-20">
+      <footer className="">
         <Footer />
       </footer>
     </article>
