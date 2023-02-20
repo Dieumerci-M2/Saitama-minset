@@ -71,18 +71,18 @@ const Bookspage = () => {
               <img src={Harry2} alt="book" className="bg-cover h-[578px] w-[100%] cursor-pointer" />
             </div>
           </section>
-          <section className="w-[33%]">
+          <section className="desktop:w-[33%]">
             <InfoLivre />
           </section>
-          <section className="w-[34%] flex flex-col gap-4">
-            <div className="w-[100%]">
+          <section className="desktop:w-[34%] flex flex-col desktop:flex-col desktop:gap-4 my-3">
+            <div className="desktop:w-[100%]">
               <img
                 src={Harry1}
                 alt="harry"
-                className="bg-cover h-[280px] w-[100%] cursor-pointer"
+                className="bg-cover desktop:h-[280px] desktop:w-[100%] cursor-pointer"
               />
             </div>
-            <div className="w-[100%]">
+            <div className="desktop:w-[100%]">
               <img
                 src={Harry3}
                 alt="harry"
