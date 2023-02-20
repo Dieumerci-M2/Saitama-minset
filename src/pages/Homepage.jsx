@@ -23,22 +23,16 @@ const Homepage = () => {
         <>
             <article className="text-sm laptop:text-sm ">
                 <header
-                    className="flex justify-center flex-col items-center
-                        
+                    className="flex justify-center flex-col items-center                        
                                                       tablette:flex tablette:justifiy-center tablette:flex-col tablette:items-center
                                                       desktop:flex desktop:justify-center desktop:flex-col desktop:items-center
-                        
                                                       ">
                     <div
                         className="flex justify-between w-full h-[30px] bg-slate-200
                                                                 tablette:flex tablette:justifiy-between tablette:w-full
-                                                                desktop:flex desktop:justify-between desktop:w-full
-                                                          ">
+                                                                desktop:flex desktop:justify-between desktop:w-full">
                         <div
-                            className="flex flex-row ml-2 gap-4
-                                                                          tablette:flex tablette:flex-row
-                                                                          desktop:flex desktop:flex-row
-                                                                          ">
+                            className="flex flex-row ml-2 gap-4 tablette:flex tablette:flex-row desktop:flex desktop:flex-row                                                                          ">
                             <span>
                                 <img src={Reduction} alt="reduction" className='text-black bg-black cursor-pointer' />
                             </span>
@@ -46,7 +40,7 @@ const Homepage = () => {
 
 
                         </div>
-                        <div className="flex flex-row gap-2">
+                        <div className="flex desktop:flex-row desktop:gap-2">
                             <select
                                 name="devise"
                                 id="devise"
