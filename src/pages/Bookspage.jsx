@@ -7,7 +7,7 @@ import Harry3 from '../assets/HenryPorter1.jpg';
 import InfoLivre from '../components/InfoLivre';
 import Footer from '../components/Footer';
 import NewsLetter from '../components/NewsLetter';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Bookspage = () => {
   const router = useNavigate();
@@ -63,11 +63,11 @@ const Bookspage = () => {
           </div>
         </section>
       </header>
-      <main className="m-10">
-        <h1 className="text-5xl my-10">Mes Collections</h1>
-        <article className="flex flex-row">
-          <section className="w-[33%] h-[500px]">
-            <div className="ml-1">
+      <main className="desktop:">
+        <h1 className="desktop:text-5xl desktop:my-10 text-3xl flex justify-center">Mes Collections</h1>
+        <article className="flex flex-col desktop:flex-row">
+          <section className="desktop:w-[33%] desktop:h-[500px] mx-2">
+            <div className="desktop:ml-1">
               <img src={Harry2} alt="book" className="bg-cover h-[578px] w-[100%] cursor-pointer" />
             </div>
           </section>
