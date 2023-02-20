@@ -7,9 +7,9 @@ import Toppost from "../assets/Topblog.png"
 
 const NewsLetter = () => {
   return (
-    <div className="flex flex-col gap-6 my-10">
+    <div className="flex flex-col gap-3 desktop:gap-4 desktop:my-7">
       <h1 className="text-start text-2xl flex justify-center font-bold">NEWSLETTER</h1>
-      <div className="flex flex-row h-10 rounded-2xl w-[300px]">
+      <div className="flex flex-row h-10 rounded-2xl w-[300px] justify-center ml-5">
         <span className="w-[50%] bg-slate-200 rounded-l-3xl"></span>
         <span className="w-[50%] bg-red-700 text-center pt-2 cursor-pointer text-[#FFFFFF] rounded-r-3xl">
           Soumettre
@@ -29,7 +29,7 @@ const NewsLetter = () => {
         </div>
       </div>
       <h1 className="desktop:text-start text-2xl  flex justify-center font-bold">TOP POST</h1>
-      <div className="flex desktop:flex-row">
+      <div className="flex desktop:flex-row mb-2">
         <div className="desktop:w-36 desktop:h-36">
           <img src={Toppost} alt="toppost" className="bg-cover desktop:w-[100%] desktop:h-[100%]" />
         </div>
