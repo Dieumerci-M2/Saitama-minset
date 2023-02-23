@@ -8,11 +8,11 @@ import Affiche from '../assets/Affiche.jpg';
 import SousMenus from '../components/SousMenus';
 import InfoLivre from '../components/InfoLivre';
 import Harry1 from '../assets/BooksReal.jpg';
-import Harry2 from '../assets/Harry-Potter-de-J.K.-Rowling.jpg';
+import Harry2 from '../assets/millionnaire.png';
 import Harry3 from '../assets/HenryPorter1.jpg';
-import Formation from '../assets/Formation 1.svg';
-import Formation1 from '../assets/Formation-relatif-1.svg';
-import Formation2 from '../assets/Formation-relatif-2.svg';
+import Formation from '../assets/Formation 1.jpg';
+import Formation1 from '../assets/Formation-relatif-1.png';
+import Formation2 from '../assets/Formation-relatif-2.jpg';
 import Bed from '../assets/Bed.jpg';
 import Payement from '../components/PaiyementModal';
 
@@ -73,8 +73,8 @@ const Homepage = () => {
                             <div
                                 className="flex flex-col justify-center items-center text-center p-8 pt-8 gap-6 text-laptop
                                                                                      bg-slate-200 w-[50%] laptop:text-base xl:text-laptop">
-                                <span className="text-red-900 mt-3">J.K ROWLING</span>
-                                <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
+                                <span className="text-red-900 mt-3">R. KIYOSAKI</span>
+                                <span className="font-semibold">GUIDE POUR INVESTIR</span>
                                 <span className="text-red-900">$13.22</span>
                                 <button
                                     onClick={() => setShowpayement(true)}
@@ -126,7 +126,7 @@ const Homepage = () => {
                         Nos Livres
                     </h1>
                     <article className="flex flex-col tablette:flex-row justify-center">
-                        <section className=" ">
+                        <section className="">
                             <div className="ml-1" onClick={() => setShowpayement(true)}>
                                 <img src={Harry2} alt="book" className="bg-cover  cursor-pointer" />
                             </div>
@@ -134,11 +134,11 @@ const Homepage = () => {
                         <section className=" ">
                             <InfoLivre />
                         </section>
-                        <section className=" flex flex-col gap-4 desktop:flex desktop:gap-4 tablette:flex-row desktop:flex-row">
+                        <section className=" flex flex-col gap-4 desktop:flex desktop:gap-4 tablette:flex-row desktop:flex-row bg">
                             <div className="flex flex-col  desktop:flex-row">
                                 <div className="flex flex-col justify-start items-center text-center gap-4 bg-slate-200 p-6 ">
-                                    <span className="text-red-900">J.K ROWLING</span>
-                                    <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
+                                    <span className="text-red-900">NAPOLEON III</span>
+                                    <span className="font-semibold">REFLECHISSEZ ET DEVENEZ RICHE</span>
                                     <span className="text-red-900">$13.22</span>
                                     <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
                                 </div>
@@ -152,8 +152,8 @@ const Homepage = () => {
                             </div>
                             <div className="flex flex-col-reverse desktop:flex-row  laptop:flex-row tablette:flex-row ">
                                 <div className="flex flex-col justify-start items-center text-center gap-4 bg-slate-200 p-6 ">
-                                    <span className="text-red-900 mt-3">J.K ROWLING</span>
-                                    <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
+                                    <span className="text-red-900 mt-3">T. HARV EKER</span>
+                                    <span className="font-semibold">LE SECRET D'UN ESPRIT MILLIONNAIRE</span>
                                     <span className="text-red-900">$13.22</span>
                                     <button className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">Lire plus</button>
                                 </div>
