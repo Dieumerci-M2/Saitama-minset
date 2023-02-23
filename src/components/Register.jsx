@@ -12,6 +12,7 @@ import { createUsers } from "../feature/usersSlice";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function Register() {
    const navigateTo = useNavigate();
@@ -54,6 +55,12 @@ export default function Register() {
       const handleconfirmPassChange = (e) => {
     setConfirmPass(e.target.value)
 } 
+
+const register = async() => {
+  const opts = {userName, email, password}
+  const user = await axios.post("http://localhost:8080/api/v1/register", opts)
+  console.log(user);
+}
   
   
  
@@ -66,6 +73,7 @@ export default function Register() {
           email: email,
           password :password
         }))
+        register()
         showToastSuccessMessage()
         
 
@@ -95,7 +103,7 @@ export default function Register() {
           </p>
         </div>
         <form className="h-[350px] w-[350px] mb-14 max-mobile:w-full"   >
-          <CardBody className="flex flex-col justify-center gap-[26.5px] mt-[8px] h-[450px] w-96 p-10 shadow-xl max-mobile:w-full max-mobile:gap-9 max-tablette:w-full max-tablette:gap-9" >
+          <CardBody className="flex flex-col justify-center gap-[10px] mt-[8px] h-[450px] w-96 p-10 shadow-xl max-mobile:w-full max-mobile:gap-9 max-tablette:w-full max-tablette:gap-9 max-mobile:shadow-none" >
             <Input value={userName}  type="text"   autoComplete="off" placeholder="Nom" size="lg" name="username" onChange={handleUsernameChange} />
             <Input value={email}  type="email" autoComplete="off"  placeholder="Email" size="lg" name="email" onChange={handleemailChange} />
             <Input value={password}  type="password"  autoComplete="off" placeholder="Password" size="lg" name="password" onChange={handlepasswordChange} />
@@ -107,7 +115,7 @@ export default function Register() {
             <p className="text-center text-blue-400 cursor-pointer">Avez-vous déjà un compte?</p>
             <Button type="submit" onClick={(e) => {
               handleSubmit(e)
-            }} className="bg-red-500 text-center" fullWidth >
+            }} className="bg-red-700 text-center" fullWidth >
               S'inscrire
             </Button>
           </CardBody>

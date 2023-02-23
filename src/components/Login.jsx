@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import "./Auth.css"
 import { useState } from "react";
+import axios from "axios";
 
   export default function Example() {
     const navigateTo = useNavigate();
@@ -46,9 +47,15 @@ import { useState } from "react";
     const handlepasswordChange = (e) => {
     setPassword(e.target.value)
   } 
-     
-  
-  
+
+  const login = async() => {
+    const opt = {email, password}
+    const user = await axios.post("http://localhost:8080/api/v1/login", opt)
+    console.log(user.data)
+    localStorage.setItem('Username', user.data.username)
+    localStorage.setItem('Usermail', user.data.email)
+    localStorage.setItem('Token', user.data.token)
+  }
  
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -58,8 +65,8 @@ import { useState } from "react";
           email: email,
           password :password
         }))
+        login();
         showToastSuccessMessage()
-
       } else if (password === "" && email === "") {
                showToastErrorMessage(`Votre champ nom est vide ou votre champ email est vide `)
       }  
@@ -79,10 +86,10 @@ import { useState } from "react";
             </p>
           </div>
           <ToastContainer/>
-          <div className="h-[400px] w-[350px] max-mobile:w-full max-mobile:mt-16 max-tablette:w-full max-tablette:mt-16">
-            <CardBody className="cardBody flex flex-col justify-center gap-6 w-96 h-[450px] mt-[5px] p-10 shadow-xl max-mobile:w-full max-mobile:gap-9 max-tablette:w-full max-tablette:gap-9">
-              <Input placeholder="Email" id="email"  value={email} size="lg" onChange={handleemailChange}/>
-              <Input placeholder="Password" value={password} size="lg" onChange={handlepasswordChange}  />
+          <div className="h-[400px] w-[350px] max-mobile:w-full max-mobile:h-full max-mobile:mt-16 max-tablette:w-full max-tablette:mt-16">
+            <CardBody className="cardBody flex flex-col justify-center gap-4 w-96 h-[450px] mt-[5px] p-10 shadow-xl max-mobile:w-full max-mobile:h-full max-mobile:gap-9 max-tablette:w-full max-tablette:gap-9 max-mobile:shadow-none">
+              <Input placeholder="Email" id="email" type="email"  value={email} size="lg" onChange={handleemailChange}/>
+              <Input placeholder="Password" value={password} type="password" size="lg" onChange={handlepasswordChange}  />
               <div className=" flex items-center -ml-2.5 max-mobile:hidden max-tablette:hidden">
                 <Checkbox className="bg-red" id="login-checkbox"/>
                 <label for="login-checkbox">se souvenir de moi</label>

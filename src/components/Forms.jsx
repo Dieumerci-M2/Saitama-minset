@@ -154,30 +154,28 @@ function Forms() {
           <span>
             <div class="ml-2 text-sm">
               <p for="helper-radio" className=" mb-5 font-medium text-gray-900 dark:text-gray-300">Selectionner votre sujet</p>
-              <span><p id="helper-radio-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">
+              <span><p id="helper-radio-text" className="text-xs font-normal text-gray-500 dark:text-gray-300">
 
-                <span><label><input id="helper-radio" aria-describedby="helper-radio-text" type="radio" value="" class="w-4 ml-2 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                <span className='flex gap-10 justify-center'>
+                    <div className='flex gap-2 items-center'>
+                      <input id="sujet-general" aria-describedby="helper-radio-text" type="radio" value="Sujet Général" name='radio' class="w-4 ml-2 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                      <label for="sujet-general">Sujet Général</label>
+                    </div>
 
-                  <span className='ml-2'>Sujet Général</span>
+                    <div className='flex gap-2 items-center'>
+                      <input id="pour-projet" aria-describedby="helper-radio-text" type="radio" value="" name='radio' className="w-4 ml-2 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                      <label for="pour-projet">Contact pour un projet</label>
+                    </div>
 
-                </label>
+                    <div className='flex gap-2 items-center'>
+                      <input id="informer" aria-describedby="helper-radio-text" type="radio" value="" name='radio' className="w-4 ml-2 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                      <label for="informer">S'informer</label>
+                    </div>
 
-                  <label><input id="helper-radio" aria-describedby="helper-radio-text" type="radio" value="" class="w-4 ml-2 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-
-                    <span className='ml-2'>Contact pour un projet</span>
-
-                  </label>
-                  <label><input id="helper-radio" aria-describedby="helper-radio-text" type="radio" value="" class="w-4 ml-2 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-
-                    <span className='ml-2'>S'informer</span>
-
-                  </label>
-
-                  <label><input id="helper-radio" aria-describedby="helper-radio-text" type="radio" value="" class="w-4 ml-2 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-
-                    <span className='ml-2'>Autres</span>
-
-                  </label>
+                    <div className='flex gap-2 items-center'>
+                      <input id="autres" aria-describedby="helper-radio-text" type="radio" value="" name='radio' class="w-4 ml-2 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                      <label for="autres">Autres</label>
+                    </div>
                 </span>
               </p>
               </span>
@@ -187,8 +185,8 @@ function Forms() {
         <div class="form-group mb-6">
 
 
-          <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre message</label>
-          <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
+          <label for="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre message</label>
+          <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
 
 
 
@@ -196,7 +194,7 @@ function Forms() {
 
 
         <div className='flex justify-start'>
-          <button type="submit" class="
+          <button type="submit" className="
       w-56
       px-6
       py-2.5
@@ -213,7 +211,8 @@ function Forms() {
       active:bg-red-500 active:shadow-lg
       transition
       duration-150
-      ease-in-out">Envoyer le message</button>
+      ease-in-out"
+      onClick={(e)=>handleSubmit(e)}>Envoyer le message</button>
         </div>
       </form>
     </div>
