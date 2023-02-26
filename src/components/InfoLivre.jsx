@@ -2,18 +2,11 @@ import React from 'react'
 
 const InfoLivre = () => {
   return (
-<<<<<<< HEAD
     <section className="flex flex-col desktop:flex-col my-3 mx-3 text-center desktop:p-10 desktop:lg:p-8  desktop:justify-center desktop:items-center desktop:gap-3 shadow-xl">
       <div classname="flex flex-col">
 
         <div className="text-red-900 text-lg">CHRISTOPHER SOYTOROV</div>
         <div className="font-semibold text-2xl">GUIDE DE L'APPRENTIS MILLIONNAIRE</div>
-=======
-    <section className="flex flex-col desktop:flex-col my-3 p-4 text-center desktop:p-10 desktop:lg:p-8  desktop:justify-center desktop:items-center desktop:gap-3 shadow-xl">
-      <div classname="flex flex-col">
-        <div className="text-red-900 text-lg">J.K ROWLING</div>
-        <div className="font-semibold text-2xl">HARRY POTTER AND THE CURSED CHILD</div>
->>>>>>> 920ae79 (refactor: arrange all Home page  mobile breakpoint)
       </div>
       <div className="flex flex-col desktop:justify-center">
         <span className="text-red-900 text-2xl">$13.22</span>
