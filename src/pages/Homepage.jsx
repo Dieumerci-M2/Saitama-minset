@@ -25,13 +25,13 @@ const Homepage = () => {
         <header
           className="flex justify-center flex-col items-center                        
             tablette:flex tablette:justifiy-center tablette:flex-col tablette:items-center
-            desktop:flex desktop:justify-center desktop:flex-col desktop:items-center
+           tablette:justify-center
             ">
           <div
-            className="flex justify-between w-full h-[30px] bg-slate-200
+            className="flex justify-between w-full h-[30px] tablette:h-[40px] bg-slate-200
                 tablette:flex tablette:justifiy-between tablette:w-full
-                desktop:flex desktop:justify-between desktop:w-full">
-            <div className="flex flex-row ml-2 gap-2 tablette:flex tablette:flex-row desktop:flex desktop:flex-row                                                                          ">
+                desktop:flex tablette:justify-between">
+            <div className="flex flex-row ml-2 gap-2 tablette:flex tablette:flex-row">
               <span className="m-auto">
                 <img src={Reduction} alt="reduction" className="text-black cursor-pointer" />
               </span>
@@ -43,18 +43,20 @@ const Homepage = () => {
                 />
               </a>
             </div>
-            <div className="flex desktop:flex-row desktop:gap-2">
+            <div className="flex tablette:flex-row tablette:gap-2">
               <select
                 name="devise"
                 id="devise"
-                className="bg-gray-200 text-[10px] text-black outline-none cursor-pointer">
+                className="bg-gray-200 text-sm tablette:text-base text-black outline-none 
+                cursor-pointer">
                 <option value="1">USD</option>
                 <option value="2">FC</option>
               </select>
               <select
                 name="language"
                 id="language"
-                className="bg-gray-200 text-[10px] text-black outline-none cursor-pointer">
+                className="bg-gray-200 text-sm tablette:text:base text-black outline-none 
+                cursor-pointer">
                 <option value="1">French</option>
                 <option value="2">English</option>
               </select>
@@ -62,20 +64,18 @@ const Homepage = () => {
           </div>
           <Menus />
         </header>
-        <main className="my-5 mx-5">
+        <main className="mb-5  mx-5">
           <Payement onClose={HandlerOnclose} Visible={showpayment} />
           <article
-            className="flex flex-col  laptop:m-0 desktop:m-2 justify-center
-                    desktop:justify-center laptop:justify-center desktop:gap-3 tablette:flex-row
-
-                                                                ">
+            className="flex flex-col gap-4 laptop:m-0 tablette:m-2 justify-center
+                    tablette:justify-center laptop:justify-center tablette:gap-3 tablette:flex-row">
             <section className="  mr-0 laptop:mr-0 xl:mr-2">
               <Categories />
             </section>
-            <section className="flex   mr-0 laptop:mr-0 xl:mr-1 mt-4">
+            <section className="flex   mr-0 laptop:mr-0 xl:mr-1">
               <div
                 className="flex flex-col justify-center items-center text-center p-8 pt-8 gap-6 text-laptop
-                                                                                     bg-slate-200 w-[50%] laptop:text-base xl:text-laptop">
+                 bg-slate-200 w-[50%] laptop:text-base xl:text-laptop">
                 <span className="text-red-900 mt-3">R. KIYOSAKI</span>
                 <span className="font-semibold">GUIDE POUR INVESTIR</span>
                 <span className="text-red-900">$13.22</span>
@@ -95,13 +95,13 @@ const Homepage = () => {
               </div>
             </section>
             <section className="">
-              <SousMenus />
-              <section className="flex  gap-4 mt-4">
+              <section className="flex  gap-4">
                 <div
-                  className="flex flex-col text-center p-8 pt-2 justify-center
-                                                                                               items-center gap-4 text-laptop bg-slate-200 w-[50%] laptop:text-base xl:text-laptop">
-                  <span className="text-red-900 mt-3">J.K ROWLING</span>
-                  <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
+                  className="flex flex-col text-center p-8 pt-2 justify-center items-center 
+                  gap-4 text-laptop bg-slate-200 w-[50%] laptop:text-base xl:text-laptop
+                  ">
+                  <span className="text-red-900 mt-3">MJ DE MARCO</span>
+                  <span className="font-semibold">L'AUTOROUTE DU MILLIONNAIRE</span>
                   <span className="text-red-900">$13.22</span>
                   <button
                     onClick={() => setShowpayement(true)}
@@ -110,10 +110,10 @@ const Homepage = () => {
                   </button>
                 </div>
                 <div
-                  className="flex flex-col text-center justify-center items-center
-                                                                                               p-8 pt-2 gap-4 text-laptop bg-slate-200 w-[50%] laptop:text-base xl:text-laptop">
-                  <span className="text-red-900 mt-3">J.K ROWLING</span>
-                  <span className="font-semibold">HARRY POTTER AND THE CURSED CHILD</span>
+                  className="flex flex-col text-center justify-center items-center p-8 pt-2
+                   gap-4 bg-slate-200 w-[50%] tablette:text-base xl:text-laptop">
+                  <span className="text-red-900 mt-3">R. KIYOSAKI</span>
+                  <span className="font-semibold">LE QUADRANT DU CASHFLOW</span>
                   <span className="text-red-900">$13.22</span>
                   <button
                     onClick={() => setShowpayement(true)}
@@ -125,7 +125,9 @@ const Homepage = () => {
             </section>
           </article>
           <Livraison />
-          <h1 className="text-5xl mt-10 pb-5 flex justify-center tablette:justify-center laptop:justify-center desktop:justify-center">
+          <h1
+            className="text-5xl mt-10 pb-5 flex justify-center tablette:justify-center 
+          laptop:justify-center">
             Nos Livres
           </h1>
           <article className="flex flex-col tablette:flex-row justify-center">
@@ -137,8 +139,8 @@ const Homepage = () => {
             <section className=" ">
               <InfoLivre />
             </section>
-            <section className=" flex flex-col gap-4 desktop:flex desktop:gap-4 tablette:flex-row desktop:flex-row bg">
-              <div className="flex flex-col  desktop:flex-row">
+            <section className=" flex flex-col gap-4 tablette:flex tablette:gap-4 bg">
+              <div className="flex flex-col  tablette:flex-row">
                 <div className="flex flex-col justify-start items-center text-center gap-4 bg-slate-200 p-6 ">
                   <span className="text-red-900">NAPOLEON III</span>
                   <span className="font-semibold">REFLECHISSEZ ET DEVENEZ RICHE</span>
@@ -149,11 +151,11 @@ const Homepage = () => {
                   <img
                     src={Harry1}
                     alt="harry"
-                    className="cursor-pointer desktop:bg-cover desktoph-56 desktop:w-[100%]"
+                    className="cursor-pointer tablette:bg-cover tabletteh-56 tablette:w-[100%]"
                   />
                 </div>
               </div>
-              <div className="flex flex-col-reverse desktop:flex-row  laptop:flex-row tablette:flex-row ">
+              <div className="flex flex-col-reverse tablette:flex-row  laptop:flex-row">
                 <div className="flex flex-col justify-start items-center text-center gap-4 bg-slate-200 p-6 ">
                   <span className="text-red-900 mt-3">T. HARV EKER</span>
                   <span className="font-semibold">LE SECRET D'UN ESPRIT MILLIONNAIRE</span>
@@ -164,49 +166,50 @@ const Homepage = () => {
                   <img
                     src={Harry3}
                     alt="harry"
-                    className="bg-cover cursor-pointer desktop:bg-cover desktop:h-[280px] desktop:w-[100%]"
+                    className="bg-cover cursor-pointer tablette:bg-cover tablette:h-[280px] 
+                    tablette:w-[100%]"
                   />
                 </div>
               </div>
             </section>
           </article>
 
-          <h1 className="text-4xl flex justify-center desktop:text-4xl my-4">Nos Formations</h1>
-          <article className="flex flex-col desktop:flex desktop:flex-row">
-            <section className="desktop:h-[500px] desktop:w-[33%]">
+          <h1 className="text-4xl flex justify-center tablette:text-4xl my-4">Nos Formations</h1>
+          <article className="flex flex-col tablette:flex-row">
+            <section className="tablette:h-[500px] tablette:w-[33%]">
               <div className="ml-1 bg-black">
                 <img
                   src={Formation}
                   alt="book"
-                  className="bg-cover   desktop:w-[100%] desktop:h-[578px] cursor-pointer"
+                  className="bg-cover   tablette:w-[100%] tablette:h-[578px] cursor-pointer"
                 />
               </div>
             </section>
-            <section className=" desktop:w-[33%]">
+            <section className=" tablette:w-[33%]">
               <InfoLivre />
             </section>
-            <section className="desktop:w-[34%] flex desktop:flex-col desktop:gap-4 ">
-              <div className="flex desktop:flex-row">
-                <div className="desktop:w-[100%]" onClick={() => setShowpayement(true)}>
+            <section className="tablette:w-[34%] flex tablette:flex-col tablette:gap-4 ">
+              <div className="flex tablette:flex-row">
+                <div className="tablette:w-[100%]" onClick={() => setShowpayement(true)}>
                   <img
                     src={Formation1}
                     alt="harry"
-                    className="desktop:bg-cover desktop:h-[280px] desktop:w-[100%] cursor-pointer"
+                    className="tablette:bg-cover tablette:h-[280px] tablette:w-[100%] cursor-pointer"
                   />
                 </div>
               </div>
               <div className="flex flex-row">
-                <div className="desktop:w-[100%]" onClick={() => setShowpayement(true)}>
+                <div className="tablette:w-[100%]" onClick={() => setShowpayement(true)}>
                   <img
                     src={Formation2}
                     alt="harry"
-                    className="desktop:bg-cover desktop:h-[280px] desktopw-[100%] cursor-pointer"
+                    className="tablette:bg-cover tablette:h-[280px] tablettew-[100%] cursor-pointer"
                   />
                 </div>
               </div>
             </section>
           </article>
-          <article className="flex flex-col  my-10 desktop:my-6 desktop:flex-row desktop:justify-around">
+          <article className="flex flex-col justify-between tablette:flex-row my-10 tablette:my-6 tablette:justify-around">
             <section>
               <div className="flex flex-col justify-center items-center h-[650px] w-[350px] rounded-2xl shadow-xl">
                 <div className="h-[300px] w-[350px]">
@@ -239,7 +242,7 @@ const Homepage = () => {
                 </div>
               </div>
             </section>
-            <section>
+            <section className="hidden tablette:block">
               <div className="flex flex-col justify-center items-center h-[650px] w-[350px] rounded-2xl shadow-xl">
                 <div className="h-[300px] w-[350px]">
                   <img
@@ -271,7 +274,7 @@ const Homepage = () => {
                 </div>
               </div>
             </section>
-            <section>
+            <section className="hidden tablette:block">
               <div className="flex flex-col justify-center items-center h-[650px] w-[350px] rounded-2xl shadow-xl">
                 <div className="h-[300px] w-[350px]">
                   <img
