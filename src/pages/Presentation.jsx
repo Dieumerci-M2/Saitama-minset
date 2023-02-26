@@ -82,11 +82,11 @@ const Presentation = () => {
       </nav>
 
       <section id="section">
-        <div className=" bg-gray-200 flex flex-col justify-center px-6 tablette:px-14 gap-5 tablette:gap-20 mx-0 mt-0 
+        <div className=" bg-gray-200 flex flex-col justify-center px-6 w-[100%] tablette:px-14 gap-5 tablette:gap-20 mx-0 mt-0 
         space-y-0 tablette:space-y-0  tablette:flex-row">
           <img src={ Accueil } alt="Accueil" className="my-8 bg-gray-200 text-gray-200
-           w-[inset] tablette:w-[50%]" />
-          <div className="flex flex-col mb-5 justify-center">
+           w-[inset] tablette:w-[50%] laptop:w-[50%]" />
+          <div className="flex flex-col mb-5 justify-center w-[inset] tablette:w-[50%] laptop:w-[50%]">
             <p className="text-2xl font-bold flex  tablette:text-5xl">
               Le meilleur investissement que tu puisse faire c'est d'investir dans toi même
             </p>
