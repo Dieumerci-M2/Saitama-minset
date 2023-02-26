@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import "./Auth.css"
 import { useState } from "react";
+import axios from "axios";
 
   export default function Example() {
     const navigateTo = useNavigate();
@@ -46,9 +47,15 @@ import { useState } from "react";
     const handlepasswordChange = (e) => {
     setPassword(e.target.value)
   } 
-     
-  
-  
+
+  const login = async() => {
+    const opt = {email, password}
+    const user = await axios.post("http://localhost:8080/api/v1/login", opt)
+    console.log(user.data)
+    localStorage.setItem('Username', user.data.username)
+    localStorage.setItem('Usermail', user.data.email)
+    localStorage.setItem('Token', user.data.token)
+  }
  
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -58,8 +65,8 @@ import { useState } from "react";
           email: email,
           password :password
         }))
+        login();
         showToastSuccessMessage()
-
       } else if (password === "" && email === "") {
                showToastErrorMessage(`Votre champ nom est vide ou votre champ email est vide `)
       }  
@@ -68,22 +75,22 @@ import { useState } from "react";
     return (
       <body clasName="flex flex-row justify-center items-center text-center mx-auto">
         <div className="flex flex-row flex-wrap items-center">
-          <div className="imgBackLogin bg-blue-400 max-mobile:bg-white max-mobile:h-7 max-mobile:mb-[30px] max-mobile:mt-[-30px]">
+          <div className="imgBackLogin bg-blue-400 max-mobile:bg-white max-mobile:h-7 max-mobile:mb-[30px] max-mobile:mt-[-30px] max-tablette:bg-white max-tablette:h-7 max-tablette:mb-[30px] max-tablette:mt-[-30px]">
             <p
               className="text-5xl font-bold px-10 pt-20 text-white
-           text-center max-mobile:text-red-700 max-mobile:text-lg max-mobile:pb-2">
+           text-center max-mobile:text-red-700 max-mobile:text-lg max-mobile:pb-2 max-tablette:text-lg">
               Se connecter
             </p>
-            <p className="px-10 pt-20  text-white text-center max-mobile:hidden">
+            <p className="px-10 pt-20  text-white text-center max-mobile:hidden max-tablette:hidden">
               Connectez-vous et joignez notre team ! C'est gratuit et sans frais...
             </p>
           </div>
           <ToastContainer/>
-          <div className="h-[400px] w-[350px] max-mobile:w-full max-mobile:mt-16">
-            <CardBody className="cardBody flex flex-col justify-center gap-6 w-96 h-[450px] mt-[5px] p-10 shadow-xl max-mobile:w-full max-mobile:gap-9">
-              <Input placeholder="Email" id="email"  value={email} size="lg" onChange={handleemailChange}  />
-              <Input placeholder="Password" value={password} size="lg" onChange={handlepasswordChange}  />
-              <div className=" flex items-center -ml-2.5 max-mobile:hidden">
+          <div className="h-[400px] w-[350px] max-mobile:w-full max-mobile:h-full max-mobile:mt-16 max-tablette:w-full max-tablette:mt-16">
+            <CardBody className="cardBody flex flex-col justify-center gap-4 w-96 h-[450px] mt-[5px] p-10 shadow-xl max-mobile:w-full max-mobile:h-full max-mobile:gap-9 max-tablette:w-full max-tablette:gap-9 max-mobile:shadow-none">
+              <Input placeholder="Email" id="email" type="email"  value={email} size="lg" onChange={handleemailChange}/>
+              <Input placeholder="Password" value={password} type="password" size="lg" onChange={handlepasswordChange}  />
+              <div className=" flex items-center -ml-2.5 max-mobile:hidden max-tablette:hidden">
                 <Checkbox className="bg-red" id="login-checkbox"/>
                 <label for="login-checkbox">se souvenir de moi</label>
               </div>

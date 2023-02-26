@@ -14,8 +14,8 @@ function Navbar() {
     }
   return (
     <div>
-      <header className="flex flex-row justify-between bg-white border-b-2 border-[gray]-600">
-        <div className="border w-[150px] h-[50px] m-2">
+      <header className="flex flex-row justify-between bg-white border-b-2 border-[gray]-600 max-mobile:mb-5 max-mobile:flex max-mobile:justify-between">
+        <div className="border w-[150px] h-[50px] m-2 max-mobile:w-[75px] max-mobile:h-[25px]">
           <a href="https://t.me/Moneygrr" target="_blank">
             <img src={saitama} alt="Logo" />
           </a>
@@ -27,7 +27,7 @@ function Navbar() {
             onClick={() => {
               handlerNavigate();
             }}
-            className="text-[#000000] text-1xl hover:text-blue-400"
+            className="text-[#000000] text-1xl hover:text-blue-400 max-mobile:text-sm"
             id="inscription">
             Inscription
           </span>
@@ -35,7 +35,7 @@ function Navbar() {
             onClick={() => {
               handlerLoginNavigate();
             }}
-            className="text-[#000000] text-1xl hover:text-blue-400"
+            className="text-[#000000] text-1xl hover:text-blue-400 max-mobile:text-sm"
             id="connexion">
             Connexion
           </span>

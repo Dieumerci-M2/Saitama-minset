@@ -2,8 +2,9 @@ import React from 'react'
 import Saitama from '../assets/saitama.png';
 import Search from '../assets/Vector.svg';
 import Harry1 from '../assets/BooksReal.jpg';
-import Harry2 from '../assets/Harry-Potter-de-J.K.-Rowling.jpg';
-import Harry3 from '../assets/HenryPorter1.jpg';
+import Harry2 from '../assets/auto.jpg';
+import Harry3 from '../assets/cashflow.jpg';
+import Entre from '../assets/entre.jpg';
 import InfoLivre from '../components/InfoLivre';
 import Footer from '../components/Footer';
 import NewsLetter from '../components/NewsLetter';
@@ -96,19 +97,19 @@ const Bookspage = () => {
           <section className="desktop:grid desktop:grid-cols-2 desktop:gap-10 desktop:w-[68%] text-center my-7 mx-5">
             <div className="desktop:h-[300px] flex flex-col desktop:flex-col gap-2 desktop:w-[100%]">
               <img src={Harry2} alt="harry" className=" bg-cover desktop:h-[100%] cursor-pointer" />
-              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+              <span className="text-lg font-semibold">L'AUTOROUTE DU MILLIONNAIRE</span>
             </div>
             <div className="desktop:h-[300px] flex flex-col  desktop:flex-col desktop:gap-2 desktop:w-[100%]">
               <img src={Harry3} alt="harry" className="bg-cover desktop:h-[100%] cursor-pointer" />
-              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+              <span className="text-lg font-semibold">LE QUADRANT DU CASHFLOW</span>
             </div>
             <div className="desktop:h-[300px] flex flex-col desktop:gap-2 desktop:w-[100%]">
-              <img src={Harry3} alt="harry" className="bg-cover desktop:h-[100%] cursor-pointer" />
-              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+              <img src={Harry1} alt="harry" className="bg-cover desktop:h-[100%] cursor-pointer" />
+              <span className="text-lg font-semibold"></span>
             </div>
             <div className="desktop:h-[300px] flex-col flex desktop:flex-col desktop:gap-2 desktop:w-[100%]">
-              <img src={Harry2} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
-              <span className="text-lg font-semibold">Harry Porter and the cursed child</span>
+              <img src={Entre} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
+              <span className="text-lg font-semibold">L'ENTREPRENEUR DU 21E SIECLE</span>
             </div>
           </section>
           <section className="">

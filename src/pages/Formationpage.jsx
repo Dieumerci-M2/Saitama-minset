@@ -2,15 +2,15 @@ import React from 'react'
 import Saitama from '../assets/saitama.png';
 import Search from '../assets/Vector.svg';
 import Footer from '../components/Footer';
-import Formation from '../assets/Formation 1.svg';
-import Formation1 from '../assets/Formation-relatif-1.svg';
-import Formation2 from '../assets/Formation-relatif-2.svg';
+import Formation from '../assets/Formation 1.jpg';
+import Formation1 from '../assets/facebook-ads.jpeg';
+import Formation2 from '../assets/ech.jpg';
 import InfoLivre from '../components/InfoLivre';
 import NewsLetter from '../components/NewsLetter';
-import FormReact1 from "../assets/Formation-dispo-1.png"
-import FormReact2 from "../assets/Formation-dispo-2.png"
-import FormReact3 from '../assets/Formation-dispo-3.png';
-import FormReact4 from '../assets/Formation-dispo-4.png';
+import FormReact1 from "../assets/Formation-relatif-2.jpg"
+import FormReact2 from "../assets/Formation-relatif-1.png"
+import FormReact3 from '../assets/facebook-ads.jpeg';
+import FormReact4 from '../assets/Formation 1.jpg';
 import { useNavigate } from 'react-router-dom';
 
 const Formationpage = () => {
@@ -20,7 +20,7 @@ const Formationpage = () => {
       <header className="">
         <section className="flex flex-col desktop:justify-between ">
           <div className="w-[150px]  h-[50px] my-3 mr-2 mt-4 desktop:ml-2">
-            <a href="https://t.me/Moneygrr" target="_blank">
+            <a href="" onClick={() => router('/')}>
               <img src={Saitama} alt="logo" className="cursor-pointer" />
             </a>
           </div>
@@ -106,20 +106,20 @@ const Formationpage = () => {
           <section className="grid desktop:grid-cols-2 desktop:gap-10 desktop:w-[68%] text-center">
             <div className="desktop:h-[300px] flex-col flex desktop:flex-col desktop:gap-2 desktop:w-[100%]">
               <img src={FormReact1} alt="harry" className=" bg-cover desktop:h-[100%] cursor-pointer" />
-              <span className="text-lg font-semibold">React js et native pour debutants</span>
+              <span className="text-lg font-semibold">Yomi Denzel, Dropshipping</span>
             </div>
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
               <img src={FormReact2} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
-              <span className="text-lg font-semibold">PHP et Laravel pour debutants</span>
+              <span className="text-lg font-semibold">Infographie et design avec Canvas</span>
             </div>
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
               <img src={FormReact3} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
-              <span className="text-lg font-semibold">Créer un seveur avec node</span>
+              <span className="text-lg font-semibold">Publicité avac facebook</span>
             </div>
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
               <img src={FormReact4} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
               <span className="text-lg font-semibold">
-                Decouvrer python avec son framework Flask
+                Faites-vous des millions grace à la pub instagram
               </span>
             </div>
           </section>
