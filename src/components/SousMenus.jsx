@@ -5,7 +5,7 @@ const SousMenus = () => {
    const router = useNavigate();
   return (
     <div
-      className="flex font-semibold justify-between mt-4
+      className="flex flex-col tablette:flex-row gap-8 mr-5 text-blue-500 font-semibold justify-between
          laptop:text-base xl:text-laptop xl:px-10 py-4 ">
       <div onClick={() => router('/home')} className="cursor-pointer hover:text-blue-[#1E7DBD]">
         Home
