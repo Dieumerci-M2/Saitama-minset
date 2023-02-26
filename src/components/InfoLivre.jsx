@@ -2,13 +2,20 @@ import React from 'react'
 
 const InfoLivre = () => {
   return (
+<<<<<<< HEAD
     <section className="flex flex-col desktop:flex-col my-3 mx-3 text-center desktop:p-10 desktop:lg:p-8  desktop:justify-center desktop:items-center desktop:gap-3 shadow-xl">
       <div classname="flex flex-col">
 
         <div className="text-red-900 text-lg">CHRISTOPHER SOYTOROV</div>
         <div className="font-semibold text-2xl">GUIDE DE L'APPRENTIS MILLIONNAIRE</div>
+=======
+    <section className="flex flex-col desktop:flex-col my-3 p-4 text-center desktop:p-10 desktop:lg:p-8  desktop:justify-center desktop:items-center desktop:gap-3 shadow-xl">
+      <div classname="flex flex-col">
+        <div className="text-red-900 text-lg">J.K ROWLING</div>
+        <div className="font-semibold text-2xl">HARRY POTTER AND THE CURSED CHILD</div>
+>>>>>>> 920ae79 (refactor: arrange all Home page  mobile breakpoint)
       </div>
-      <div className='flex flex-col desktop:justify-center'>
+      <div className="flex flex-col desktop:justify-center">
         <span className="text-red-900 text-2xl">$13.22</span>
         <span className="line-through text-gray-500 desktop:ml-8 text-2xl">$20.32</span>
       </div>
@@ -17,8 +24,8 @@ const InfoLivre = () => {
         fugiat Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur atque sint
         consequuntur fugiat
       </span>
-      <div className='desktop:w-[100%] my-2'>
-        <div className="flex desktop:flex-row desktop:justify-between">
+      <div className="desktop:w-[100%] my-2">
+        <div className="flex justify-between desktop:flex-row desktop:justify-between">
           <span>Solde: 10</span>
           <span>Disponible: 60</span>
         </div>
