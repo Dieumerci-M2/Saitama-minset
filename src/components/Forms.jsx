@@ -74,44 +74,44 @@ function Forms() {
   return (
 
 
-    <div class=" px-10 py-6 shadow-lg bg-white">
+    <div class=" px-10 py-6 shadow-lg bg-white max-mobile:shadow-none max-tablette:shadow-none">
       <form>
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-2 gap-4 max-mobile:flex max-mobile:flex-col max-tablette:flex max-tablette:flex-col">
           <div class="form-group mb-6">
             <input type="text" class="form-control
-          block
-          w-full
-          px-3
-          py-1.5
-          text-base
-          font-normal
-          text-gray-700
-          bg-white bg-clip-padding
-          border border-solid border-gray-300
-          rounded
-          transition
-          ease-in-out
-          m-0
-          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput123"
-              aria-describedby="prenom" placeholder="Prénom" />
+            block
+            w-full
+            px-3
+            py-1.5
+            text-base
+            font-normal
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded
+            transition
+            ease-in-out
+            m-0
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput123"
+                aria-describedby="prenom" placeholder="Prénom" />
           </div>
           <div class="form-group mb-6">
             <input type="text" class="form-control
-          block
-          w-full
-          px-3
-          py-1.5
-          text-base
-          font-normal
-          text-gray-700
-          bg-white bg-clip-padding
-          border border-solid border-gray-300
-          rounded
-          transition
-          ease-in-out
-          m-0
-          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput124"
-              aria-describedby="nom" placeholder="Nom" />
+            block
+            w-full
+            px-3
+            py-1.5
+            text-base
+            font-normal
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded
+            transition
+            ease-in-out
+            m-0
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput124"
+                aria-describedby="nom" placeholder="Nom" />
           </div>
           <div class="form-group mb-6">
             <input type="text" class="form-control
@@ -156,7 +156,7 @@ function Forms() {
               <p for="helper-radio" className=" mb-5 font-medium text-gray-900 dark:text-gray-300">Selectionner votre sujet</p>
               <span><p id="helper-radio-text" className="text-xs font-normal text-gray-500 dark:text-gray-300">
 
-                <span className='flex gap-10 justify-center'>
+                <span className='flex gap-10 justify-center max-tablette:grid max-tablette:grid-cols-2 max-tablette:gap-4 max-mobile:grid max-mobile:grid-cols-2 max-mobile:gap-4'>
                     <div className='flex gap-2 items-center'>
                       <input id="sujet-general" aria-describedby="helper-radio-text" type="radio" value="Sujet Général" name='radio' class="w-4 ml-2 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
                       <label for="sujet-general">Sujet Général</label>
