@@ -17,7 +17,7 @@ const Formationpage = () => {
   return (
     <article>
       <header className="">
-        <Menus/>
+        <Menus />
       </header>
       <main className="m-5">
         <h1 className="text-5xl flex before:justify-center">Mes Videos</h1>
@@ -27,7 +27,8 @@ const Formationpage = () => {
               <img
                 src={Formation}
                 alt="book"
-                className="tablette:bg-cover tablette:h-[578px] tablette:w-[100%] cursor-pointer mt-2"
+                className="tablette:bg-cover tablette:h-[578px] tablette:w-[100%] 
+                cursor-pointer mt-2 object-cover"
               />
             </div>
           </section>
@@ -40,7 +41,7 @@ const Formationpage = () => {
                 <img
                   src={Formation1}
                   alt="harry"
-                  className="bg-cover h-[280px] w-[100%] cursor-pointer"
+                  className="bg-cover h-[280px] w-[100%] cursor-pointer object-cover"
                 />
               </div>
             </div>
@@ -49,21 +50,31 @@ const Formationpage = () => {
                 <img
                   src={Formation2}
                   alt="harry"
-                  className="bg-cover h-[280px] w-[100%] cursor-pointer"
+                  className="bg-cover h-[280px] w-[100%] cursor-pointer object-cover"
                 />
               </div>
             </div>
           </section>
         </article>
-        <h1 className="tablette:text-5xl tablette:my-10 text-3xl justify-center">Les plus téléchargées</h1>
+        <h1 className="tablette:text-5xl tablette:my-10 text-3xl justify-center">
+          Les plus téléchargées
+        </h1>
         <article className="flex flex-col tablette:flex-row tablette:justify-between">
           <section className="grid tablette:grid-cols-2 tablette:gap-10 tablette:w-[68%] text-center">
             <div className="tablette:h-[300px] flex-col flex tablette:flex-col tablette:gap-2 tablette:w-[100%]">
-              <img src={FormReact1} alt="harry" className=" bg-cover tablette:h-[100%] cursor-pointer" />
+              <img
+                src={FormReact1}
+                alt="harry"
+                className=" bg-cover tablette:h-[100%] cursor-pointer object-cover"
+              />
               <span className="text-lg font-semibold">Yomi Denzel, Dropshipping</span>
             </div>
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
-              <img src={FormReact2} alt="harry" className="bg-cover h-[100%] cursor-pointer" />
+              <img
+                src={FormReact2}
+                alt="harry"
+                className="bg-cover h-[100%] cursor-pointer object-cover"
+              />
               <span className="text-lg font-semibold">Infographie et design avec Canvas</span>
             </div>
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">

@@ -65,14 +65,19 @@ const Homepage = () => {
           <Menus />
         </header>
         <main className="mb-5  mx-5">
+          <h1
+            className="text-2xl tablette:text-5xl my-4 flex justify-center tablette:justify-start 
+          laptop:justify-start">
+            Catalogue
+          </h1>
           <Payement onClose={HandlerOnclose} Visible={showpayment} />
           <article
             className="flex flex-col gap-4 laptop:m-0 tablette:m-2 justify-center
                     tablette:justify-center laptop:justify-center tablette:gap-3 tablette:flex-row">
-            <section className="  mr-0 laptop:mr-0 xl:mr-2">
+            <section className="w-[inset] tablette:w-[20%] mr-0 laptop:mr-0 xl:mr-2">
               <Categories />
             </section>
-            <section className="flex   mr-0 laptop:mr-0 xl:mr-1">
+            <section className="flex w-[inset] tablette:w-[40%] mr-0 laptop:mr-0 xl:mr-1">
               <div
                 className="flex flex-col justify-center items-center text-center p-8 pt-8 gap-6 text-laptop
                  bg-slate-200 w-[50%] laptop:text-base xl:text-laptop">
@@ -90,15 +95,15 @@ const Homepage = () => {
                   onClick={() => setShowpayement(true)}
                   src={Affiche}
                   alt="affiche"
-                  className="bg-cover h-[100%] cursor-pointer"
+                  className="bg-cover h-[100%] w-[100%] tablette:h-96 cursor-pointer"
                 />
               </div>
             </section>
-            <section className="">
-              <section className="flex  gap-4">
+            <section className="w-[inset] tablette:w-[40%]">
+              <section className="flex gap-4">
                 <div
                   className="flex flex-col text-center p-8 pt-2 justify-center items-center 
-                  gap-4 text-laptop bg-slate-200 w-[50%] laptop:text-base xl:text-laptop
+                  gap-4 text-laptop bg-slate-200 w-[50%] tablette:h-96 laptop:text-base xl:text-laptop
                   ">
                   <span className="text-red-900 mt-3">MJ DE MARCO</span>
                   <span className="font-semibold">L'AUTOROUTE DU MILLIONNAIRE</span>
@@ -126,8 +131,8 @@ const Homepage = () => {
           </article>
           <Livraison />
           <h1
-            className="text-5xl mt-10 pb-5 flex justify-center tablette:justify-center 
-          laptop:justify-center">
+            className="text-2xl tablette:text-5xl my-5 -mt-[inset] tablette:-mt-12
+             flex justify-center tablette:justify-start laptop:justify-start">
             Nos Livres
           </h1>
           <article className="flex flex-col tablette:flex-row justify-center">
@@ -141,7 +146,8 @@ const Homepage = () => {
             </section>
             <section className=" flex flex-col gap-4 tablette:flex tablette:gap-4 bg">
               <div className="flex flex-col  tablette:flex-row">
-                <div className="flex flex-col justify-start items-center text-center gap-4 bg-slate-200 p-6 ">
+                <div className="flex flex-col justify-start items-center text-center gap-4 
+                bg-slate-200 p-6 ">
                   <span className="text-red-900">NAPOLEON III</span>
                   <span className="font-semibold">REFLECHISSEZ ET DEVENEZ RICHE</span>
                   <span className="text-red-900">$13.22</span>
@@ -151,7 +157,7 @@ const Homepage = () => {
                   <img
                     src={Harry1}
                     alt="harry"
-                    className="cursor-pointer tablette:bg-cover tabletteh-56 tablette:w-[100%]"
+                    className="cursor-pointer tablette:bg-cover tabletteh-56 tablette:w-[100%] object-cover"
                   />
                 </div>
               </div>
@@ -174,14 +180,15 @@ const Homepage = () => {
             </section>
           </article>
 
-          <h1 className="text-4xl flex justify-center tablette:text-4xl my-4">Nos Formations</h1>
+          <h1 className="text-2xl flex justify-center tablette:text-4xl my-4">Nos Formations</h1>
           <article className="flex flex-col tablette:flex-row">
             <section className="tablette:h-[500px] tablette:w-[33%]">
               <div className="ml-1 bg-black">
                 <img
                   src={Formation}
                   alt="book"
-                  className="bg-cover   tablette:w-[100%] tablette:h-[578px] cursor-pointer"
+                  className="bg-cover   tablette:w-[100%] tablette:h-[578px] cursor-pointer 
+                  object-cover"
                 />
               </div>
             </section>
@@ -194,7 +201,8 @@ const Homepage = () => {
                   <img
                     src={Formation1}
                     alt="harry"
-                    className="tablette:bg-cover tablette:h-[280px] tablette:w-[100%] cursor-pointer"
+                    className="tablette:bg-cover tablette:h-[280px] tablette:w-[100%] 
+                    cursor-pointer"
                   />
                 </div>
               </div>
@@ -203,23 +211,27 @@ const Homepage = () => {
                   <img
                     src={Formation2}
                     alt="harry"
-                    className="tablette:bg-cover tablette:h-[280px] tablettew-[100%] cursor-pointer"
+                    className="tablette:bg-cover tablette:h-[280px] tablettew-[100%] 
+                    cursor-pointer object-cover"
                   />
                 </div>
               </div>
             </section>
           </article>
-          <article className="flex flex-col justify-between tablette:flex-row my-10 tablette:my-6 tablette:justify-around">
+          <article className="hidden my-10 tablette:my-6 tablette:justify-around">
             <section>
-              <div className="flex flex-col justify-center items-center h-[650px] w-[350px] rounded-2xl shadow-xl">
+              <div className="flex flex-col justify-center items-center h-[650px] w-[350px] 
+              rounded-2xl shadow-xl">
                 <div className="h-[300px] w-[350px]">
                   <img
                     src={Bed}
                     alt="bed"
-                    className="bg-cover h-[300px] w-[100%] rounded-t-2xl cursor-pointer"
+                    className="bg-cover h-[300px] w-[100%] rounded-t-2xl cursor-pointer 
+                    object-cover"
                   />
                 </div>
-                <div className="flex flex-col justify-center items-center text-center gap-4 h-[350px] w-[350px] px-8 py-4 ">
+                <div className="flex flex-col justify-center items-center text-center gap-4 
+                h-[350px] w-[350px] px-8 py-4 ">
                   <span className="font-bold">
                     Netus vestibulum a vulputate sollicitudin id vitae convallis
                   </span>
@@ -227,9 +239,11 @@ const Homepage = () => {
                     At accumsan condimentum donec dictumst eros, tempus in diam. Ornare gravida quis
                     eu blandit lectus vestibulum egestas.
                   </span>
-                  <div className="flex flex-row text-center h-12 w-[250px] bg-gray-100 my-auto mt-3">
+                  <div className="flex flex-row text-center h-12 w-[250px] bg-gray-100 
+                  my-auto mt-3">
                     <img
-                      className="cursor-pointer inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4"
+                      className="cursor-pointer inline-block h-10 w-10 rounded-full ring-2 
+                      ring-white m-auto mt-1 ml-4 object-cover"
                       src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       alt=""
                     />
@@ -243,15 +257,18 @@ const Homepage = () => {
               </div>
             </section>
             <section className="hidden tablette:block">
-              <div className="flex flex-col justify-center items-center h-[650px] w-[350px] rounded-2xl shadow-xl">
+              <div className="flex flex-col justify-center items-center h-[650px] w-[350px] 
+              rounded-2xl shadow-xl">
                 <div className="h-[300px] w-[350px]">
                   <img
                     src={Bed}
                     alt="bed"
-                    className="bg-cover h-[300px] w-[100%] rounded-t-2xl cursor-pointer"
+                    className="bg-cover h-[300px] w-[100%] rounded-t-2xl cursor-pointer 
+                    object-cover"
                   />
                 </div>
-                <div className="flex flex-col justify-center items-center text-center gap-4 h-[350px] w-[350px] px-8 py-4 ">
+                <div className="flex flex-col justify-center items-center text-center gap-4 
+                h-[350px] w-[350px] px-8 py-4 ">
                   <span className="font-bold">
                     Netus vestibulum a vulputate sollicitudin id vitae convallis
                   </span>
@@ -259,9 +276,11 @@ const Homepage = () => {
                     At accumsan condimentum donec dictumst eros, tempus in diam. Ornare gravida quis
                     eu blandit lectus vestibulum egestas.
                   </span>
-                  <div className="flex flex-row text-center h-12 w-[250px] bg-gray-100 my-auto mt-3">
+                  <div className="flex flex-row text-center h-12 w-[250px] bg-gray-100 
+                  my-auto mt-3">
                     <img
-                      className="cursor-pointer inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4"
+                      className="cursor-pointer inline-block h-10 w-10 rounded-full ring-2 
+                      ring-white m-auto mt-1 ml-4 object-cover"
                       src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       alt=""
                     />
@@ -275,15 +294,18 @@ const Homepage = () => {
               </div>
             </section>
             <section className="hidden tablette:block">
-              <div className="flex flex-col justify-center items-center h-[650px] w-[350px] rounded-2xl shadow-xl">
+              <div className="flex flex-col justify-center items-center h-[650px] w-[350px] 
+              rounded-2xl shadow-xl">
                 <div className="h-[300px] w-[350px]">
                   <img
                     src={Bed}
                     alt="bed"
-                    className="bg-cover h-[300px] w-[100%] rounded-t-2xl cursor-pointer"
+                    className="bg-cover h-[300px] w-[100%] rounded-t-2xl cursor-pointer 
+                    object-cover"
                   />
                 </div>
-                <div className="flex flex-col justify-center items-center text-center gap-4 h-[350px] w-[350px] px-8 py-4 ">
+                <div className="flex flex-col justify-center items-center text-center gap-4 
+                h-[350px] w-[350px] px-8 py-4 ">
                   <span className="font-bold">
                     Netus vestibulum a vulputate sollicitudin id vitae convallis
                   </span>
@@ -291,11 +313,13 @@ const Homepage = () => {
                     At accumsan condimentum donec dictumst eros, tempus in diam. Ornare gravida quis
                     eu blandit lectus vestibulum egestas.
                   </span>
-                  <div className="flex flex-row text-center h-12 w-[250px] bg-gray-100 my-auto mt-3">
+                  <div className="flex flex-row text-center h-12 w-[250px] bg-gray-100 
+                  my-auto mt-3">
                     <img
-                      className="cursor-pointer inline-block h-10 w-10 rounded-full ring-2 ring-white m-auto mt-1 ml-4"
+                      className="cursor-pointer inline-block h-10 w-10 rounded-full ring-2 
+                      ring-white m-auto mt-1 ml-4 object-cover"
                       src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      alt=""
+                      alt="book"
                     />
                     <div>
                       <span className="mr-2 cursor-pointer font-semibold">Jhon Doe</span>
