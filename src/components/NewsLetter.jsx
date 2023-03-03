@@ -10,18 +10,18 @@ const NewsLetter = () => {
     <div className="flex flex-col gap-3 desktop:gap-4 desktop:my-7">
       <h1 className="text-start text-2xl flex justify-center font-bold">NEWSLETTER</h1>
       <div className="flex flex-row h-10 rounded-2xl w-[300px] justify-center ml-5">
-        <span className="w-[50%] bg-slate-200 rounded-l-3xl"></span>
+        <input className="w-[50%] bg-slate-200 rounded-l-3xl"></input>
         <span className="w-[50%] bg-red-700 text-center pt-2 cursor-pointer text-[#FFFFFF] rounded-r-3xl">
           Soumettre
         </span>
       </div>
       <h1 className="text-start text-2xl flex justify-center font-bold">FOLLOW US</h1>
       <div className="flex desktop:flex-col justify-around desktop:gap-2">
-        <div className="flex desktop:flex-row desktop:gap-4 ">
+        <div className="flex gap-4 ">
           <img src={Facebook} alt="facebook" className="w-[50px] h-[50px] cursor-pointer" />
           <span className="cursor-pointer my-auto ">Facebook</span>
         </div>
-        <div className="flex flex-row gap-4 ">
+        <div className="flex gap-4 ">
           <a href="https://t.me/Moneygrr" target="_blank">
             <img src={Telegram} alt="telegram" className="w-[50px] h-[50px] cursor-pointer" />
           </a>
