@@ -1,5 +1,6 @@
 import React from 'react';
 import Saitama from '../assets/saitama.png';
+import Profil from '../assets/Profil.png'
 import Search from '../assets/Vector.svg';
 import { useNavigate } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -15,17 +16,17 @@ const Menus = () => {
           <img src={Saitama} alt="logo" className="xl:mr-8 cursor-pointer" />
         </a>
       </div>
-      <div className="flex flex-row my-2.5 tablette:my-3.5 -ml-1 rounded-l-xl h-8 lg:ml-6">
+      <div className="flex flex-row my-2.5 -ml-1 rounded-l-xl h-8 lg:ml-6">
         <input
           className=" placeholder:text-slate-400 placeholder:text-[8px] tablette:placeholder:text-base
-             bg-gray-100 w-28 tablette:w-80 laptop:w-96 border border-slate-300 py-1 tablette:pt-2 
+             bg-gray-100 w-28 tablette:w-80 laptop:w-96 border border-slate-300 py-2 tablette:pt-2 
              pl-2 tablette:pl-9 pr-3 shadow-sm focus:outline-none focus:ring-1 text-[8px] tablette:text-base 
-             rounded-l-xl h-4 tablette:h-[25px]"
+             rounded-l-xl h-4 tablette:h-[30px]"
           type="text"
           placeholder="Rechercher un Livre..."
         />
-        <span className="w-5 tablette:w-10 h-4 tablette:h-[25px] bg-red-700 cursor-pointer">
-          <img src={ Search } alt="Search" className="m-auto my-[1px] w-9 h-3 tablette:h-[23px]
+        <span className="w-5 tablette:w-10 h-4 tablette:h-[30px] bg-red-700 cursor-pointer">
+          <img src={ Search } alt="Search" className="m-auto my-[1px] tablette:my-[4px] w-9 h-3 tablette:h-[23px]
            text-[#FFFFFF]" />
         </span>
       </div>
@@ -35,8 +36,8 @@ const Menus = () => {
         <img
           className="inline-block h-[20px] tablette:h-7 w-[20px] tablette:w-7 rounded-full ring-2 ring-white m-auto
            mt-[2px] tablette:mt-1.5 ml-1 xl:ml-4 lg:ml-1"
-          src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""
+          src={ Profil}
+          alt="Profil"
         />
         <div className='flex flex-col gap-1 tablette:gap-0'>
           <span
