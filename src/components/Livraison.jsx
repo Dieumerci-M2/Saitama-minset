@@ -7,8 +7,8 @@ import Reduction from "../assets/Reduction.svg"
 const Livraison = () => {
 
   return (
-    <section className="flex flex-col text-lg justify-around mt-4 tablette:flex-row-reverse tablette:justify-around
-    "
+    <section className="flex flex-col text-lg justify-around my-10 tablette:flex-row-reverse 
+    tablette:justify-around"
     >
       <div className="flex flex-row gap-4">
         <img src={Voiture} alt="voiture" className="w-[50px] h-[50px] mb-2" />
