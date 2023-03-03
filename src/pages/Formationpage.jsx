@@ -15,7 +15,7 @@ import Reduction from '../assets/reduction.svg';
 const Formationpage = () => {
   const router = useNavigate();
   return (
-    <article>
+    <article className="text-sm">
       <header className="">
         <div
           className="flex justify-between w-full h-[30px] tablette:h-[40px] bg-slate-200
@@ -54,19 +54,19 @@ const Formationpage = () => {
         </div>
         <Menus />
       </header>
-      <main className="m-5">
+      <main className="mb-5  mx-5">
         <h1
           className="text-2xl tablette:text-5xl my-4 flex justify-center tablette:justify-start 
           laptop:justify-start">
           Nos Videos
         </h1>
         <article className="flex flex-col tablette:flex-row">
-          <section className="tablette:w-[33%] tablette:h-[500px]">
-            <div className="ml-1 bg-black">
+          <section className="w-[inset] tablette:w-[33%] tablette:h-[520px]">
+            <div className="">
               <img
                 src={Formation}
                 alt="book"
-                className="bg-cover h-[inset] tablette:h-[520px] cursor-pointer"
+                className="bg-cover w-[inset] tablette:w-[100%] h-[inset] tablette:h-[520px] cursor-pointer"
               />
             </div>
           </section>
@@ -169,7 +169,7 @@ const Formationpage = () => {
               </span>
             </div>
           </section>
-          <section className="mr-6">
+          <section className="mr-6 mt-10">
             <NewsLetter />
           </section>
         </article>
