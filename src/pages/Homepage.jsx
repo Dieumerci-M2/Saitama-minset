@@ -5,7 +5,6 @@ import Reduction from '../assets/reduction.svg';
 import Livraison from '../components/Livraison';
 import Categories from '../components/CategoriesSearch';
 import Affiche from '../assets/Affiche.jpg';
-import SousMenus from '../components/SousMenus';
 import InfoLivre from '../components/InfoLivre';
 import Harry1 from '../assets/BooksReal.jpg';
 import Harry2 from '../assets/millionnaire.png';
@@ -208,7 +207,7 @@ const Homepage = () => {
                 </div>
                 <div className="flex flex-col desktop:justify-center">
                   <span className="text-red-900 text-2xl">$10</span>
-                  <span className="line-through text-gray-500 desktop:ml-8 text-2xl">$20.32</span>
+                  <span className="line-through text-gray-500 desktop:ml-8 text-2xl">$15.32</span>
                 </div>
                 <div className="desktop:w-[100%] my-2">
                   <div className="flex justify-between desktop:flex-row desktop:justify-between mb-1">

@@ -10,19 +10,36 @@ const ContactUsPage = () => {
   return (
     <article className="">
       <header className="flex justify-center flex-col items-center">
-        <div className="flex justify-between w-[1200px] h-[30px] bg-gray-300">
-          <div className="flex flex-row ml-2 gap-4">
-            <span>
-              <img src={Reduction} alt="reduction" />
+        <div
+          className="flex justify-between w-full h-[30px] tablette:h-[40px] bg-slate-200
+                tablette:flex tablette:justifiy-between tablette:w-full
+                desktop:flex tablette:justify-between">
+          <div className="flex flex-row ml-2 gap-2 tablette:flex tablette:flex-row">
+            <span className="m-auto">
+              <img src={Reduction} alt="reduction" className="text-black cursor-pointer" />
             </span>
-            <span className="text-white">Nos réductions vont jusqu’à 70%</span>
+            <a href="https://git.io/typing-svg" className="my-auto mt-1">
+              <img
+                src="https://readme-typing-svg.herokuapp.com?font=timenewreman&weight=400&size=23&duration=2500&pause=1000&color=7C3AED&background=8672FF00&width=460&lines=Nos+réductions+vont+jusqu’à+70%"
+                alt="Typing SVG"
+                className="flex justify-center"
+              />
+            </a>
           </div>
-          <div className="flex flex-row gap-2">
-            <select name="devise" id="devise" className="bg-gray-300 text-white">
+          <div className="flex tablette:flex-row tablette:gap-2">
+            <select
+              name="devise"
+              id="devise"
+              className="bg-gray-200 text-sm tablette:text-base text-black outline-none 
+                cursor-pointer">
               <option value="1">USD</option>
-              <option value="2">Fc</option>
+              <option value="2">FC</option>
             </select>
-            <select name="language" id="language" className="bg-gray-300 text-white">
+            <select
+              name="language"
+              id="language"
+              className="bg-gray-200 text-sm tablette:text:base text-black outline-none 
+                cursor-pointer">
               <option value="1">French</option>
               <option value="2">English</option>
             </select>
@@ -72,10 +89,9 @@ const ContactUsPage = () => {
         </article>
 
         <article className="flex p-10 flex-row">
-          <section >
+          <section>
             <ContactForm />
           </section>
-          
         </article>
         <article></article>
         <article>
