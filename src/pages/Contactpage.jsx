@@ -1,39 +1,55 @@
 import React from 'react'
-import CategoriesSearch from '../components/CategoriesSearch'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
-import Saitama from '../assets/saitama.png';
 import { useNavigate } from 'react-router-dom';
-
+import Reduction from '../assets/reduction.svg';
+import Menus from '../components/Menus';
 const Contactpage = () => {
   const router = useNavigate();
   return (
     <div>
-      <div className="">
-        <section className="flex justify-between mx-10">
-          <div className="w-[150px]  h-[50px] my-3 mr-2 mt-4 ml-2">
-            <a href="https://t.me/Moneygrr" target="_blank">
-              <img src={Saitama} alt="logo" className="cursor-pointer" />
-            </a>
-          </div>
+        <header
+          className="flex justify-center flex-col items-center                        
+            tablette:flex tablette:justifiy-center tablette:flex-col tablette:items-center
+           tablette:justify-center
+            ">
           <div
-            className="flex gap-6 font-semibold mr-1 h-14 mt-4
-        text-lg bg-gray-300 border-2 px-4 py-2 ">
-            <span onClick={() => router('/home')} className="cursor-pointer">
-              Home
-            </span>
-            <span onClick={() => router('/formation')} className="cursor-pointer ">
-              Formations
-            </span>
-            <span onClick={() => router('/books')} className="cursor-pointer ">
-              Nos livres
-            </span>
-            <span onClick={() => router('/contact')} className="cursor-pointer ">
-              Contact
-            </span>
+            className="flex justify-between w-full h-[30px] tablette:h-[40px] bg-slate-200
+                tablette:flex tablette:justifiy-between tablette:w-full
+                desktop:flex tablette:justify-between">
+            <div className="flex flex-row ml-2 gap-2 tablette:flex tablette:flex-row">
+              <span className="m-auto">
+                <img src={Reduction} alt="reduction" className="text-black cursor-pointer" />
+              </span>
+              <a href="https://git.io/typing-svg" className="my-auto mt-1">
+                <img
+                  src="https://readme-typing-svg.herokuapp.com?font=timenewreman&weight=400&size=23&duration=2500&pause=1000&color=7C3AED&background=8672FF00&width=460&lines=Nos+réductions+vont+jusqu’à+70%"
+                  alt="Typing SVG"
+                  className="flex justify-center"
+                />
+              </a>
+            </div>
+            <div className="flex tablette:flex-row tablette:gap-2">
+              <select
+                name="devise"
+                id="devise"
+                className="bg-gray-200 text-sm tablette:text-base text-black outline-none 
+                cursor-pointer">
+                <option value="1">USD</option>
+                <option value="2">FC</option>
+              </select>
+              <select
+                name="language"
+                id="language"
+                className="bg-gray-200 text-sm tablette:text:base text-black outline-none 
+                cursor-pointer">
+                <option value="1">French</option>
+                <option value="2">English</option>
+              </select>
+            </div>
           </div>
-        </section>
-      </div>
+          <Menus />
+        </header>
       <div className="flex justify-center items-center text-center mb-20 mt-16">
         <ContactForm />
       </div>
