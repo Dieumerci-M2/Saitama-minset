@@ -13,6 +13,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { auth } from './firebase'
+import {createUserWithEmailAndPassword} from 'firebase/auth'
 
 export default function Register() {
    const navigateTo = useNavigate();
@@ -40,6 +42,7 @@ export default function Register() {
   const [email, setUserEmail] = useState("")
   const [password, setPassword] = useState("")
   const [confirmPass, setConfirmPass] = useState("")
+  const [error, setError] = useState("")
 
   const handleUsernameChange = (e) => {
     setUserName(e.target.value)
@@ -57,9 +60,14 @@ export default function Register() {
 } 
 
 const register = async() => {
-  const opts = {userName, email, password}
-  const user = await axios.post("http://localhost:8080/api/v1/register", opts)
-  console.log(user);
+  createUserWithEmailAndPassword(auth, email, password)
+  .then((res) => {
+      console.log(res.user)
+    })
+  .catch(err => {
+    setError(err.message)
+    console.log(error);
+  })
 }
   
   
@@ -75,7 +83,6 @@ const register = async() => {
         }))
         register()
         showToastSuccessMessage()
-        
 
       } else if (userName === "" && email === "") {
                showToastErrorMessage(`Votre champ nom est vide ou votre champ email est vide `)

@@ -13,6 +13,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./Auth.css"
 import { useState } from "react";
 import axios from "axios";
+import { signInWithEmailAndPassword } from 'firebase/auth'
+import { auth } from "./firebase";
 
   export default function Example() {
     const navigateTo = useNavigate();
@@ -39,6 +41,7 @@ import axios from "axios";
 
   const [email, setUserEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
 
     const handleemailChange = (e) => {
     setUserEmail(e.target.value)
@@ -49,12 +52,14 @@ import axios from "axios";
   } 
 
   const login = async() => {
-    const opt = {email, password}
-    const user = await axios.post("http://localhost:8080/api/v1/login", opt)
-    console.log(user.data)
-    localStorage.setItem('Username', user.data.username)
-    localStorage.setItem('Usermail', user.data.email)
-    localStorage.setItem('Token', user.data.token)
+    signInWithEmailAndPassword(auth, email, password)
+      .then((res) => {
+        console.log(res.user);
+      })
+      .catch(err => {
+        setError(err.message)
+        console.log(error);
+      })
   }
  
   const handleSubmit = (e) => {
