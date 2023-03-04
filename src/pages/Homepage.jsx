@@ -14,13 +14,14 @@ import Formation1 from '../assets/Formation-relatif-1.png';
 import Formation2 from '../assets/Formation-relatif-2.jpg';
 import Bed from '../assets/Bed.jpg';
 import Payement from '../components/PaiyementModal';
+import FormReact3 from '../assets/ech.jpg';
 
 const Homepage = () => {
   const [showpayment, setShowpayement] = useState(false);
   const HandlerOnclose = () => setShowpayement(false);
   return (
     <>
-      <article className="text-sm laptop:text-sm ">
+      <article className="text-sm">
         <header
           className="flex justify-center flex-col items-center                        
             tablette:flex tablette:justifiy-center tablette:flex-col tablette:items-center
@@ -81,7 +82,9 @@ const Homepage = () => {
                 className="flex flex-col justify-center items-center text-center p-8 pt-8 gap-6 text-laptop
                  bg-slate-200 w-[50%] laptop:text-base xl:text-laptop">
                 <span className="text-red-900 mt-3">R. KIYOSAKI</span>
-                <span className="font-semibold" max={6}>GUIDE POUR INVESTIR</span>
+                <span className="font-semibold" max={6}>
+                  GUIDE POUR INVESTIR
+                </span>
                 <span className="text-red-900">$6</span>
                 <button
                   onClick={() => setShowpayement(true)}
@@ -101,17 +104,8 @@ const Homepage = () => {
             <section className="w-[inset] tablette:w-[40%]">
               <section className="flex gap-3">
                 <div
-                  className="flex flex-col text-center p-8 pt-2 justify-center items-center 
-                  gap-4 text-laptop bg-slate-200 w-[50%] tablette:h-96 laptop:text-base xl:text-laptop
-                  ">
-                  <span className="text-red-900 mt-3">MJ DE MARCO</span>
-                  <span className="font-semibold">L'AUTOROUTE DU MILLIONNAIRE</span>
-                  <span className="text-red-900">$6</span>
-                  <button
-                    onClick={() => setShowpayement(true)}
-                    className="py-1 mt-1 px-4 text-white bg-[#1E7DBD] w-28">
-                    Lire plus
-                  </button>
+                  className="w-[50%] h-[100%] tablette:h-96">
+                  <img src={FormReact3} alt="facebook adds" className='w-[100%] h-[100%] bg-cover'/>
                 </div>
                 <div
                   className="flex flex-col text-center justify-center items-center p-8 pt-2

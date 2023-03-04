@@ -9,7 +9,11 @@ import ContactForm from '../components/ContactForm'
 const ContactUsPage = () => {
   return (
     <article className="">
-      <header className="flex justify-center flex-col items-center">
+      <header
+        className="flex justify-center flex-col items-center                        
+            tablette:flex tablette:justifiy-center tablette:flex-col tablette:items-center
+           tablette:justify-center
+            ">
         <div
           className="flex justify-between w-full h-[30px] tablette:h-[40px] bg-slate-200
                 tablette:flex tablette:justifiy-between tablette:w-full
