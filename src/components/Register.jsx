@@ -63,6 +63,8 @@ const register = async() => {
   createUserWithEmailAndPassword(auth, email, password)
   .then((res) => {
       console.log(res.user)
+      localStorage.setItem('username', userName)
+      localStorage.setItem('user', res.user)
     })
   .catch(err => {
     setError(err.message)

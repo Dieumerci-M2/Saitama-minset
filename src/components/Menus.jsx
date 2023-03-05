@@ -7,6 +7,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import SousMenus from "./SousMenus"
 const Menus = () => {
   const router = useNavigate();
+  let currentUser = localStorage.getItem('username')
   return (
     <section className="flex justify-around tablette:justify-between w-full ">
       <div
@@ -46,11 +47,11 @@ const Menus = () => {
             }}
             className="text-[8px] tablette:text-[10px] mr-[inset] tablette:mr-2 mx-1 
             cursor-pointer -mt-[3px] tablette:mt-0 text-blue-500">
-            Connexion
+              Connexion
           </span>
           <span className="text-[8px] tablette:text-[10px] ml-[inset] tablette:ml-1 mx-1 
           cursor-pointer text-blue-500 -mt-3.5 tablette:-mt-[2px]">
-            Compte
+          { localStorage.getItem('username') == "" ? "Compte" : currentUser }
           </span>
         </div>
       </div>

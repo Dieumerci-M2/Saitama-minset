@@ -1,0 +1,22 @@
+{
+    "form1" : {
+        "name" : "Yomi Denzel, Dropshipping",
+        "Description" : "Une formation pour devenir millionnaire",
+        "prix" : 10
+    },
+    "form2" : {
+        "name" : "Infographie et design avec Canvas",
+        "Description" : "Apprendre l'infographie pour vous creer une image de marque exceptionnel",
+        "prix" : 10
+    },
+    "form3" : {
+        "name" : "Publicité avac facebook",
+        "Description" : "Augmenter votre notorieté grace à la publicité en ligne avec facebook",
+        "prix" : 10
+    },
+    "form4" : {
+        "name" : "Faites-vous des millions grace à la pub...",
+        "Description" : "instagram est une platform...",
+        "prix" : 10
+    }
+}

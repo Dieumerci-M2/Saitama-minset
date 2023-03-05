@@ -55,6 +55,8 @@ import { auth } from "./firebase";
     signInWithEmailAndPassword(auth, email, password)
       .then((res) => {
         console.log(res.user);
+        localStorage.setItem('username', res.user.username);
+        localStorage.setItem('user', res.user)
       })
       .catch(err => {
         setError(err.message)
