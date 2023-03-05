@@ -1,17 +1,16 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import saitama from "../components/img/saitama.png"
-
 function Navbar() {
   const navigate = useNavigate()
-    const handlerNavigate = () => {
-      navigate("/register")
-    }
+  const handlerNavigate = () => {
+    navigate("/register")
+  }
 
-    const LoginNavigate = useNavigate()
-    const handlerLoginNavigate = () => {
-      LoginNavigate("/auth")
-    }
+  const LoginNavigate = useNavigate()
+  const handlerLoginNavigate = () => {
+    LoginNavigate("/auth")
+  }
   return (
     <div>
       <header className="flex flex-row justify-between bg-white border-b-2 border-[gray]-600">
