@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import Saitama from '../assets/saitama.png';
 import Search from '../assets/Vector.svg';
 import { useNavigate } from 'react-router-dom';
-// import Nav from "../components/header/Nav"<<
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 const Menus = () => {
   const router = useNavigate();
   const [close, setClose] = useState(false);
-  const [hidden, setHidden] = useState(true);
   return (
     <section className=" flex  flex-col desktop:justify-around desktop:w-full ">
       <div className="flex justify-start my-5 mx-5">
@@ -45,24 +43,27 @@ const Menus = () => {
           />
         </div>
       </div>
-{
-  close && 
-
+      {close && (
         <ul
-          className={` ${
-            close ? 'fixed top-0 left-0 ' : null
-          }  flex-col h-screen w-screen gap-7 mt-7 items-center list-none flex  bg-slate-200  pt-8`}>
-          <li>
-            <AiOutlineClose className="w-20 h-20" onClick={() => setClose(false)} />
-          </li>
-          <li>Formation</li>
-          <li>Nos Livres</li>
-          <li>A propos</li>
-          <li>Contact</li>
+          className={` ${close ? 'fixed top-0 left-0 ' : null} 
+           flex-col h-screen w-screen gap-7 mt-7 items-center list-none flex  bg-slate-200  pt-8`}>
+          <div className="flex flex-col gap-5 border border-red-100 shadow-sm py-10 px-10 shadow-slate-800 ">
+            <li>
+              <AiOutlineClose className="w-20 h-20" onClick={() => setClose(false)} />
+            </li>
+            <li className="text-xl hover:text-red-400 " onClick={() => router('/formation')}>
+              Formation
+            </li>
+            <li className="text-xl hover:text-red-400 " onClick={() => router('/books')}>
+              Nos Livres
+            </li>
+            <li className="text-xl hover:text-red-400 ">À propos</li>
+            <li className="text-xl hover:text-red-400 " onClick={() => router('/contact')}>
+              Contact
+            </li>
+          </div>
         </ul>
-
-}
-    
+      )}
       <div
         className="flex flex-row my-auto rounded-l-xl h-10 lg:ml-8 x-8 xl-8 ml-1 
                     ">
