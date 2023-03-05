@@ -51,15 +51,15 @@ const Menus = () => {
             <li>
               <AiOutlineClose className="w-20 h-20" onClick={() => setClose(false)} />
             </li>
-            <li className="text-xl hover:text-red-400 " onClick={() => router('/formation')}>
+            <li className="text-xl hover:text-red-400 border  shadow-xl cursor-pointer" onClick={() => router('/formation')}>
               Formation
             </li>
-            <li className="text-xl hover:text-red-400 " onClick={() => router('/books')}>
+            <li className="text-xl hover:text-red-400 shadow-xl cursor-pointer" onClick={() => router('/books')}>
               Nos Livres
             </li>
-            <li className="text-xl hover:text-red-400 ">À propos</li>
-            <li className="text-xl hover:text-red-400 " onClick={() => router('/contact')}>
-              Contact
+            <li className="text-xl hover:text-red-400 shadow-xl cursor-pointer">À propos</li>
+            <li className="text-xl hover:text-red-400 shadow-xl cursor-pointer" onClick={() => router('/contact')}>
+              Contact 
             </li>
           </div>
         </ul>
@@ -76,11 +76,11 @@ const Menus = () => {
           placeholder="Rechercher un Livre..."
           placeholder:italic
         />
-        <span className="w-19 h-10 bg-red-700 cursor-pointer ">
+        {/* <span className="w-19 h-10 bg-red-700 cursor-pointer ">
           <img src={Search} alt="Search" className="m-auto my-2 text-[#FFFFFF]" />
-        </span>
-      </div>{' '}
-      *
+        </span> */}
+      </div>
+      
     </section>
   );
 };

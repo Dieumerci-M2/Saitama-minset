@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Saitama from '../assets/saitama.png';
 import Search from '../assets/Vector.svg';
 import Harry1 from '../assets/BooksReal.jpg';
@@ -8,19 +8,15 @@ import InfoLivre from '../components/InfoLivre';
 import Footer from '../components/Footer';
 import NewsLetter from '../components/NewsLetter';
 import { useNavigate } from 'react-router-dom';
-
+import Menus from '../components/Menus';
 const Bookspage = () => {
   const router = useNavigate();
   return (
     <article>
-      <header className="mx-10">
-        <section className="flex justify-between">
-          <div className="w-[150px]  h-[50px] my-3 mr-2 mt-4 ml-2">
-            <a href="https://t.me/Moneygrr" target="_blank">
-              <img src={Saitama} alt="logo" className="cursor-pointer" />
-            </a>
-          </div>
-          <div className="flex flex-row mt-6 mx-4 rounded-l-xl h-10">
+      <header className="">
+        <Menus />
+        <section className="flex">
+             <div className="flex flex-row mt-6 mx-4 rounded-l-xl h-10">
             <input
               className="placeholder:italic placeholder:text-slate-400 block
              bg-gray-100 w-full border border-slate-300 py-2 pl-9 pr-3 shadow-sm 
@@ -39,12 +35,10 @@ const Bookspage = () => {
               <img src={Search} alt="Search" className="m-auto my-2 text-[#FFFFFF]" />
             </span>
           </div>
-          <div
+          {/* <div
             className="flex gap-6 font-semibold mr-1 h-14 mt-4
         text-lg bg-gray-300 border-2 px-4 py-2  ">
-            <span
-              onClick={() => router('/home')}
-              className="cursor-pointer hover:text-[#1E7DBD]">
+            <span onClick={() => router('/home')} className="cursor-pointer hover:text-[#1E7DBD]">
               Home
             </span>
             <span
@@ -60,11 +54,13 @@ const Bookspage = () => {
               className="cursor-pointer hover:text-[#1E7DBD]">
               Contact
             </span>
-          </div>
+          </div> */}
         </section>
       </header>
       <main className="desktop:">
-        <h1 className="desktop:text-5xl desktop:my-10 text-3xl flex justify-center">Mes Collections</h1>
+        <h1 className="desktop:text-5xl desktop:my-10 text-3xl flex justify-center">
+          Mes Collections
+        </h1>
         <article className="flex flex-col desktop:flex-row">
           <section className="desktop:w-[33%] desktop:h-[500px] mx-2">
             <div className="desktop:ml-1">
@@ -91,7 +87,9 @@ const Bookspage = () => {
             </div>
           </section>
         </article>
-        <h1 className="desktop:text-5xl text-3xl desktop:my-3 flex justify-center">Les plus achetés</h1>
+        <h1 className="desktop:text-5xl text-3xl desktop:my-3 flex justify-center">
+          Les plus achetés
+        </h1>
         <article className="flex desktop:flex-row desktop:justify-between flex-col ">
           <section className="desktop:grid desktop:grid-cols-2 desktop:gap-10 desktop:w-[68%] text-center my-7 mx-5">
             <div className="desktop:h-[300px] flex flex-col desktop:flex-col gap-2 desktop:w-[100%]">
@@ -121,6 +119,6 @@ const Bookspage = () => {
       </footer>
     </article>
   );
-}
+};
 
-export default Bookspage
+export default Bookspage;

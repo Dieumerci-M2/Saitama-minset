@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Saitama from '../assets/saitama.png';
 import Search from '../assets/Vector.svg';
 import Footer from '../components/Footer';
@@ -7,8 +7,8 @@ import Formation1 from '../assets/Formation-relatif-1.svg';
 import Formation2 from '../assets/Formation-relatif-2.svg';
 import InfoLivre from '../components/InfoLivre';
 import NewsLetter from '../components/NewsLetter';
-import FormReact1 from "../assets/Formation-dispo-1.png"
-import FormReact2 from "../assets/Formation-dispo-2.png"
+import FormReact1 from '../assets/Formation-dispo-1.png';
+import FormReact2 from '../assets/Formation-dispo-2.png';
 import FormReact3 from '../assets/Formation-dispo-3.png';
 import FormReact4 from '../assets/Formation-dispo-4.png';
 import { useNavigate } from 'react-router-dom';
@@ -21,9 +21,8 @@ const Formationpage = () => {
     <article>
       <header className="">
         <section className="flex flex-col desktop:justify-between ">
-
-          < Menus />
-          <SousMenus />
+          <Menus />
+          {/* <SousMenus /> */}
         </section>
       </header>
       <main className="m-5">
@@ -62,11 +61,17 @@ const Formationpage = () => {
             </div>
           </section>
         </article>
-        <h1 className="desktop:text-5xl desktop:my-10 text-3xl justify-center">Les plus téléchargées</h1>
+        <h1 className="desktop:text-5xl desktop:my-10 text-3xl justify-center">
+          Les plus téléchargées
+        </h1>
         <article className="flex flex-col desktop:flex-row desktop:justify-between">
           <section className="grid desktop:grid-cols-2 desktop:gap-10 desktop:w-[68%] text-center">
             <div className="desktop:h-[300px] flex-col flex desktop:flex-col desktop:gap-2 desktop:w-[100%]">
-              <img src={FormReact1} alt="harry" className=" bg-cover desktop:h-[100%] cursor-pointer" />
+              <img
+                src={FormReact1}
+                alt="harry"
+                className=" bg-cover desktop:h-[100%] cursor-pointer"
+              />
               <span className="text-lg font-semibold">React js et native pour debutants</span>
             </div>
             <div className="h-[300px] flex flex-col gap-2 w-[100%]">
@@ -94,6 +99,6 @@ const Formationpage = () => {
       </footer>
     </article>
   );
-}
+};
 
-export default Formationpage
+export default Formationpage;

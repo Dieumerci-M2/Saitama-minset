@@ -1,16 +1,17 @@
-import React from 'react'
-import CategoriesSearch from '../components/CategoriesSearch'
-import ContactForm from '../components/ContactForm'
-import Footer from '../components/Footer'
+import React from 'react';
+import CategoriesSearch from '../components/CategoriesSearch';
+import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer';
 import Saitama from '../assets/saitama.png';
 import { useNavigate } from 'react-router-dom';
+import Menus from '../components/Menus';
 
 const Contactpage = () => {
   const router = useNavigate();
   return (
     <div>
       <div className="">
-        <section className="flex justify-between mx-10">
+        {/* <section className="flex justify-between mx-10">
           <div className="w-[150px]  h-[50px] my-3 mr-2 mt-4 ml-2">
             <a href="https://t.me/Moneygrr" target="_blank">
               <img src={Saitama} alt="logo" className="cursor-pointer" />
@@ -32,7 +33,8 @@ const Contactpage = () => {
               Contact
             </span>
           </div>
-        </section>
+        </section> */}
+        <Menus />
       </div>
       <div className="flex justify-center items-center text-center mb-20 mt-16">
         <ContactForm />
@@ -42,6 +44,6 @@ const Contactpage = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Contactpage
+export default Contactpage;
