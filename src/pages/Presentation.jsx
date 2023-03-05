@@ -12,9 +12,9 @@ const Presentation = () => {
   return (
     // NavBar
     <>
-      <nav className="relative mx-0 p-0">
+      <nav className="relative mx-0 p-0 ">
         {/* flex container */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between shadow-sm">
           {/* logo */}
           <div className="pt-2">
             <img
@@ -59,8 +59,7 @@ const Presentation = () => {
             id="menu"
             className="flex-col items-center hidden self-end py-8 mt-10 space-y-6
              font-bold bg-slate-600 bg-cover mobile:w-auto mobile:self-center left-6 right-6
-             drop-shadow-md"
-          >
+             drop-shadow-md">
             <span
               className="cursor-pointer hover:text-blue-400"
               id="inscription"
@@ -106,9 +105,17 @@ const Presentation = () => {
       <section className="flex flex-col justify-center m-3 tablette:flex-col tablette:mt-2">
         {/* <div className=" tablette:justify-around p-10"> */}
         <div className="tablette:flex flex flex-col justify-center tablette:flex-row tablette:justify-around mt-2 tablette:mt-2">
-          <img src={ReadBook1} alt="ReadBook" className="desktop:w-[250px] desktop:h-[250px] bg-#28a69b" />
+          <img
+            src={ReadBook1}
+            alt="ReadBook"
+            className="desktop:w-[250px] desktop:h-[250px] bg-#28a69b"
+          />
 
-          <img src={ReadBook2} alt="ReadBook" className=" mb-2 desktop:w-[250px] desktop:h-[250px]" />
+          <img
+            src={ReadBook2}
+            alt="ReadBook"
+            className=" mb-2 desktop:w-[250px] desktop:h-[250px]"
+          />
         </div>
 
         <div
