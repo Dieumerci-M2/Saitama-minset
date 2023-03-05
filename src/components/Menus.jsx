@@ -7,6 +7,7 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 const Menus = () => {
   const router = useNavigate();
   const [close, setClose] = useState(false);
+  const [hidden, setHidden] = useState(true);
   return (
     <section className=" flex  flex-col desktop:justify-around desktop:w-full ">
       <div className="flex justify-start my-5 mx-5">
@@ -17,6 +18,7 @@ const Menus = () => {
             <img src={Saitama} alt="logo" className="desktop:xl:mr-8 cursor-pointer " />
           </a>
         </div>
+
         <div className="flex items-center">
           <div
             className="ml-12 flex flex-row desktop:h-12 desktop:w-48 bg-gray-100 desktop:my-auto desktop:mt-3 desktop:mx-8 lg:mx-8 xl-8
@@ -37,20 +39,30 @@ const Menus = () => {
               <span className="mr-2 cursor-pointer  hidden laptop:flex desktop:flex">Compte</span>
             </div>
           </div>
-          <AiOutlineMenu className="w-20 h-14 laptop:hidden desktop:hidden" />
+          <AiOutlineMenu
+            className="w-20 h-14 laptop:hidden desktop:hidden"
+            onClick={() => setClose(true)}
+          />
         </div>
       </div>
-      <div>
-        <ul className="flex-col h-screen w-screen gap-7 mt-7 items-center list-none flex fixed bg-slate-200 top-0 left-0 pt-8">
+{
+  close && 
+
+        <ul
+          className={` ${
+            close ? 'fixed top-0 left-0 ' : null
+          }  flex-col h-screen w-screen gap-7 mt-7 items-center list-none flex  bg-slate-200  pt-8`}>
+          <li>
+            <AiOutlineClose className="w-20 h-20" onClick={() => setClose(false)} />
+          </li>
           <li>Formation</li>
           <li>Nos Livres</li>
           <li>A propos</li>
           <li>Contact</li>
-          <li>
-            <AiOutlineClose className="w-20 h-20" />
-          </li>
         </ul>
-      </div>
+
+}
+    
       <div
         className="flex flex-row my-auto rounded-l-xl h-10 lg:ml-8 x-8 xl-8 ml-1 
                     ">
