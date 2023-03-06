@@ -1,11 +1,8 @@
 import React from 'react';
-import CategoriesSearch from '../components/CategoriesSearch';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
-import Saitama from '../assets/saitama.png';
 import { useNavigate } from 'react-router-dom';
 import Menus from '../components/Menus';
-
 const Contactpage = () => {
   const router = useNavigate();
   return (

@@ -1,11 +1,11 @@
-import React from 'react'
-import Menus from "../components/Menus"
-import Footer from "../components/Footer"
-import Reduction from '../assets/reduction.svg'
-import Categories from '../components/CategoriesSearch'
-import Affiche from '../assets/Affiche.jpg'
-import ContactForm from '../components/ContactForm'
-
+import React from 'react';
+import Menus from '../components/Menus';
+import Footer from '../components/Footer';
+import Reduction from '../assets/reduction.svg';
+import Categories from '../components/CategoriesSearch';
+import Affiche from '../assets/Affiche.jpg';
+import ContactForm from '../components/ContactForm';
+// import Humburger from '../components/header/Humburger';
 const ContactUsPage = () => {
   return (
     <article className="">
@@ -28,8 +28,8 @@ const ContactUsPage = () => {
             </select>
           </div>
         </div>
-        <Menus />
       </header>
+
       <main className="my-[30px]">
         <article className="flex flex-row gap-4">
           <section className="ml-2">
@@ -72,10 +72,9 @@ const ContactUsPage = () => {
         </article>
 
         <article className="flex p-10 flex-row">
-          <section >
+          <section>
             <ContactForm />
           </section>
-          
         </article>
         <article></article>
         <article>
@@ -88,6 +87,6 @@ const ContactUsPage = () => {
       </footer>
     </article>
   );
-}
+};
 
-export default ContactUsPage
+export default ContactUsPage;

@@ -20,7 +20,7 @@ const Formationpage = () => {
   return (
     <article>
       <header className="">
-        <section className="flex flex-col desktop:justify-between ">
+        <section className=" desktop:justify-between ">
           <Menus />
           {/* <SousMenus /> */}
         </section>
